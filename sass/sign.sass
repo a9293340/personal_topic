@@ -1,0 +1,343 @@
+@import "./base/_var"
+@import "./module/_function"
+.sign_in_box
+    position: fixed
+    width: 400px
+    background-color: #2A2A2A
+    border-radius: 10px
+    left: 50%
+    transform: translateX(-50%)
+    z-index: 100000
+    top: 15%
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3)
+    display: flex
+    flex-direction: column
+    align-items: center
+    .signin_title
+        // border: 1px solid red
+        h1
+            @include font_style(36px,wheat,500,wrap)
+        .signin_cross
+            @extend %cross
+    .signin
+        width: 90%
+        // border: 1px solid red
+        .signin_form
+            width: 95%
+            padding: 10px
+            display: flex
+            flex-direction: column
+            border: 2px solid wheat
+            // align-items: center
+            justify-content: center
+            .account_num, .account_password
+                display: flex
+                flex-direction: column
+                // align-items: center
+                .account_label
+                    @include font_style(20px,wheat) 
+                .account_input
+                    margin: 10px 0
+                    width: 90%
+                    height: 30px
+                    color: $black
+                    background-color: white
+                    border: 0
+                    padding-left: 5px
+            .account_password, .account_num
+                position: relative
+                .warning
+                    // width: 45px
+                    width: 90%
+                    text-align: center
+                    border-radius: 5px
+                    margin: 0
+                    @include font_style(14px,white)
+                    padding: 2px 5px
+                .warning_red
+                    background-color: #b81919
+                .warning_green
+                    background-color: green
+                .question
+                    cursor: pointer
+                    position: absolute
+                    right: 35px
+                    bottom: 35px
+                    &:hover
+                        .tooltip
+                            display: block
+                    img
+                        width: 20px
+                    .tooltip
+                        display: none
+                        white-space: nowrap
+                        background-color: rgba(0,0,0,.8)
+                        color: white
+                        border-radius: 5px
+                        width: 120px
+                        white-space: pre-wrap
+                        padding: 5px 10px
+                        // font-size: .8rem
+                        position: absolute
+                        top: 120%
+                        right: -54px
+                        &::before
+                            content: ""
+                            display: inline-block
+                            width: 0
+                            height: 0
+                            position: absolute
+                            // width: 60px
+                            left: 50%
+                            // transform: translateX(-50%)
+                            top: -8px
+                            border-top: 0px solid transparent
+                            border-right: 8px solid transparent
+                            border-bottom: 8px solid rgba(0,0,0,.8)
+                            border-left: 8px solid transparent
+            .signin_submit
+                width: 100px
+                height: 40px
+                margin-top: 10px
+                margin-bottom: 20px
+                border-radius: 5px
+                background-color: white
+                border: 0
+                cursor: pointer
+                color: $black
+                font-size: 18px
+                font-family: $notosans
+                @include transition_set(all,.3s)
+                &:hover
+                    background-color: $orange
+                    color: white
+            .signin_submit_not
+                color: white
+                background-color: $bgcgrey
+                border-color: $bgcgrey
+                cursor: not-allowed
+                &:hover
+                    color: white
+                    background-color: $bgcgrey
+    .signin_btn
+        width: 95%
+        padding: 10px 2px
+        // border: 1px solid red   
+        display: flex
+        justify-content: space-around
+        flex-direction: column
+        align-items: center
+        .social_signin, .no_account
+            display: flex
+            justify-content: space-around
+            align-items: center
+            // border: 1px solid red
+            width: 100%
+        .social_signin
+            .fb_signin, .google_signin
+                width: 45%
+                height: 40px
+                // border: 1px solid black
+                // margin: 10px
+                cursor: pointer
+            .fb_signin
+                background-color: #283C92
+                display: flex
+                align-items: center
+                // margin-bottom: 10px
+                img
+                    margin-left: 5px
+                    // transform: translate(5px,7px)
+                span
+                    // border: 1px solid red
+                    white-space: nowrap
+                    font-size: 15px
+                    font-weight: 700
+                    color: white
+            .google_signin
+                background-color: #4687F3
+                display: flex
+                align-items: center
+                img
+                    margin-left: 9px
+                    // transform: translate(5px,7px)
+                span
+                    // border: 1px solid red
+                    margin-left: 8px
+                    white-space: nowrap
+                    font-size: 15px
+                    font-weight: 700
+                    color: white
+        .no_account
+            margin-top: 10px
+            .forget, .create
+                cursor: pointer
+                border: 0px
+                @include font_style(24px,white)
+                @include transition_set(all,.3s)            
+                &:hover
+                    color: $orange
+.sign_up_box
+    position: fixed
+    width: 400px
+    background-color: #2A2A2A
+    border-radius: 10px
+    left: 50%
+    transform: translateX(-50%)
+    z-index: 100000
+    top: 15%
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3)
+    display: flex
+    flex-direction: column
+    align-items: center
+    .signup_title
+        // border: 1px solid red
+        h1
+            @include font_style(36px,wheat,500,wrap)
+        .signup_cross
+            @extend %cross
+    .signup
+        width: 90%
+        // border: 1px solid red
+        .signup_form
+            width: 95%
+            padding: 10px
+            display: flex
+            flex-direction: column
+            border: 2px solid wheat
+            // align-items: center
+            justify-content: center
+            .account_num, .account_password, .password_again
+                display: flex
+                flex-direction: column
+                // align-items: center
+                .account_label
+                    @include font_style(20px,wheat) 
+                .account_input
+                    margin: 10px 0
+                    width: 90%
+                    height: 30px
+                    color: $black
+                    background-color: white
+                    border: 0
+                    padding-left: 5px
+            .account_password, .account_num
+                position: relative
+                .warning
+                    // width: 45px
+                    width: 90%
+                    text-align: center
+                    border-radius: 5px
+                    margin: 0
+                    @include font_style(14px,white)
+                    padding: 2px 5px
+                .warning_red
+                    background-color: #b81919
+                .warning_green
+                    background-color: green
+                .warning_orange
+                    background-color: orange
+                .warning_blue
+                    background-color: blue
+                .question
+                    cursor: pointer
+                    position: absolute
+                    right: 35px
+                    bottom: 38px
+                    &:hover
+                        .tooltip
+                            display: block
+                    img
+                        width: 20px
+                    .tooltip
+                        display: none
+                        white-space: nowrap
+                        background-color: rgba(0,0,0,.8)
+                        color: white
+                        border-radius: 5px
+                        width: 120px
+                        white-space: pre-wrap
+                        padding: 5px 10px
+                        z-index: 10000000
+                        // font-size: .8rem
+                        position: absolute
+                        top: 120%
+                        right: -54px
+                        &::before
+                            content: ""
+                            display: inline-block
+                            width: 0
+                            height: 0
+                            position: absolute
+                            // width: 60px
+                            left: 50%
+                            // transform: translateX(-50%)
+                            top: -8px
+                            border-top: 0px solid transparent
+                            border-right: 8px solid transparent
+                            border-bottom: 8px solid rgba(0,0,0,.8)
+                            border-left: 8px solid transparent
+            .signup_submit
+                width: 100px
+                height: 40px
+                margin-top: 10px
+                margin-bottom: 20px
+                border-radius: 5px
+                background-color: white
+                border: 0
+                cursor: pointer
+                color: $black
+                font-size: 18px
+                font-family: $notosans
+                display: flex
+                justify-content: center
+                align-items: center
+                @include transition_set(all,.3s)
+                &:hover
+                    background-color: $orange
+                    color: white
+            .signup_submit_not
+                color: white
+                background-color: $bgcgrey
+                border-color: $bgcgrey
+                cursor: not-allowed
+                &:hover
+                    color: white
+                    background-color: $bgcgrey
+    .signup_btn
+        width: 95%
+        padding: 10px 2px
+        // border: 1px solid red   
+        display: flex
+        justify-content: space-around
+        align-items: center
+        .signup_fb, .signup_google
+            width: 45%
+            height: 50px
+            // border: 1px solid green
+            display: flex
+            justify-content: center
+        .signup_fb
+            background-color: #283C92
+            display: flex
+            align-items: center
+            justify-content: space-around
+            span
+                white-space: nowrap
+                font-size: 15px
+                font-weight: 700
+                color: white
+        .signup_google
+            background-color: #4687F3
+            display: flex
+            align-items: center
+            justify-content: space-around
+            span
+                white-space: nowrap
+                font-size: 15px
+                font-weight: 700
+                color: white
+
+
+.sign_box_display
+    display: none

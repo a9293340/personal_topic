@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luscious Fantasy給你幻想的美味</title>
+    <link href="https://fonts.googleapis.com/css?family=Bellota|Noto+Sans+TC|Noto+Serif+TC|Oswald&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="./pic/BEWD_icon.png">
+    <link rel="bookmark" href="./pic/BEWD_icon.png">
+    <link rel="stylesheet" href="./css/hd_ft.css">
+    <link rel="stylesheet" href="./css/sign.css">
+    <link rel="stylesheet" href="./css/chat.css">
+    <link rel="stylesheet" href="./css/search_bar.css">
+    <link rel="stylesheet" href="./css/recipe_item.css">
+</head>
+<body>
+    <!-- inject header -->
+    <div class="headerpage"></div>
+    <!-- inject header -->
+    <!-- 購物車 -->
+    <div class="shoopingCart"></div>
+    <!-- 購物車 -->
+    <!-- 登入 -->
+    <div class="SigninSignup"></div>
+    <!-- 登入 -->
+    <!-- 聊天室 -->
+    <div class="ChatBox"></div>
+    <!-- 聊天室 -->
+
+    <div class="cards_box">
+        <div class="search_bar">
+            <div class="first_search">
+                <div class="extends">
+                    <div>
+                        <span>所有分類</span>
+                        <span class="extend" id="all_extend">+</span>
+                    </div>
+                </div>
+                <div class="sb_content1" id="sb_content1">
+                    <div class="sbcont1_left">
+                        <a href="./hot_recipe.html">熱門食譜
+                            <div class="line"></div>
+                        </a>
+                        <a href="">快煮食譜
+                            <div class="line"></div>
+                        </a>
+                        <a href="">精緻食譜
+                            <div class="line"></div>
+                        </a>
+                        <a href="">夢幻食譜
+                            <div class="line"></div>
+                        </a>
+                        <a href="">異國食譜
+                            <div class="line"></div>
+                        </a>
+                    </div>
+                    <div class="sbcont1_right">
+                        <a href="">菜葉類
+                            <div class="line"></div>
+                        </a>
+                        <a href="">肉肉類
+                            <div class="line"></div>
+                        </a>
+                        <a href="">湯品類
+                            <div class="line"></div>
+                        </a>
+                        <a href="">調味料
+                            <div class="line"></div>
+                        </a>
+                        <a href="">飲品類
+                            <div class="line"></div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="second_search" id="app">
+                <input type="text" placeholder="請輸入關鍵字" class="input" v-model='text'>
+                <div :class="btnClass">搜尋</div>
+            </div>
+            <div class="third_search">
+                <div class="extends">
+                    <div>
+                        <span>選擇分類</span>
+                        <span class="extend" id="chose_extend">+</span>
+                    </div>
+                </div>
+                <div class="sb_content2_box" id="sb_content2">
+                    <div class="sb_content2">
+                        <div class="sbcont2_left">
+                            <label for="a">
+                                <input type="checkbox" value="要有菜" class="choose_inp" id="a">
+                                要有菜
+                            </label>
+                            <label for="b">
+                                <input type="checkbox" class="choose_inp" id="b">
+                                要有肉
+                            </label>
+                            <label for="c">
+                                <input type="checkbox" class="choose_inp" id="c">
+                                要有飯
+                            </label>
+                            <label for="d">
+                                <input type="checkbox" class="choose_inp" id="d">
+                                要有麵
+                            </label>
+                            <label for="e">
+                                <input type="checkbox" class="choose_inp" id="e">
+                                要有魚
+                            </label>
+                            <label for="e">
+                                <input type="checkbox" class="choose_inp" id="e">
+                                要有蛋
+                            </label>
+                        </div>
+                        <div class="sbcont2_right">
+                            <label for="f">
+                                <input type="checkbox" class="choose_inp" id="f">
+                                要貴貴
+                            </label>
+                            <label for="g">
+                                <input type="checkbox" class="choose_inp" id="g">
+                                要實惠
+                            </label>
+                            <label for="h">
+                                <input type="checkbox" class="choose_inp" id="h">
+                                要簡單
+                            </label>
+                            <label for="i">
+                                <input type="checkbox" class="choose_inp" id="i">
+                                要美美
+                            </label>
+                            <label for="j">
+                                <input type="checkbox" class="choose_inp" id="j">
+                                要好玩
+                            </label>
+                            <label for="k">
+                                <input type="checkbox" class="choose_inp" id="k">
+                                我全都要
+                            </label>
+                        </div>
+                    </div>
+                    <div class="submit2">搜尋</div>
+                </div>
+            </div>
+        </div>
+        <div class="crumbs">
+            <a href="./recipe.html">食譜</a>
+            <span>&nbsp;>&nbsp;</span>
+            <a href="" class="orange">所有食譜</a>
+        </div>
+        <div class="cards_content">
+                <div class="card">
+                    <div class="img">
+                        <img src="./pic/rw1.jpg" alt="">
+                    </div>
+                    <div class="card_info">
+                        <div class="h1_bgc"></div>
+                        <h1>超級無敵海景佛跳牆</h1>
+                        <div class="span">
+                            <span>集結九種高檔食材，擁有九九八十一種口味，不但火侯十足，而且濃而不膩，膠而不黏</span>
+                        </div>
+                        <div class="other_box">
+                            <div class="collect_btn" data-num="0" data-count="0">
+                                <img src="./pic/collect.svg" alt="" class="collect_img">
+                                <span class="collect_span">我要收藏</span>
+                            </div>
+                            <div class="card_more">
+                                <img src="./pic/mark.png" alt="">
+                                <a href="./recipe_info.html">more info...</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="img">
+                        <img src="./pic/rw2.jpg" alt="">
+                    </div>
+                    <div class="card_info">
+                        <div class="h1_bgc"></div>
+                        <h1>火雞特製撒尿牛丸</h1>
+                        <div class="span">
+                            <span>據說有特殊功效，能讓人變美，考試都考100分，還能變壯變高增加自信呢~</span>
+                        </div>
+                        <div class="other_box">
+                            <div class="collect_btn" data-num="1" data-count="0">
+                                <img src="./pic/collect.svg" alt="" class="collect_img">
+                                <span class="collect_span">我要收藏</span>
+                            </div>
+                            <div class="card_more">
+                                <img src="./pic/mark.png" alt="">
+                                <span>more info...</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="img">
+                        <img src="./pic/rw3.jpg" alt="">
+                    </div>
+                    <div class="card_info">
+                        <div class="h1_bgc long1"></div>
+                        <h1>美味蟹堡</h1>
+                        <div class="span">
+                            <span>內含酸黃瓜、蟹肉、麵包、番茄醬、芥末醬以及蟹堡王特製祖傳祕方，一個造價只要900美金</span>
+                        </div>
+                        <div class="other_box">
+                            <div class="collect_btn" data-num="2" data-count="0">
+                                <img src="./pic/collect.svg" alt="" class="collect_img">
+                                <span class="collect_span">我要收藏</span>
+                            </div>
+                            <div class="card_more">
+                                <img src="./pic/mark.png" alt="">
+                                <span>more info...</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="img">
+                        <img src="./pic/rw4.jpg" alt="">
+                    </div>
+                    <div class="card_info">
+                        <div class="h1"></div>
+                        <div class="h1_bgc"></div>
+                        <h1>太陽ㄉ溫暖彗星炒飯</h1>
+                        <div class="span">
+                            <span>將波菜與飯拌炒後，將其裝置在投石機上投射並吸收太陽之溫暖，是充滿技術與創意的料理</span>
+                        </div>
+                        <div class="other_box">
+                            <div class="collect_btn" data-num="3" data-count="0">
+                                <img src="./pic/collect.svg" alt="" class="collect_img">
+                                <span class="collect_span">我要收藏</span>
+                            </div>
+                            <div class="card_more">
+                                <img src="./pic/mark.png" alt="">
+                                <span>more info...</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="img">
+                        <img src="./pic/rw5.jpg" alt="">
+                    </div>
+                    <div class="card_info">
+                        <div class="h1"></div>
+                        <div class="h1_bgc"></div>
+                        <h1>大魔術熊貓麻婆豆腐</h1>
+                        <div class="span">
+                            <span>兼具色、香、辣、燙、麻、酥等六位一體，更重要的是有媽媽的味道，謝謝你向恩<3</span>
+                        </div>
+                        <div class="other_box">
+                            <div class="collect_btn" data-num="4" data-count="0">
+                                <img src="./pic/collect.svg" alt="" class="collect_img">
+                                <span class="collect_span">我要收藏</span>
+                            </div>
+                            <div class="card_more">
+                                <img src="./pic/mark.png" alt="">
+                                <span>more info...</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="img">
+                        <img src="./pic/rw6.jpg" alt="">
+                    </div>
+                    <div class="card_info">
+                        <div class="h1"></div>
+                        <div class="h1_bgc"></div>
+                        <h1>艾路貓祖傳貓飯</h1>
+                        <div class="span">
+                            <span>喵喵喵~~喵喵~~~~喵!喵!喵!喵喵~喵喵喵喵喵~~喵咪喵喵喵!!!!!!!</span>
+                        </div>
+                        <div class="other_box">
+                            <div class="collect_btn" data-num="5" data-count="0">
+                                <img src="./pic/collect.svg" alt="" class="collect_img">
+                                <span class="collect_span">我要收藏</span>
+                            </div>
+                            <div class="card_more">
+                                <img src="./pic/mark.png" alt="">
+                                <span>more info...</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="img">
+                        <img src="./pic/rw7.jpg" alt="">
+                    </div>
+                    <div class="card_info">
+                        <div class="h1"></div>
+                        <div class="h1_bgc"></div>
+                        <h1>宇宙無敵昇龍餃子</h1>
+                        <div class="span">
+                            <span>利用兩種不同材質的餃子皮，加熱膨脹度不同原理，使餃子形成立體感</span>
+                        </div>
+                        <div class="other_box">
+                            <div class="collect_btn" data-num="6" data-count="0">
+                                <img src="./pic/collect.svg" alt="" class="collect_img">
+                                <span class="collect_span">我要收藏</span>
+                            </div>
+                            <div class="card_more">
+                                <img src="./pic/mark.png" alt="">
+                                <span>more info...</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="img">
+                        <img src="./pic/rw8.jpg" alt="">
+                    </div>
+                    <div class="card_info">
+                        <div class="h1"></div>
+                        <div class="h1_bgc long1"></div>
+                        <h1>乾坤燒鵝</h1>
+                        <div class="span">
+                            <span>「乾坤燒鵝」當然內有乾坤。其實是吃裡面的禾花雀，禾花雀吸收了燒鵝的香味及甘甜！</span>
+                        </div>
+                        <div class="other_box">
+                            <div class="collect_btn" data-num="7" data-count="0">
+                                <img src="./pic/collect.svg" alt="" class="collect_img">
+                                <span class="collect_span">我要收藏</span>
+                            </div>
+                            <div class="card_more">
+                                <img src="./pic/mark.png" alt="">
+                                <span>more info...</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </div>
+        
+        <div class="tab_bar" id="tab_bar">
+            <!-- <div class="left -gg">
+                < Pref
+            </div>
+            <div class="tab_num -on">1</div>
+            <div class="tab_num">2</div>
+            <div class="tab_num">3</div>
+            <div class="tab_num">4</div>
+            <div class="tab_num">5</div>
+            <div class="tab_num">6</div>
+            <div class="tab_num">7</div>
+            <div class="tab_num">8</div>
+            <div class="tab_num">...</div>
+            <div class="right">
+                Next >
+            </div> -->
+        </div>
+    </div>
+
+    <!-- footerpage -->
+    <div class="footerpage"></div>
+    <!-- footerpage -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.11/vue.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.14.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.6.1/firebase-database.js"></script>
+    <script src="./js/firebase.js"></script>
+    <!-- firebase -->
+    <script src="./js/inject.js"></script>
+    <script src="./js/hd_ft_menber.js"></script>
+    <script src="./js/searchbar.js"></script>
+    <script src="./js/tab_bar.js"></script>
+    <script src="./js/recipe.js"></script>
+</body>
+</html>

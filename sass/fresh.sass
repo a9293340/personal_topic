@@ -1,0 +1,704 @@
+@import "./base/_var"
+@import "./module/_function"
+
+
+body
+    background-color: $bgcgrey
+
+
+.header
+    .hd_black
+        .header_btn
+            .fresh_btn
+                // transform: scale(1.2) rotate(-10deg)
+                a
+                    color: $orange
+                    font-weight: bolder
+                .line
+                    border-color: $orange
+                    width: 110%
+
+@keyframes run_horse
+    0%
+        margin-left: 0%
+    100%
+        margin-left: 120%
+
+@keyframes jump
+    0%
+        transform: translateY(0px)
+    7.7%
+        transform: translateY(-8px)
+    15.4%
+        transform: translateY(0px)
+    100%
+        transform: translateY(0px)
+.cards_box
+    margin: 0 auto
+    width: 1200px
+    display: flex
+    flex-direction: column
+    // border: 1px solid red
+    .run_horse
+        // border: 1px solid red
+        margin: 0 auto
+        width: 98%
+        padding-top: 15px
+        display: flex
+        align-items: center
+        overflow: hidden
+        .run_span
+            animation: run_horse 13s infinite linear
+            display: flex
+            align-items: center
+            span
+                @include font_style(24px,#f04242) 
+                // transform: rotate(6deg)     
+                margin-left: 1px 
+            .jump1
+                animation: jump 4s infinite
+            .jump2
+                animation: jump 4s .1s infinite
+            .jump3
+                animation: jump 4s .2s infinite
+            .jump4
+                animation: jump 4s .3s infinite
+            .jump5
+                animation: jump 4s .4s infinite
+            .jump6
+                animation: jump 4s .5s infinite
+            .jump7
+                animation: jump 4s .6s infinite
+            .jump8
+                animation: jump 4s .7s infinite
+            .jump9
+                animation: jump 4s .8s infinite
+            .jump10
+                animation: jump 4s .9s infinite
+            .jump11
+                animation: jump 4s 1s infinite
+            .jump12
+                animation: jump 4s 1.1s infinite
+            .jump13
+                animation: jump 4s 1.2s infinite
+    .crumbs
+        padding: 10px
+        // padding-left: 130px
+        padding-left: 30px
+        // padding-bottom: 10px
+        .orange
+            color: $orange
+        a
+            +font_style(20px,#111111)
+            
+    .cards_content
+        display: flex
+        justify-content: space-between
+        margin: 0 auto
+        width: 95%
+        flex-wrap: wrap
+        // border: 1px solid red
+        .card
+            position: relative
+            width: 23%
+            height: 300px
+            background-color: white
+            box-shadow: 5px 5px rgba(0, 0, 0, 0.03)
+            // border-radius: 5px
+            display: flex
+            flex-direction: column
+            align-items: center
+            margin-bottom: 5%
+            &:hover
+                .bottom
+                    height: 15%
+                .img
+                    transform: translateY(-10px) scale(1.1)
+            .img
+                @include transition_set(all,.3s,50%,100%)
+                border-radius: 5px
+                margin-top: 1%
+                width: 90%
+                // height: 70%
+                overflow: hidden
+                img
+                    width: 100%
+                    // height: 100%
+            .title
+                display: flex
+                margin-left: 20%
+                margin-top: 1%
+                h2
+                    margin-top: 2%
+                    margin-left: -20%
+                    +font_style(24px,$card_word_color,300)
+                img,.heart
+                    right: 4%
+                    top: 60%
+                    position: absolute
+                    height: 8%
+                    // transform: translate(50%,45%)
+                    cursor: pointer
+                .analytics
+                    left: 4%
+                    @include transition_set(all,.3s)
+                    &:hover
+                        transform: scale(1.2)
+            .price        
+                margin-top: -10%
+                margin-right: 0%
+                // border: 1px solid red
+                display: flex
+                align-items: center
+                padding: 0
+                color: $black
+                .english
+                    font-family: $oswald
+                .small
+                    font-size: 10px
+                h3
+                    margin: 0 10px
+                    font-size: 40px
+                    transform: rotate(5deg)
+                    color: $orange
+                span
+                    // margin-top: -10%
+            .bottom
+                position: absolute
+                display: flex
+                background-color: $orange
+                width: 100%
+                height: 3%
+                // bottom: 0%
+                top: 97%
+                +transition_set(all,.3s,top,xx)  
+                transform-origin: top
+                font-family: $oswald
+                color: white
+                font-size: 28px
+                cursor: pointer
+                overflow: hidden
+                span
+                    margin: 0
+                    padding: 0
+                    margin: 0 auto
+                    margin-top: 0
+                    font-weight: 700
+                        
+    .tab_bar
+        margin: 0 auto
+        margin-bottom: 1.5%
+        display: flex
+        justify-content: space-between
+        .left, .right, .tab_num
+            cursor: pointer
+            display: flex
+            align-items: center
+            justify-content: center
+            color: $orange
+            border: 1px solid $orange
+            white-space: nowrap
+            margin-left: 5px
+        .left, .right
+            width: 70px
+            border-radius: 30px
+        .tab_num
+            width: 50px
+            height: 50px
+            border-radius: 50%
+        .-on
+            background-color: $orange
+            color: white
+        .-gg
+            background-color: $bgcgrey
+            color: $black
+            border: 0
+            cursor: not-allowed
+
+@keyframes cart
+    0%
+        left: 25%
+        bottom: 43%
+        transform: scale(1)
+    10%
+        transform: scale(0.9)
+        left: 30%
+        bottom: 47%
+    100%
+        transform: scale(0)
+        left: 73%
+        bottom: 74%
+
+
+.light_box
+    z-index: 1000
+    position: fixed
+    width: 100%
+    height: 100%
+    background-color: rgba(0, 0, 0, 0.3)
+    left: 0
+    top: 0
+    display: flex
+    justify-content: center
+    align-items: center
+    transform: scale(0)
+    +transition_set(all,.2s,center,xx)
+    .warning
+        position: fixed
+        top: 0
+        left: 50%
+        transform: translateX(-50%)
+        border-radius: 0 0 5px 5px
+        padding: 10px
+        width: 200px
+        text-align: center
+        display: none
+        z-index: 1000000000000
+        background-color: rgba(255, 255, 255, .9)
+        span
+            @include font_style(20px,orange)
+    .pic
+        transform: scale(0)
+        width: 300px
+        height: 210px
+        position: absolute
+        left: 25%
+        bottom: 43%
+        z-index: 1000000
+        line-height: 0
+        font-size: 0
+        cursor: zoom-in
+        img
+            width: 100%
+            height: 100%
+    .lb_card
+        background-color: #2c2b2b
+        box-shadow: 3px 3px 10px rgba(255, 255, 255, 0.2)
+        +transition_set(all,.7s,center,xx)
+        transform: scale(0)
+        transition-delay: .3s
+        border-radius: 15px
+        width: 1000px
+        display: flex
+        flex-direction: column
+        // position: fixed
+        .product_title
+            margin: 1%
+            display: flex
+            width: 100%
+            align-items: center
+            .lb_cross
+                @extend %cross
+                .close_line, .close_line2
+                    border-color: white
+            .h1
+                width: 90%
+                h1
+                    margin: 0
+                    margin-left: 2%
+                    @include font_style(36px,white,500,wrap)
+                .h1_bgc
+                    z-index: -1
+                    margin-left: 2%
+                    background-color: rgba(248, 100, 34, 0.7)
+                    height: 15px
+                    width: 90%
+                    margin-top: -2%
+        .card_content
+            display: flex
+            .lb_card_left, .lb_car_right
+                // border: 1px solid red
+                display: flex
+                flex-direction: column
+                margin-bottom: 1%
+            .lb_card_left
+                width: 48%
+                margin-left: 2%
+                align-items: center
+                .img
+                    margin-top: 8%
+                    border: 5px solid $white
+                    width: 350px
+                    line-height: 0
+                    font-size: 0
+                    // height: 55%
+                    // overflow: hidden
+                    position: relative
+                    cursor: zoom-in
+                    .viewport
+                        position: absolute
+                        left: 0
+                        top: 0
+                        width: 100px
+                        height: 100px
+                        background-color: rgba(85, 106, 228,.4)
+                        border: 1px solid rgba(85, 106, 228,1)
+                        visibility: hidden
+                    img
+                        width: 100%
+                        // height: 100%
+                .resume
+                    margin-top: 3%
+                    // border: 1px solid red
+                    width: 100%
+                    display: flex
+                    flex-direction: column
+                    margin-left: 5%
+                    .resume_title
+                        position: relative
+                        margin-bottom: 5%
+                        .h2_bgc
+                            z-index: -1
+                            position: absolute
+                            background-color: rgba(248, 100, 34, 0.7)
+                            height: 20px
+                            width: 30%
+                            bottom: 0
+                        h2
+                            margin: 0
+                            @include font_style(28xp,white,500)
+                    .resume_content
+                        // border: 1px solid red
+                        margin-top: 1%
+                        display: flex
+                        justify-content: space-between
+                        width: 96%
+                        // height: 40%
+                        .resume_words
+                            width: 25%
+                            // border: 1px solid green
+                            display: flex
+                            flex-direction: column
+                            span
+                                margin-bottom: 8%
+                                color: #918f8f
+                                font-size: 16px
+                                font-weight: 300
+                                @include font_style(16px,#918f8f,300)
+                            .fw
+                                // font-weight: 100
+                                color: #e9e5e5
+                                font-family: $notoserif
+            .lb_card_right
+                width: 50%
+                display: flex
+                flex-direction: column
+                margin-left: 2%
+                position: relative
+                .zoom_image
+                    // background-color: white
+                    width: 300px
+                    height: 300px
+                    border: 3px solid $white
+                    position: absolute
+                    overflow: hidden
+                    z-index: 10000000000
+                    display: none
+                    img
+                        width: 1050px
+                        position: absolute
+                        left: 0px
+                        top: 0px
+                .product_info_title
+                    position: relative
+                    margin-bottom: 3%
+                    h2
+                        @include font_style(28px,white,500)
+                        margin: 0
+                        margin-top: 2.5%
+                    .h2_line
+                        border: 1px solid $orange
+                        width: 70%
+                .product_info
+                    // border: 1px solid green
+                    width: 85%
+                    display: flex
+                    flex-direction: column
+                    span
+                        line-height: 34px
+                        font-family: $notoserif
+                        @include font_style(16px,$white)
+                .product_recipe_title
+                    position: relative
+                    // margin-bottom: 3%
+                    h2
+                        margin: 0
+                        margin-top: 2.5%
+                        @include font_style(28px,white,400)
+                    .h2_line
+                        border: 1px solid $orange
+                        width: 70%
+                .product_recipe
+                    width: 85%
+                    display: flex
+                    flex-wrap: wrap
+                    // flex-direction: column
+                    justify-content: space-around
+                    span
+                        width: 28%
+                        border: 1px solid $white
+                        border-radius: 3px
+                        text-align: center
+                        font-family: $notoserif
+                        padding: 1%
+                        margin-top: 3%
+                        +transition_set(all,.3s,50%,50%)
+                        @include font_style(18px,$white)
+                        cursor: pointer
+                        &:hover
+                            color: $orange
+                .product_other
+                    display: flex
+                    // border: 1px solid red
+                    align-items: center
+                    justify-content: space-around
+                    margin-top: 5%
+                    margin-bottom: 5%
+                    // margin-left: -5%
+                    .price_item
+                        // border: 1px solid red
+                        display: flex
+                        align-items: center
+                        // margin-left: -5%
+                        width: 50%
+                        span
+                            @include font_style(24px,white)
+                            font-family: $notoserif
+                            margin-bottom: -3%
+                        input
+                            cursor: pointer
+                            height: 150%
+                            width: 80px
+                            font-size: 40px
+                            padding: 0
+                            text-align: center
+                            padding-left: 2%
+                            background-color: #2c2b2b
+                            border: 0px
+                            // border-bottom: 1px solid white
+                            margin-bottom: -3%
+                            color: red
+                    .lb_btn
+                        // border: 1px solid green
+                        width: 150px
+                        height: 50px
+                        border-radius: 10px
+                        cursor: pointer
+                        margin-left: -20%
+                        background-color: #f04242
+                        text-align: center
+                        @include font_style(26px,white,500,nowrap)
+                        line-height: 50px
+                        font-family: $notosans
+                        +transition_set(all,.3s,50%,50%)
+                        &:hover
+                            background-color: $orange   
+    .here
+        transform: scale(1)
+
+.analyticslb_box
+    width: 700px
+    height: 500px
+    background-color: #2c2b2b
+    box-shadow: 3px 3px 10px rgba(255, 255, 255, 0.2)
+    border-radius: 5px
+    +transition_set(all,.7s,center,xx)
+    position: fixed
+    top: 20%
+    left: 50%
+    transform: translateX(-50%) scale(0)
+    z-index: 1000000
+    display: flex
+    flex-direction: column
+    align-items: center
+    .analyticslb_title
+        h1
+            +font_style(28px,white)
+            margin: 20px 0
+        .analyticslb_cross
+            @extend %cross
+            .close_line, .close_line2
+                border-color: white
+    .analytics_div
+        position: relative
+        display: inline-block
+        overflow: hidden
+        // border: 1px solid red
+        .span
+            position: absolute
+            left: 50%
+            transform: translateX(-50%) translateY(5px)
+            padding: 2px 5px
+            // border: 1px solid black
+            white-space: nowrap
+            color: $black
+            opacity: 0
+            @include transition_set(all,.5s)
+        .movespan
+            position: absolute
+            z-index: 10000000
+            left: 0
+            top: 35px
+            padding: 2px 5px
+            color: white
+            background-color: rgba(0, 0, 0, 0.3)
+            border-radius: 2px
+            opacity: 0
+            @include transition_set(all,.2s)
+        .textnode, .NodePoint, .textShow, .crosshair
+            @include transition_set(all,.5s)
+.shock
+    transform: scale(1)
+.analytics_shock
+    transform: translateX(-50%) scale(1)
+
+@media screen and ( max-width: 1199px ) and ( min-width: 1024px )
+    .cards_box
+        width: 90%
+        .cards_content
+            .card
+                width: 30%
+                // min-width: 250px
+                max-width: 280px
+
+
+@media screen and ( max-width: 1023px ) and ( min-width: 769px )
+    .cards_box
+        width: 90%
+        .crumbs
+        .cards_content
+            justify-content: space-around
+            .card
+                width: 280px
+                margin-bottom: 8%
+    .light_box
+        z-index: 10000000000
+        .pic        
+            // display: none
+        .lb_card
+            width: 100%
+            height: 100%
+            // justify-content: center
+            overflow: auto
+            padding-top: 5%
+            padding-bottom: 5%
+            .product_title
+                .lb_cross
+                    top: 80px
+            .card_content
+                flex-direction: column
+                align-items: center
+                justify-content: center
+                .lb_card_left
+                    width: 80%
+                    .img
+                        margin: 0
+                        width: 90%
+                        cursor: auto
+                        // height: 40%
+                    .resume
+                        // display: none
+                .lb_card_right
+                    width: 80%
+                    .product_info_title
+                        .h2_line
+                            width: 90%
+                    .product_recipe_title
+                        .h2_line
+                            width: 90%
+                    .product_recipe
+                        span
+                            width: 25%
+                    .product_info
+                        width: 100%
+
+@media screen and ( max-width: 768px )
+    // .chat
+    //     display: none
+    .cards_box
+        padding-top: 120px
+        width: 100%
+        .crumbs
+            padding-left: 8%
+        .cards_content
+            justify-content: space-around
+            .card
+                width: 45%
+                min-width: 280px
+                margin-bottom: 50px
+                .bottom
+                    height: 15%
+                .title
+                    img, .heart
+                        top: 75%
+                    .analytics
+                        display: none
+        .tab_bar
+            margin-top: 10px
+            .left, .right, .tab_num
+                font-size: 12px
+            .left, .right
+                width: 50px
+                height: 30px
+                border-radius: 20px
+            .tab_num
+                width: 30px
+                height: 30px
+                border-radius: 50%
+            .-on
+                color: white
+    .light_box
+        z-index: 10000000000
+        .pic        
+            // display: none
+        .lb_card
+            width: 100%
+            height: 100%
+            padding-bottom: 5%
+            padding-top: 5%
+            // justify-content: center
+            overflow: auto
+            .product_title
+                margin: 10px 3px
+                // margin-bottom: 10px
+                .lb_cross
+                    top: 50px
+                .h1
+                    h1
+                        font-size: 28px
+            .card_content
+                flex-direction: column
+                align-items: center
+                .product_title
+                    margin: 2%
+                .lb_card_left
+                    margin-bottom: 20px
+                    width: 80%
+                    .img
+                        margin: 0
+                        width: 90%
+                        cursor: auto
+                        margin: 20px 0
+                        // margin-bottom: 35px
+                    .resume
+                        display: none
+                .lb_card_right
+                    width: 90%
+                    margin-bottom: 20px
+                    .product_info_title
+                        .h2_line
+                            width: 90%
+                    .product_recipe_title
+                        display: none
+                        .h2_line
+                            width: 90%
+                    .product_recipe
+                        display: none
+                        span
+                            width: 25%
+                    .product_info
+                        width: 100%
+                        margin-bottom: 10px
+                    .product_other
+                        margin-top: 30px
+                        justify-content: space-between

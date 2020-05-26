@@ -1,0 +1,302 @@
+@import "./base/_var"
+
+
+
+
+$bellota: 'Bellota', cursive
+$oswald: 'Oswald', sans-serif
+$notosans: 'Noto Sans TC', sans-serif
+$notoserif: 'Noto Serif TC', serif
+$orange: #F86422
+$bgcgrey: rgba(204, 203, 203, 0.57)
+$black: #2A2A2A
+$white: #c2bebe
+$blue: #338fe6
+$search_bgc: #515151
+
+body
+    background-color: $bgcgrey
+
+.header
+    .hd_black
+        .header_btn
+            .recipe_btn
+                // transform: scale(1.2) rotate(-10deg)
+                a
+                    color: $orange
+                    font-weight: bolder
+                .line
+                    border-color: $orange
+                    width: 110%    
+
+
+
+.cards_box
+    width: 1200px
+    // height: 900px
+    display: flex
+    flex-direction: column
+    margin: 0 auto
+    // border: 1px solid red
+    .crumbs
+        margin-left: 4%
+        padding: 15px
+        .orange
+            color: $orange
+        a
+            font-size: 20px
+            color: #111111
+    .cards_content
+        width: 90%
+        margin-left: 5%
+        display: flex
+        flex-wrap: wrap
+        justify-content: space-around
+        .card
+            background-color: rgba(41, 41, 41, 0.28)
+            box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5)
+            width: 48%
+            display: flex
+            align-items: center
+            margin-bottom: 3%
+            .img
+                width: 45%
+                height: 90%
+                min-height: 170px
+                border: 2px solid white
+                margin: 2% auto
+                margin-left: 2%
+                overflow: hidden
+                img
+                    width: 100%
+                    height: 100%
+            .card_info
+                // border: 1px solid red
+                width: 50%
+                height: auto
+                // max-width: 70%
+                margin-left: 2%
+                // border: 1px solid red
+                h1
+                    font-size: 26px
+                    font-weight: 500
+                    color: white
+                    line-height: 28px
+                    margin-top: -12%
+                .h1_bgc
+                    background-color: rgba(248, 100, 34, 0.7)
+                    width: 80%
+                    height: 10%
+                    margin-top: 8%
+                .long1
+                    width: 50%
+                .span
+                    // border: 1px solid green
+                    width: 90%
+                    // height: 35%
+                    min-height: 35%
+                    margin-top: 0%
+                    margin-left: 2%
+                    font-size: 16px
+                    color: $black
+                    // margin-bottom: 15px
+                .other_box
+                    // border: 1px solid green
+                    width: 100%
+                    // height: 40%
+                    display: flex
+                    align-items: center
+                    margin-top: 10px
+                    .collect_btn
+                        background-color: #fff
+                        border-radius: 15px
+                        display: flex
+                        align-items: center
+                        width: 200px
+                        height: 40px
+                        cursor: pointer
+                        transition-property: all
+                        transition-duration: .3s
+                        &:hover
+                            transition-property: all
+                            transition-duration: .3s
+                            border: 1px solid $orange
+                            span
+                                color: $orange
+                        img
+                            margin-left: 8%
+                            width: 20%
+                            border: 0
+                        span
+                            transition-property: all
+                            transition-duration: .3s
+                            margin-left: 5%
+                            color: $black
+                    .card_more
+                        display: flex
+                        cursor: pointer
+                        transition-duration: .2s
+                        transform-origin: left center
+                        // margin-left: 10%
+                        transform: translate(20%)
+                        &:hover
+                            transform: rotate(2deg) translate(20% )
+                        img
+                            border: 0
+                            width: 90%
+                        span
+                            color: $blue
+                            font-family: $bellota
+                            font-size: 20px
+                            font-weight: 700
+                            margin-top: 9%
+                            margin-left: -85%
+                            white-space: nowrap
+                        a
+                            text-decoration: none
+                            color: $blue
+                            font-family: $bellota
+                            font-size: 20px
+                            font-weight: 700
+                            margin-top: 9%
+                            margin-left: -85%
+                            white-space: nowrap
+    .tab_bar
+        margin: 0 auto
+        margin-bottom: 1.5%
+        display: flex
+        justify-content: space-between
+        .left, .right, .tab_num
+            cursor: pointer
+            display: flex
+            align-items: center
+            justify-content: center
+            color: $orange
+            border: 1px solid $orange
+            white-space: nowrap
+            margin-left: 5px
+        .left, .right
+            width: 70px
+            border-radius: 30px
+        .tab_num
+            width: 50px
+            height: 50px
+            border-radius: 50%
+        .-on
+            background-color: $orange
+            color: white
+        .-gg
+            background-color: $bgcgrey
+            color: $black
+            border: 0
+            cursor: not-allowed
+
+
+
+@media screen and ( max-width: 1024px ) and ( min-width: 769px)
+    .cards_box
+        width: 95%
+        .crumbs
+            margin-left: 18%
+        .cards_content
+            .card
+                width: 70%
+                min-width: 600px
+
+@media screen and ( max-width: 768px ) and ( min-width: 615px)
+    // .chat
+    //     display: none
+    .cards_box
+        padding-top: 120px
+        width: 95%
+        // min-width: 500px
+        .cards_content
+            // border: 1px solid red
+            .card
+                width: 90%
+                // min-width: 500px
+                // border: 1px solid red
+        .tab_bar
+            .left, .right, .tab_num
+                font-size: 12px
+            .left, .right
+                width: 50px
+                height: 30px
+                border-radius: 20px
+            .tab_num
+                width: 30px
+                height: 30px
+                border-radius: 50%
+            .-on
+                color: white
+
+@media screen and ( max-width: 614px )
+    // .chat
+    //     display: none
+    .cards_box
+        padding-top: 120px
+        width: 98%
+        // min-width: 500px
+        .cards_content
+            // border: 1px solid red
+            .card
+                width: 100%
+                flex-direction: column
+                justify-content: center
+                align-items: center
+                // border: 1px solid red
+                .img
+                    // border: 1px solid red
+                    width: 85%
+                    // height: 70%
+                    min-height: 100px
+                    margin: 0
+                    margin-top: 10px
+                .card_info
+                    width: 85%
+                    margin-top: 10px
+                    h1
+                        margin-top: -6%
+                    .h1_bgc
+                        margin-top: 3%
+                    .span
+                        margin: 0
+                        // margin-top: -5%
+                    .other_box
+                        margin: 0
+                        margin-bottom: 8%
+                        justify-content: space-between
+                        .collect_btn
+                            height: 40px
+                            width: auto
+                            min-width: 100px
+                            padding: 1%
+                            img
+                                width: 20%
+                            span
+                                white-space: nowrap
+                        .card_more
+                            // margin-right: -50%
+                            margin-top: -10px
+                            img
+                                width: 80%
+                            span
+                                margin-left: -75%
+                            a
+                                margin-left: -75%
+
+        .tab_bar
+            margin-top: 10px
+            .left, .right, .tab_num
+                font-size: 12px
+            .left, .right
+                width: 50px
+                height: 30px
+                border-radius: 20px
+            .tab_num
+                width: 30px
+                height: 30px
+                border-radius: 50%
+            .-on
+                color: white
+                

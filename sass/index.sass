@@ -1,0 +1,1124 @@
+@import "./base/_var"
+@import "./module/_function"
+
+
+body
+    overflow-x: hidden
+    overflow-y: auto
+
+@keyframes wind_768
+    0%
+        transform: rotate(3deg)
+    50%
+        transform: rotate(-3deg)
+    100%
+        transform: rotate(3deg)
+
+@keyframes none
+    0%
+        color: #ffffff
+    100%
+        color: #ffffff
+        
+
+@keyframes arrow
+    0%
+        transform: scale(1.2) translateY(5px)
+    50%
+        transform: scale(1.2) translateY(-5px)
+    100%
+        transform: scale(1.2) translateY(5px)
+
+@keyframes shack
+    0%
+        transform: translate(0px,0px)
+    100%
+        transform: translate(-5px,5px)
+@keyframes run
+    0%
+        transform: translateX(3px)
+    50%
+        transform: translateX(9px)
+    100%
+        transform: translateX(0px)
+@keyframes sales_next_run
+    0%
+        transform: translate(0px) rotate(-20deg)
+    50%
+        transform: translate(30px) rotate(-20deg)
+    100%
+        transform: translate(0px) rotate(-20deg)
+
+@keyframes sales_next_run2
+    0%
+        transform: translate(0px) rotate(-10deg)
+    50%
+        transform: translate(30px) rotate(-10deg) 
+    100%
+        transform: translate(0px) rotate(-10deg)
+
+@keyframes rock1
+    0%
+        transform: scale(1.1) rotate(0deg) translate(-70%,-5%)
+    25%
+        transform: rotate(5deg) scale(1.1) translate(-70%,-5%)
+    75%
+        transform: rotate(-5deg) scale(1.1) translate(-70%,-5%)
+    100%
+        transform: scale(1.1) rotate(0deg) translate(-70%,-5%)
+@keyframes rock2
+    0%
+        transform: scale(1.1) rotate(0deg) translate(120%,-40%)
+    25%
+        transform: rotate(5deg) scale(1.1) translate(120%,-40%)
+    75%
+        transform: rotate(-5deg) scale(1.1) translate(120%,-40%)
+    100%
+        transform: scale(1.1) rotate(0deg) translate(120%,-40%)
+
+@keyframes welcome
+    0%
+        clip-path: circle(50% at 50% 50%)
+        display: block
+    100%
+        clip-path: circle(0% at 50% 50%)
+        display: none
+
+.header
+    top: 0
+    z-index: 100000
+
+.welcome
+    position: fixed
+    width: 100%
+    height: 100%
+    background-color: #07071e
+    top: 0
+    z-index: 100000000000000
+    display: flex
+    justify-content: center
+    align-items: center
+    animation: welcome 1s 2.5s forwards
+    .ml5
+        position: relative
+        font-weight: 300
+        font-size: 4em
+        color: $orange
+        .text-wrapper
+            position: relative
+            display: inline-block
+            padding-top: 0.1em
+            padding-right: 0.05em
+            padding-bottom: 0.15em
+            line-height: 1em
+        .line
+            position: absolute
+            left: 0
+            top: 0
+            bottom: 0
+            margin: auto
+            height: 3px
+            width: 100%
+            background-color: $orange
+            transform-origin: 0.5 0
+        .letters
+            display: inline-block
+            opacity: 0
+            font-family: $bellota
+        .ampersand
+            font-family: Baskerville, "EB Garamond", serif
+            font-style: italic
+            font-weight: 400
+            width: 1em
+            margin-right: -0.1em
+            margin-left: -0.1em
+
+@keyframes banner
+    0%
+        transform: scale(1)
+        opacity: .7
+    25%
+        transform: scale(1.025)
+        opacity: .85
+    50%
+        transform: scale(1.05)
+        opacity: 1
+    75%
+        transform: scale(1.075)
+        opacity: .85
+    100%
+        transform: scale(1.1)
+        opacity: .7
+
+.banner
+    width: 100%
+    // height: 1200px
+    // height: 100vh
+    // margin-top: 120px
+    line-height: 0
+    overflow: hidden
+    position: relative
+    .banner_gone
+        display: none
+    .banner_img
+        width: 100%
+        opacity: .9
+        animation: banner 5s infinite linear
+        // margin-top: 50%
+        // background-attachment: fixed
+        // top: 0
+        // z-index: -1
+        // position: fixed
+    .banner_words
+        width: 100%
+        position: absolute
+        top: 25%
+        left: 50%
+        transform: translateX(-50%)
+        display: flex
+        flex-direction: column
+        align-items: center
+        .banner_logo
+            width: 200px
+        .arrow
+            width: 60px
+            margin-top: 150px
+            cursor: pointer
+            &:hover
+                animation: arrow 1.2s infinite
+        .p
+            width: 100%
+            margin-top: 50px
+            text-align: center
+            background-color: rgba(0, 0, 0, 0.5)
+            p
+                // background-color: rgba(0, 0, 0, 0.5)
+                +font_style(36px,white)
+                font-family: $bellota
+    .banner_search
+        display: none
+
+
+.recipe_box
+    padding-bottom: 2%
+    display: flex
+    justify-content: center
+    align-items: center
+    .recipe_outer_box
+        display: flex
+        width: 1200px
+        padding-left: 3%
+        // border: 1px solid red
+        .recipe_content
+            width: 35%
+            margin-top: 4%
+            // border: 1px solid red
+            padding: 3%
+            position: relative
+            display: flex
+            flex-direction: column
+            background-color: white
+            margin-right: 3%
+            box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5)
+            .rc
+                .rct, .rcc
+                    // border: 1px solid green
+                .rct
+                    display: flex
+                    flex-direction: column
+                    position: relative
+                    margin-bottom: 2%
+                    h1
+                        margin: 0
+                        margin-top: 1%
+                        z-index: 100
+                        @include font_style(36px,$black,500,nowrap)
+                    .rct_bgc
+                        background-color: $orange
+                        // border: 1px solid red
+                        width: 360px
+                        height: 15px
+                        margin-top: -3%
+                        z-index: 1
+                .rcc
+                    display: flex
+                    flex-direction: column
+                    justify-content: space-around
+                    .rcc_author, .rcc_info, .rcc_tool
+                        // border: 1px solid red
+                        display: flex
+                    .rcc_author
+                        align-items: center
+                        .author_pic
+                            width: 80px
+                            height: 80px
+                            border-radius: 50%
+                            margin-top: 15px
+                            overflow: hidden
+                            // position: relative
+                            img
+                                width: 100%
+                            .author_pic2
+                                width: 200%
+                                transform: translateX(-15%)
+                        span
+                            margin-left: 15px
+                            margin-top: 5px
+                            @include font_style(28px,$black,700,nowrap)
+                        .rc_collect_btn
+                            // position: absolute
+                            border: 1px solid $bgcgrey
+                            background-color: white
+                            margin-left: 5%
+                            margin-top: 1%
+                            width: 130px
+                            height: 50px
+                            border-radius: 20px
+                            display: flex
+                            align-items: center
+                            cursor: pointer
+                            transition-duration: .3s
+                            &:hover
+                                // color: #F86422
+                                border-color: $orange
+                                box-shadow: 3px 3px rgba(0, 0, 0, 0.1)
+                                transition-duration: .1s
+                            img
+                                margin: 0 10%
+                                margin-right: 0
+                                width: 15%
+                            span
+                                @include font_style(16px,$black,500,nowrap)
+                                margin-top: -3%
+                                margin-right: 3%
+                    .rcc_info
+                        flex-direction: column
+                        h1
+                            @include font_style(28px,$black,300)
+                        span
+                            margin-left: 40px
+                            line-height: 30px
+                            @include font_style(18px,$black)
+                    .rcc_tool
+                        flex-direction: column
+                        h1
+                            @include font_style(28px,$black,300)
+                        span
+                            margin-left: 40px
+                            line-height: 30px
+                            @include font_style(18px,$black,300)
+            .rc2
+                .rc_more
+                    bottom: 5%
+            .rc3
+                .rc_more
+                    bottom: -1%
+                    // left: 65%
+            #rc1
+                display: block
+            #rc2
+                display: none
+            #rc3
+                display: none
+        .recipe_wall
+            width: 60%
+            margin-left: 8%
+            display: flex
+            flex-direction: column
+            .recipe_title
+                display: flex
+                flex-direction: column
+                margin-bottom: 2%
+                transform: rotate(270deg) translate(-10%,-480%)
+                // z-index: 100000
+                span
+                    color: #579ee0
+                    // position: absolute
+                    // bottom: 12%
+                    // margin-top: 1%
+                h1
+                    font-family: $bellota
+                    font-size: 48px
+                    color: $black
+                    margin: 0
+                .line
+                    border: 1px solid $black
+                    border-top: 0px
+                    width: 45%
+                .circle
+                    background-color: $black
+                    width: 10px
+                    height: 10px
+                    margin-left: 43%
+                    margin-top: -2%
+            .rw_more
+                // position: absolute
+                cursor: pointer
+                // color: $orange
+                transition-duration: .5s
+                transition-property: all
+                transform-origin: left
+                z-index: 1000
+                white-space: nowrap
+                a
+                    font-family: $oswald
+                    font-size: 30px
+                    font-weight: 500
+                    margin: 0
+                    padding: 0
+                    text-decoration: none
+                    color: $orange
+                &:hover
+                    transition-duration: .5s
+                    transition-property: all
+                    transform: scale(1.1)
+            .recipe_wall_pic
+                display: flex
+                flex-direction: column
+                .rwb
+                    // position: absolute
+                    border: 5px solid white
+                    cursor: pointer
+                    overflow: hidden
+                    line-height: 0
+                    .rw
+                        width: 100%
+                        height: 100%
+                .rwb1
+                    z-index: 100
+                    margin-left: 10%
+                    width: 500px
+                    // height: 330px
+                .rwb2
+                    width: 400px
+                    // height: 270px
+                    margin-top: -25%
+                    z-index: 10
+                    filter: brightness(70%)
+                .rwb3
+                    width: 350px
+                    // height: 230px
+                    filter: brightness(70%)
+                    z-index: 9
+                    margin-top: -20%
+                    margin-left: 20%
+        
+        
+.sales
+    // background-color: $bgcgrey
+    position: relative
+    display: flex
+    justify-content: center
+    .outside_box
+        display: flex
+        flex-direction: column
+        // min-width: 1200px
+        width: 1200px
+        // border: 1px solid red
+        margin-bottom: 5%
+        .sales_title
+            // border: 1px solid red
+            display: flex
+            flex-direction: column
+            // transform: rotate(270deg)
+            span
+                color: #579ee0
+                margin-top: 0%
+            h1
+                font-family: $bellota
+                font-size: 48px
+                color: $black
+                margin: 0
+            .line
+                border: 1px solid $black
+                border-top: 0px
+                width: 28%
+                // margin-top: -1%
+            .circle
+                background-color: $black
+                width: 10px
+                height: 10px
+                margin-left: 27%
+                margin-top: -1%
+        .hi_line
+            padding: 0
+            margin: 0
+            position: absolute
+            border: 1px solid black
+            width: 100%
+            transform: rotate(-8deg)
+            top: 30%
+            left: 0%
+        .sales_out_box
+            display: flex
+            margin-top: -10%
+            margin-left: 10%
+            .next_left
+                cursor: pointer
+                transform: rotate(-20deg)
+                @include transition_set(all,.3s)
+                margin-top: 40%
+                width: 40px
+                height: 40px
+                margin-right: 5%
+                display: block
+                // width: 50%
+                &:hover
+                    animation: sales_next_run 1s infinite
+                    img
+                        transform: scale(1.5)
+                img
+                    width: 100%
+            .next_right
+                display: block
+                cursor: not-allowed
+                margin-top: 15%
+                transform: rotate(-10deg)
+                // margin-right: 20%
+                @include transition_set(all,.3s)
+                width: 40px
+                height: 40px
+                // width: 50%
+                &:hover
+                    animation: none 10000s infinite
+                    img
+                        transform: scale(1.5)
+                img
+                    width: 100%
+            .sales_box
+                width: 90%
+                position: relative
+                margin-top: 13%
+                .sales_content
+                    width: 90%
+                    height: 100%
+                    overflow: hidden
+                    position: relative
+                    .salebox
+                        position: absolute
+                        width: 25%
+                        top: 15%
+                        cursor: pointer
+                        display: block
+                        transition-duration: .8s
+                    .salebox1
+                        transform: translate(-10%,10%)
+                        &:hover
+                            transform: rotate(6deg) translate(-10%,10%)
+                    .salebox2
+                        transform: translate(90%,-3%)
+                        &:hover
+                            transform: translate(90%,-3%) rotate(6deg)
+                    .salebox3
+                        transform: translate(180%,-17%)
+                        &:hover
+                            transform: translate(180%,-17%) rotate(6deg)
+                    .salebox4
+                        transform: translate(270%,-28%)
+                        &:hover
+                            transform: translate(270%,-28%) rotate(6deg)
+                    .salebox5
+                        // display: none
+                        transform: translate(800%,-42%)
+                        &:hover
+                            transform: rotate(6deg) translate(-10%,10%)
+                    .salebox6
+                        // display: none
+                        transform: translate(800%,-42%)
+                        &:hover
+                            transform: translate(90%,-3%) rotate(6deg)
+                    .salebox7
+                        // display: none
+                        transform: translate(800%,-42%)
+                        &:hover
+                            transform: translate(180%,-17%) rotate(6deg)
+                    .salebox8
+                        // display: none
+                        transform: translate(800%,-42%)
+                        &:hover
+                            transform: translate(270%,-28%) rotate(6deg)
+
+
+@media screen and ( max-width: 1199px ) and ( min-width: 1025px)
+    .banner
+        .banner_words
+            .arrow
+                display: none
+    .recipe_box
+        padding-top: 2%
+        .recipe_outer_box
+            // border: 1px solid red
+            width: 85%
+            .recipe_wall
+                margin-left: 0%
+                width: 55%
+                .recipe_title
+                    transform: rotate(0deg) translate(-20px,0%)
+                    width: 200px
+                    margin-left: -5%
+                    h1
+                        font-size: 34px
+                    .line
+                        width: 100%
+                    .circle
+                        margin-left: 95%
+                        margin-top: -5%
+                .recipe_wall_pic
+                    display: flex
+                    flex-direction: row
+                    flex-wrap: wrap
+                    .rwb
+                        width: 90%
+                        margin: 0
+                        // margin-left: -10%
+                    .rwb2
+                        width: 75%
+                        margin-top: -20%
+                        margin-left: -10%
+                    .rwb3
+                        width: 75%
+                        margin-top: -20%
+                        margin-left: 20%
+            .recipe_content
+                width: 40%
+                .rc
+                    .rct
+                        h1
+                            font-size: 36px
+    .sales
+        .outside_box
+            width: 85%
+            // border: 1px solid red
+            .sales_title
+                width: 230px
+                h1
+                    font-size: 34px
+                .line
+                    width: 100%
+                .circle
+                    margin-left: 95%
+                    margin-top: -5%
+            .sales_out_box
+                margin-top: -12%
+            .hi_line
+                top: 25%
+
+@media screen and ( max-width: 1024px ) and ( min-width: 769px)
+    .banner
+        .banner_words
+            .arrow
+                display: none
+    .recipe_box
+        padding: 2%
+        .recipe_outer_box
+            // border: 1px solid red
+            width: 85%
+            // flex-direction: column
+            .recipe_wall
+                margin-left: 0%
+                width: 35%
+                // order: 2
+                // border: 1px solid red
+                .recipe_wall_pic
+                    margin-top: 2%
+                    .rwb
+                        margin: 0
+                        // width: 28%
+                        width: 100%
+                        height: 50%
+                    .rwb2
+                        transform: scale(.85)
+                        // margin-top: 10%
+                        filter: brightness(70%)
+                    .rwb3
+                        transform: scale(.7)
+                        margin-top: -10%
+                        filter: brightness(70%)
+                .rw_more
+                    transform: scale(.7)
+                    margin-left: 24%
+                    margin-top: -5%
+                    // margin: 0 auto
+                    // border: 1px solid red
+                    .line
+                        display: none
+                    &:hover
+                        transform: scale(.9)
+                        .line           
+                            display: none
+                .recipe_title
+                    width: 200px
+                    margin-left: -5%
+                    transform: rotate(0deg) translate(-45px,0%)
+                    h1
+                        font-size: 34px
+                    .line
+                        width: 100%
+                    .circle
+                        margin-left: 95%
+                        margin-top: -5%
+            .recipe_content
+                width: 50%
+                // border: 1px solid red
+                margin: 0 auto
+                flex-wrap: nowrap
+                // height: 300px
+                justify-content: flex-start
+                // margin-bottom: 5%
+                margin-top: 8%
+                .rc
+                    // border: 1px solid $black
+                    // height: 400px
+                    // margin-left: 5%
+                    .rct
+                        h1
+                            font-size: 28px
+                        .rct_bgc
+                            width: 280px
+                            margin-top: -2%
+                    .rcc
+                        .rcc_author
+                            .author_pic
+                                // margin-left: 2%
+                            span
+                                font-size: 24px
+                        .rcc_info
+                            // order: 3
+                            // margin-left: 45%
+                            // margin-top: -20%
+                            h1
+                                font-size: 24px
+                            span
+                                font-size: 15px
+                        .rcc_tool
+                            h1
+                                font-size: 24px
+                            span
+                                font-size: 15px
+    .sales
+        .outside_box
+            width: 85%
+            // border: 1px solid red
+            .sales_title
+                width: 230px
+                h1
+                    font-size: 34px
+                .line
+                    width: 100%
+                .circle
+                    margin-left: 95%
+                    margin-top: -5%
+            .sales_out_box
+                margin-top: -12%
+            .hi_line
+                top: 25%
+
+
+@media screen and ( max-width: 768px ) and ( min-width: 500px)
+    .banner
+        .banner_words
+            .arrow
+                display: none
+    .welcome
+        display: none
+    .banner
+        margin-top: 90px
+        position: relative
+        .banner_words
+            transform: translate(0) rotate(0deg)
+            left: -0%
+            top: 40%
+            // border: 1px solid red
+            .banner_logo
+                display: none
+            .p
+                margin-top: 0
+                text-align: center
+                p
+                    // padding-left: 25%
+                    font-size: 20px
+        .banner_search
+            position: absolute
+            bottom: 15%
+            left: 50%
+            transform: translateX(-50%)
+            display: block
+            z-index: 10
+            width: 80%
+            overflow: hidden
+            border-radius: 10px
+            box-shadow: 2px 2px 30px $white
+            // height: 50px
+            input
+                width: 100%
+                min-width: 200px
+                height: 40px
+                // border-radius: 10px
+                padding-left: 10px
+                border: 0
+                +font_style(24px,$black)
+            .input_bgc
+                cursor: pointer
+                width: 70px
+                height: 55px
+                background-color: rgba(0,0,0,0.5)
+                position: absolute
+                // border-radius: 0px 10px 10px 0px
+                top: 0
+                right: 0
+                display: flex
+                justify-content: center
+                align-items: center
+                border-left: 1px solid $black
+                img
+                    position: absolute
+                    top: 15%
+                    width: 30px
+    .recipe_box
+        // min-width: 500px
+        padding-top: 2%
+        .recipe_outer_box
+            // border: 1px solid red
+            width: 95%
+            flex-direction: column
+            // align-items: center
+            .recipe_wall
+                // border: 1px solid red
+                width: 100%
+                margin: 0
+                margin-left: -2%
+                padding: 0
+                .recipe_wall_pic
+                    // border: 1px solid red
+                    margin: 0
+                    flex-direction: row
+                    width: 100%
+                    justify-content: space-around
+                    .rwb
+                        margin: 0
+                        width: 25%
+                    .rwb2
+                        width: 25%
+                        filter: brightness(70%)
+                    .rwb3
+                        width: 25%
+                        filter: brightness(70%)
+                .rw_more
+                    transform: scale(.7) translateY(0)
+                    margin-left: 6%
+                    .line
+                        display: none
+                    a
+                        font-size: 24px
+                    &:hover
+                        transform: scale(.9)
+                        .line           
+                            display: none
+                .recipe_title
+                    width: 200px
+                    // margin-left: -5%
+                    transform: rotate(0deg) translate(0%)
+                    h1
+                        font-size: 34px
+                        white-space: nowrap
+                    .line
+                        width: 100%
+                    .circle
+                        margin-left: 95%
+                        margin-top: -5%
+            .recipe_content
+                width: 90%
+                margin: 0
+                // margin-left: -2%
+                flex-wrap: nowrap
+                justify-content: flex-start
+                .rc
+                    // border: 1px solid $black
+                    // height: 400px
+                    // margin-left: 5%
+                    .rct
+                        h1
+                            font-size: 28px
+                        .rct_bgc
+                            width: 280px
+                            margin-top: -2%
+                    .rcc
+                        .rcc_author
+                            .author_pic
+                                // margin-left: 2%
+                            span
+                                font-size: 20px
+                        .rcc_info
+                            // order: 3
+                            // margin-left: 45%
+                            // margin-top: -20%
+                            h1
+                                font-size: 24px
+                            span
+                                margin-left: 20px
+                                font-size: 14px
+                        .rcc_tool
+                            h1
+                                font-size: 24px
+                            span
+                                margin-left: 20px
+                                font-size: 14px
+    // .chat
+    //     display: none
+    .sales
+        // min-width: 500px
+        padding-top: 2%
+        margin-bottom: 20%
+        .outside_box
+            width: 95%
+            // border: 1px solid red
+            .sales_title
+                width: 230px
+                h1
+                    font-size: 34px
+                    white-space: nowrap
+                .line
+                    width: 100%
+                .circle
+                    margin-left: 95%
+                    margin-top: -5%
+            .sales_out_box
+                // margin-top: -12%
+                width: 100%
+                // border: 1px solid red
+                margin: 0 auto
+                .next_left, .next_right
+                    display: none
+                    margin: 0
+                .sales_box
+                    width: 100%
+                    padding-top: 0
+                    margin: 0
+                    .sales_content
+                        width: 100%
+                        padding-top: 30px
+                        // margin-top: 20px
+                        // border: 1px solid red
+                        margin: 0
+                        overflow: visible
+                        display: flex
+                        flex-wrap: wrap     
+                        overflow: hidden                       
+                        .salebox
+                            width: 200px
+                            // min-width: 200px
+                            position: static
+                            margin: 0
+                            margin-left: 0%
+                            transform: translate(0)
+                            animation: wind_768 10s infinite
+                            margin-bottom: 10%
+                            // max-height: 100px
+                            // height: 170px
+            .hi_line
+                display: none
+
+@media screen and ( max-width: 499px )
+    .banner
+        .banner_words
+            .arrow
+                display: none
+    .welcome
+        display: none
+    .banner
+        margin-top: 90px
+        position: relative
+        .banner_words
+            transform: translate(0) rotate(0deg)
+            left: -0%
+            top: 40%
+            // border: 1px solid red
+            .banner_logo
+                display: none
+            .p
+                margin-top: 0
+                text-align: center
+                p
+                    // padding-left: 25%
+                    font-size: 20px
+        .banner_search
+            position: absolute
+            bottom: 15%
+            left: 50%
+            transform: translateX(-50%)
+            display: block
+            z-index: 10
+            width: 80%
+            overflow: hidden
+            border-radius: 10px
+            box-shadow: 2px 2px 30px $white
+            // height: 50px
+            input
+                width: 100%
+                min-width: 200px
+                height: 40px
+                // border-radius: 10px
+                padding-left: 10px
+                border: 0
+                +font_style(24px,$black)
+            .input_bgc
+                cursor: pointer
+                width: 70px
+                height: 55px
+                background-color: rgba(0,0,0,0.5)
+                position: absolute
+                // border-radius: 0px 10px 10px 0px
+                top: 0
+                right: 0
+                display: flex
+                justify-content: center
+                align-items: center
+                border-left: 1px solid $black
+                img
+                    position: absolute
+                    top: 15%
+                    width: 30px
+    .recipe_box
+        // min-width: 500px
+        padding-top: 2%
+        .recipe_outer_box
+            // border: 1px solid red
+            width: 95%
+            flex-direction: column
+            // align-items: center
+            .recipe_wall
+                // border: 1px solid red
+                width: 100%
+                margin: 0
+                margin-left: -2%
+                padding: 0
+                .recipe_wall_pic
+                    // border: 1px solid red
+                    margin: 0
+                    flex-direction: row
+                    width: 100%
+                    justify-content: space-around
+                    .rwb
+                        margin: 0
+                        width: 25%
+                    .rwb2
+                        width: 25%
+                        filter: brightness(70%)
+                    .rwb3
+                        width: 25%
+                        filter: brightness(70%)
+                .rw_more
+                    transform: scale(.7) translateY(0)
+                    margin-left: 6%
+                    .line
+                        display: none
+                    a
+                        font-size: 24px
+                    &:hover
+                        transform: scale(.9)
+                        .line           
+                            display: none
+                .recipe_title
+                    width: 200px
+                    // margin-left: -5%
+                    transform: rotate(0deg) translate(0%)
+                    h1
+                        font-size: 34px
+                        white-space: nowrap
+                    .line
+                        width: 100%
+                    .circle
+                        margin-left: 95%
+                        margin-top: -5%
+            .recipe_content
+                width: 90%
+                margin: 0
+                // margin-left: -2%
+                flex-wrap: nowrap
+                justify-content: flex-start
+                .rc
+                    // border: 1px solid $black
+                    // height: 400px
+                    // margin-left: 5%
+                    .rct
+                        h1
+                            font-size: 28px
+                        .rct_bgc
+                            width: 280px
+                            margin-top: -2%
+                    .rcc
+                        .rcc_author
+                            .author_pic
+                                // margin-left: 2%
+                            span
+                                font-size: 20px
+                        .rcc_info
+                            // order: 3
+                            // margin-left: 45%
+                            // margin-top: -20%
+                            h1
+                                font-size: 24px
+                            span
+                                margin-left: 20px
+                                font-size: 14px
+                        .rcc_tool
+                            h1
+                                font-size: 24px
+                            span
+                                margin-left: 20px
+                                font-size: 14px
+    // .chat
+    //     display: none
+    .sales
+        // min-width: 500px
+        padding-top: 2%
+        margin-bottom: 20%
+        .outside_box
+            width: 95%
+            // border: 1px solid red
+            .sales_title
+                width: 230px
+                h1
+                    font-size: 34px
+                    white-space: nowrap
+                .line
+                    width: 100%
+                .circle
+                    margin-left: 95%
+                    margin-top: -5%
+            .sales_out_box
+                // margin-top: -12%
+                width: 100%
+                // border: 1px solid red
+                margin: 0 auto
+                .next_left, .next_right
+                    display: none
+                    margin: 0
+                .sales_box
+                    width: 100%
+                    padding-top: 0
+                    margin: 0
+                    .sales_content
+                        width: 100%
+                        padding-top: 30px
+                        // margin-top: 20px
+                        // border: 1px solid red
+                        margin: 0
+                        overflow: visible
+                        display: flex
+                        flex-wrap: wrap     
+                        overflow: hidden                       
+                        .salebox
+                            width: 150px
+                            // min-width: 200px
+                            position: static
+                            margin: 0
+                            margin-left: 0%
+                            transform: translate(0)
+                            animation: wind_768 10s infinite
+                            margin-bottom: 10%
+                            // max-height: 100px
+                            max-height: 170px
+            .hi_line
+                display: none
+

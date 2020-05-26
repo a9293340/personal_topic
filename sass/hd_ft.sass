@@ -1,0 +1,580 @@
+@import "./base/_var"
+@import "./module/_function"
+.overflow_hd
+    overflow: hidden
+.header
+    position: relative
+    // border: 1px solid black
+    height: 120px
+    width: 100%
+    background-color: #07071e
+    display: flex
+    align-items: center
+    justify-content: space-between
+    .hd_black
+        // position: fixed
+        // border: 1px solid red
+        // position: absolute
+        margin-top: 2%
+        height: 100%
+        width: 100%
+        // background-color: rgba(0, 0, 0, 0.3)
+        display: flex
+        align-items: center
+        justify-content: space-around
+        .burger
+            z-index: 100000
+            position: relative
+            width: 80px
+            height: 80px
+            // border: 1px solid red
+            margin: 0 2%
+            margin-top: -2%
+            display: flex
+            flex-direction: column
+            justify-content: center
+            align-items: center
+            display: none
+            cursor: pointer
+            transition-property: all
+            transition-duration: 1s
+            .line
+                width: 50%
+                border: 3px solid white
+                border-radius: 4px
+                margin-top: 20%
+                transform-origin: center
+            .first_line
+                margin-top: 0
+                transition-property: all
+                transition-duration: 1s
+            .second_line
+                transition-property: all
+                transition-duration: .5s
+            .third_line
+                transition-property: all
+                transition-duration: 1s
+        .to_cross
+            transform: translateX(25px)
+            .first_line
+                transform: rotate(45deg) translateY(26px) translateX(0px)
+            .second_line
+                transform: scale(0)
+            .third_line
+                transform: rotate(-45deg) translateY(-26px) translateX(0px)
+        .burger_lbox
+            z-index: 10000
+            // border: 1px solid red
+            background-color: #07071e
+            position: fixed
+            width: 100%
+            height: 100%
+            top: 0%
+            display: flex
+            clip-path: circle(0% at 50% 50%)
+            flex-direction: column
+            // justify-content: center
+            align-items: center
+            transition-property: all
+            transition-duration: 1s
+            overflow: auto
+            a
+                text-decoration: none
+                color: white
+                font-size: 28px
+                margin-top: 5%
+                margin-left: -0%
+                transition-property: all
+                transition-duration: .3s
+                white-space: nowrap
+                // border: 1px solid red
+                display: flex
+                justify-content: center
+            #burger_customer
+                margin-bottom: 5%
+                &:hover
+                    color: $orange
+                .logo_lb
+                    cursor: pointer
+                    // border: 1px solid red
+                    width: 180%
+                    
+        .burger_lbox_display
+            clip-path: circle(65% at 50% 50%)
+        a
+            margin-left: -4%
+            .logo
+                cursor: pointer
+                width: 70%
+                margin-left: -30%
+                margin-bottom: 15%
+        .main_btn
+            margin-right: 30px
+            // background-color: rgba(0, 0, 0, 0.15)
+            // text-shadow: #6c96d4 0em 0em 1em
+            &:hover
+                transform: scale(1.3)
+                transform-origin: 50% 50%
+                transition-duration: .3s
+                a
+                    color: $orange
+                    transition-duration: .3s
+                    font-weight: bolder
+                    // text-shadow: white 0em 0em 0.48em
+                .line
+                    border-color: $orange
+                    transition-duration: .3s
+            a
+                margin: 0
+                padding: 0
+                text-decoration: none
+                color: white
+                font-family: $bellota
+            .line
+                border: 1px solid white
+                transition-duration: .3s
+        .header_btn
+            display: flex
+            // margin-left: -20%
+            transform: translateX(-100%)
+            .main_btn
+                &:hover
+                    transform: scale(1.3) rotate(-10deg)
+                    a
+                        font-weight: 500
+                    .line
+                        width: 110%
+                a
+                    font-size: 20px
+                .line
+                    width: 20px
+            .about_btn
+                margin-right: 0
+        .menber_btn
+            margin-right: -10%
+            // margin-top: 1%
+            // border: 1px solid red
+            margin-top: 20px
+            display: flex
+            font-weight: 300
+            align-items: flex-end
+            justify-content: space-between
+            .shopping_btn
+                cursor: pointer
+                position: relative
+                // border: 1px solid red
+                background-color: #07071e
+                display: flex
+                justify-content: center
+                align-items: center
+                padding: 5px
+                border-radius: 5px
+                top: 10%
+                right: 5%
+                @include transition_set(all,.5s)
+                .ball
+                    position: absolute
+                    width: 10px
+                    height: 10px
+                    border-radius: 50%
+                    background-color: $orange
+                    // right: -8%
+                    top: -20%
+                    left: -10%
+                    display: none
+                img
+                    width: 100%
+            .shpping_btn_fixed_768up
+                position: fixed
+                top: 15%
+                right: 0%
+            .shpping_btn_fixed_768down
+                position: fixed
+                top: 15%
+                right: 0%
+            .signin_btn
+                cursor: pointer
+                transition-duration: .3s
+                img
+                    width: 150%
+                &:hover
+                    color: $orange
+                    transform: scale(1.2)
+                    // text-shadow: white 0em 0em 0.48em
+                    transition-duration: .3s
+                    font-weight: bolder
+        .menber_head
+            position: absolute
+            width: 70px
+            height: 70px
+            right: 1%
+            bottom: 10%
+            border-radius: 50%
+            background-size: cover
+            transition-duration: .1s
+            display: none
+            cursor: pointer
+            img
+                width: 100%
+                border-radius: 50%
+                border: 1px solid white
+            &:hover
+                .extend_menber
+                    display: flex
+            .extend_menber
+                // border: 1px solid red
+                height: 100px
+                width: 120px
+                position: absolute
+                right: -12%
+                top: 101%
+                z-index: 1
+                // display: flex
+                display: none
+                flex-direction: column
+                justify-content: space-around
+                align-items: center
+                background-color: #07071e
+                .line
+                    border: 1px solid white
+                    width: 75px
+                a
+                    margin: 0
+                    padding: 0
+                    text-decoration: none
+                    font-size: 18px
+                    color: white
+                    &:hover
+                        color: $orange
+                .a1
+                    margin-top: 10px
+                .a2
+                    margin-bottom: 5px
+    .hd_black_position
+        position: fixed
+        a
+            // transform: translateX(50px)
+
+.footer
+    width: 100%
+    height: auto
+    // border: 1px solid red
+    background-color: #07071e
+    display: flex
+    justify-content: space-around
+    align-items: center
+    .footer_left, .footer_content, .footer_right
+        height: 100%
+        // border: 1px solid red
+        width: 30%
+    .footer_left
+        // transform: translateY(-5%)
+        display: flex
+        flex-direction: column
+        justify-content: center
+        span
+            color: #ffffff
+            // transform: translateX(30%)
+            margin: 10px 0
+            font-size: 16px
+            font-family: $notosans
+        .contact
+            font-size: 20px
+            color: $white
+            margin-bottom: 5px
+            font-family: $bellota
+    .footer_content
+        display: flex
+        flex-direction: column
+        justify-content: center
+        align-items: center
+        margin-top: 2%
+        margin-bottom: 2%
+        // transform: translateY(-5%)
+        .social
+            display: flex
+            transform: translateX(4%)
+            margin-top: 30px
+            img
+                margin-right: 20px
+    .footer_right
+        display: flex
+        // flex-direction: column
+        justify-content: space-around
+        align-items: center
+        .main_btn
+            display: flex
+            flex-direction: column
+            justify-content: center
+            span
+                color: $white
+                font-family: $bellota
+                font-size: 22px
+                margin-top: 5px
+                cursor: pointer
+                &:hover
+                    color: $orange
+        .ft_menber
+            display: flex
+            flex-direction: column
+            justify-content: center
+            span
+                color: $white
+                margin-left: -30%
+                font-size: 18px
+                font-family: $bellota
+                font-weight: 300
+                cursor: pointer
+                margin-top: 10px
+                &:hover
+                    color: $orange
+.shopping_bgc
+    width: 100%
+    height: 100%
+    top: 0
+    background-color: rgba(0,0,0,0.6)
+    position: absolute
+    z-index: 9999
+    display: none
+.shopping_bgc_open
+    display: block
+.shopping_cart
+    position: fixed
+    width: 400px
+    height: 100vh
+    background-color: rgba(3, 3, 12, .7)
+    // opacity: .6
+    z-index: 100000000000
+    top: 0
+    left: -400px
+    @include transition_set(all,.3s,left,xx)
+    transition-delay: .1s
+    display: flex
+    flex-direction: column
+    align-items: center
+    overflow: auto
+    .close
+        @extend %cross
+    h1
+        margin-top: 40px
+        font-size: 36px
+        color: white
+        font-family: $bellota
+    .sc_products
+        .sc_product
+            display: flex
+            width: 90%
+            // background-color: white
+            padding: 2% 1%
+            justify-content: space-between
+            // box-sizing: border-box
+            margin-left: 2%
+            position: relative
+            margin-bottom: 2%
+            &:hover
+                img
+                    transform: translateY(-10px)
+            img
+                @include transition_set(all,.3s)
+                width: 50%
+                height: 50%
+                border-radius: 5px
+            .sc_close
+                border: 2px solid #f04242
+                cursor: pointer
+                border-radius: 50%
+                width: 15px
+                height: 15px
+                position: absolute
+                right: 2%
+                top: 5%
+                display: flex
+                justify-content: center
+                align-items: center
+                @include transition_set(all,.5s)
+                &:hover
+                    background-color: #f04242
+                    .sc_close_line
+                        background-color: white
+                .sc_close_line
+                    @include transition_set(all,.5s)
+                    background-color: #f04242
+                    width: 15px
+                    height: 2px
+            .sc_product_contents
+                width: 45%
+                display: flex
+                flex-direction: column
+                h3
+                    margin: 0
+                    @include font_style(18px,$orange)
+                    padding-bottom: 10px
+                span
+                    @include font_style(16px,$white)
+                    padding-bottom: 10px
+                .price
+                    display: flex
+                    margin-top: 10px
+                    width: 100%
+                    align-items: center
+                    span
+                        @include font_style(20px,$white)
+                        margin-right: 10px
+                    .sc_number
+                        @include font_style(24px,$orange)
+                        margin-left: 10px
+                    .count
+                        cursor: pointer
+                        margin-bottom: 10px
+    .sc_total
+        margin-top: 40px
+        display: flex
+        align-items: center
+        span
+            @include font_style(20px,white)
+        #sc_total
+            margin-left: 5px
+            margin-right: 5px
+            @include font_style(32px,$orange)
+    .sc_bonus_before
+        margin-top: 10px
+        display: flex
+        align-items: center
+        span
+            @include font_style(20px,white)
+        #sc_bonus
+            margin-left: 5px
+            margin-right: 5px
+            @include font_style(28px,#f04242)
+            transform: rotate(-6deg)
+    .sc_bonus_after
+        margin-top: 10px
+        display: flex
+        align-items: center
+        span
+            @include font_style(24px,#f04242)
+    .sc_btn
+        margin-top: 20px
+        padding: 5px
+        border: 1px solid white
+        border-radius: 5px
+        cursor: pointer
+        margin-bottom: 20px
+        &:hover
+            border-color: $orange
+            span
+                color: $orange
+        img
+            @include transition_set(all,.3s)
+        span
+            @include font_style(24px,white)
+            @include transition_set(all,.3s)
+    .sc_display_none
+        display: none
+.shopping_right
+    left: 0
+
+
+@media screen and ( max-width: 1300px ) and ( min-width: 1025px)
+    .header
+        .hd_black
+            .header_btn
+                margin-right: -40%
+            a
+                margin-left: -5%
+
+
+
+@media screen and ( max-width: 1024px ) and ( min-width: 769px)
+    .header
+        .hd_black
+            // justify-content: space-around
+            a
+                margin-left: 5%
+                width: 100px
+                .logo
+                    width: 100%
+                    // margin-left: 0
+            .header_btn
+                // margin-right: -35%
+                transform: scale(.9) translateX(-10%)
+            .menber_btn
+                margin-right: 0%
+                // transform: scale(.9)
+            .menber_head
+                .extend_menber
+                    z-index: 100000000
+    .footer
+        justify-content: space-around
+        .footer_right
+            .ft_menber
+                display: none
+    
+@media screen and ( max-width: 768px )
+    .header
+        top: 0
+        position: fixed
+        z-index: 100000
+        height: 90px
+        .hd_black
+            justify-content: space-between
+            a
+                // border: 1px solid red
+                margin-left: 0
+                width: 80px
+                .logo
+                    width: 100%
+                    margin-left: 0
+            .burger
+                display: flex
+                // width: 80px
+                .line
+                    border: 1px solid white
+            .header_btn
+                display: none
+            .menber_btn
+                margin-top: 0
+                margin-right: 0
+                .shopping_btn
+                    transform: translateX(20px)
+                    transform-origin: 50% 50%
+                    &:hover
+                        transform: scale(1.2) translateX(-10px)
+                        transition-duration: .3s
+            .menber_head
+                top: 15%
+                right: 10px
+                width: 60px
+                .extend_menber
+                    top: 90%
+                    right: -10px
+    .footer
+        // height: 140px
+        height: auto
+        .footer_left
+            width: 45%
+            order: 2
+            // justify-content: center
+            span
+                margin: 0
+                transform: translateX(0)
+        .footer_content
+            order: 1
+            img
+                width: 90px
+                // height:
+            .social
+                margin-top: 10px
+                // width: 50px
+                transform: translateX(0)
+                img
+                    margin-right: 20px
+                    width: 30px
+        .footer_right
+            display: none
+    .shopping_cart
+        position: fixed
+        width: 350px
+        height: 100%
+        // padding-top: 90px
+

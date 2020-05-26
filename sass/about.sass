@@ -1,0 +1,241 @@
+@import "./base/_var"
+@import "./module/_function"
+
+
+body
+    background-color: $bgcgrey
+
+
+
+.header
+    .hd_black
+        .header_btn
+            .about_btn
+                // transform: scale(1.2) rotate(-10deg)
+                a
+                    color: $orange
+                    font-weight: bolder
+                .line
+                    border-color: $orange
+                    width: 110%    
+
+
+.main_box
+    width: 1200px
+    margin: 0 auto
+    margin-top: 2%
+    margin-bottom: 2%
+    display: flex
+    min-height: 900px
+    flex-direction: column
+    .question_box
+        display: flex
+        // border: 1px solid green
+        justify-content: center
+        flex-wrap: wrap
+        width: 100%
+        margin: 0 auto
+        align-items: center
+        margin-bottom: 5%
+        .line
+            border: .5px solid $orange
+            height: 30px
+            margin: 0 2%
+        span
+            font-size: 24px
+            font-family: $bellota
+            font-weight: 400
+            color: $black
+            // margin-left: 2%
+            cursor: pointer
+            transition-property: all
+            transition-duration: .3s
+            &:hover
+                transform: scale(1.1)
+        .orange
+            color: $orange
+            transform: scale(1.1)
+    .answer_box
+        display: flex
+        flex-direction: column
+        // border: 1px solid red
+        width: 100%
+        margin: 0 auto
+        align-items: center
+        // height: 100%
+        h1
+            font-size: 32px
+            font-family: $bellota
+            font-weight: 700
+            margin-top: 0
+            color: $orange
+        .content
+            width: 50%
+            display: flex
+            flex-direction: column
+            span
+                line-height: 30px
+                font-size: 20px
+                margin-bottom: 5%
+                color: $black
+        .pics
+            display: flex
+            // height: 40%
+            width: 50%
+            justify-content: space-between
+            img
+                width: 45%
+        .swiper-container
+            width: 500px
+            height: 300px
+            .swiper-slide
+                overflow: hidden
+                position: relative
+                .slide-inner
+                    position: absolute
+                    left: 0
+                    top: 0
+                    width: 100%
+                    height: 100%
+                    background-size: cover
+                    background-position: center
+        .time_box
+            display: flex
+            justify-content: space-around
+            width: 680px
+            margin-top: 2%
+            margin-bottom: 1%
+            span
+                transition-property: all
+                transition-duration: .3s
+                font-size: 18px
+                font-family: $bellota
+                color: $black
+            .big_span
+                transform: scale(1.3)
+                font-weight: bolder
+                color: $orange
+        .time_line
+            display: flex
+            align-items: center
+            // margin: 5% 0
+            // border: 1px solid red
+            margin-bottom: 2%
+            .circle_orange
+                background-color: $orange
+                transform: scale(1.3)
+            .circle, .line
+                border: 1px solid $orange
+            .circle
+                width: 30px
+                height: 30px
+                border-radius: 50%
+                cursor: pointer
+                transition-property: all
+                transition-duration: .3s
+                &:hover
+                    background-color: $orange
+                    transform: scale(1.3)
+            .line
+                width: 100px
+                height: 0
+                border: 2px solid $orange  
+        .time_article
+            // border: 1px solid red
+            width: 30%
+            display: flex
+            flex-direction: column
+            align-items: center
+            h2
+                font-weight: 700
+                // margin: 0 auto
+                color: $black
+            .time_span
+                font-size: 16px
+                line-height: 30px
+                color: $black
+        .article_none
+            display: none
+    .here
+        display: none
+        
+    
+
+@media screen and ( max-width: 1199px ) and ( min-width: 1024px )
+    .main_box
+        width: 95%
+        .answer_box
+            .content
+                width: 70%
+            .pics
+                width: 80%
+
+@media screen and ( max-width: 1023px ) and ( min-width: 769px )
+    .main_box
+        .question_box
+            .about_btn
+                width: 33%
+                text-align: center
+                font-size: 24px
+                margin-bottom: 2%
+            .min_line
+                display: none
+        width: 95%
+        .answer_box
+            .content
+                width: 70%
+            .pics
+                width: 80%
+                flex-wrap: wrap
+                img
+                    width: 90%
+                    margin-bottom: 2%
+            .time_article
+                width: 80%
+            .swiper-container
+                width: 95%
+
+@media screen and ( max-width: 768px )
+    // .chat
+    //     display: none
+    .main_box
+        padding-top: 85px
+        .question_box
+            width: 100%
+            .about_btn
+                width: 48%
+                text-align: center
+                font-size: 18px
+                margin-bottom: 2%
+                margin-top: 2%
+            .line
+                display: none
+            .min_line
+                display: none
+        width: 95%
+        .answer_box
+            h1
+                font-size: 28px
+            .content
+                width: 90%
+            .pics
+                width: 80%
+                flex-wrap: wrap
+                img
+                    width: 90%
+                    margin-bottom: 2%
+            .time_box
+                width: 100%
+                justify-content: space-between
+            .time_line
+                width: 95%
+                .line
+                    width: calc( ( 100% - 100px ) / 4 )
+                .circle
+                    width: 20px
+                    height: 20px
+            .time_article
+                width: 80%
+            .swiper-container
+                width: 95%
+

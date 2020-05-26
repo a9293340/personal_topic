@@ -1,0 +1,598 @@
+@charset "UTF-8";
+* {
+  font-family: 'Noto Sans TC', '微軟正黑體', "Times New Roman", sans-serif;
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+body {
+  background-color: rgba(204, 203, 203, 0.37);
+}
+
+.sign_in_box .signin_title .signin_cross, .sign_up_box .signup_title .signup_cross {
+  position: absolute;
+  right: 20px;
+  top: 40px;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+
+.sign_in_box .signin_title .signin_cross:hover .close_line, .sign_up_box .signup_title .signup_cross:hover .close_line, .sign_in_box .signin_title .signin_cross:hover .close_line2, .sign_up_box .signup_title .signup_cross:hover .close_line2 {
+  border-color: #F86422;
+}
+
+.sign_in_box .signin_title .signin_cross .close_line, .sign_up_box .signup_title .signup_cross .close_line, .sign_in_box .signin_title .signin_cross .close_line2, .sign_up_box .signup_title .signup_cross .close_line2 {
+  width: 30px;
+  border-top: 4px solid #e6c0a6;
+  -webkit-transition-property: all;
+  transition-property: all;
+  -webkit-transition-duration: 0.3s;
+          transition-duration: 0.3s;
+  -webkit-transform-origin: 50% 50%;
+          transform-origin: 50% 50%;
+}
+
+.sign_in_box .signin_title .signin_cross .close_line, .sign_up_box .signup_title .signup_cross .close_line {
+  -webkit-transform: rotate(45deg) translateX(-2.5px);
+          transform: rotate(45deg) translateX(-2.5px);
+}
+
+.sign_in_box .signin_title .signin_cross .close_line2, .sign_up_box .signup_title .signup_cross .close_line2 {
+  -webkit-transform: rotate(-45deg) translate(2px, -6px);
+          transform: rotate(-45deg) translate(2px, -6px);
+}
+
+.sign_in_box {
+  position: fixed;
+  width: 400px;
+  background-color: #2A2A2A;
+  border-radius: 10px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  z-index: 100000;
+  top: 15%;
+  -webkit-box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
+          box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.sign_in_box .signin_title h1 {
+  font-size: 36px;
+  color: wheat;
+  font-weight: 500;
+  white-space: wrap;
+}
+
+.sign_in_box .signin {
+  width: 90%;
+}
+
+.sign_in_box .signin .signin_form {
+  width: 95%;
+  padding: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border: 2px solid wheat;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.sign_in_box .signin .signin_form .account_num, .sign_in_box .signin .signin_form .account_password {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.sign_in_box .signin .signin_form .account_num .account_label, .sign_in_box .signin .signin_form .account_password .account_label {
+  font-size: 20px;
+  color: wheat;
+  font-weight: 500;
+  white-space: wrap;
+}
+
+.sign_in_box .signin .signin_form .account_num .account_input, .sign_in_box .signin .signin_form .account_password .account_input {
+  margin: 10px 0;
+  width: 90%;
+  height: 30px;
+  color: #2A2A2A;
+  background-color: white;
+  border: 0;
+  padding-left: 5px;
+}
+
+.sign_in_box .signin .signin_form .account_password, .sign_in_box .signin .signin_form .account_num {
+  position: relative;
+}
+
+.sign_in_box .signin .signin_form .account_password .warning, .sign_in_box .signin .signin_form .account_num .warning {
+  width: 90%;
+  text-align: center;
+  border-radius: 5px;
+  margin: 0;
+  font-size: 14px;
+  color: white;
+  font-weight: 500;
+  white-space: wrap;
+  padding: 2px 5px;
+}
+
+.sign_in_box .signin .signin_form .account_password .warning_red, .sign_in_box .signin .signin_form .account_num .warning_red {
+  background-color: #b81919;
+}
+
+.sign_in_box .signin .signin_form .account_password .warning_green, .sign_in_box .signin .signin_form .account_num .warning_green {
+  background-color: green;
+}
+
+.sign_in_box .signin .signin_form .account_password .question, .sign_in_box .signin .signin_form .account_num .question {
+  cursor: pointer;
+  position: absolute;
+  right: 35px;
+  bottom: 35px;
+}
+
+.sign_in_box .signin .signin_form .account_password .question:hover .tooltip, .sign_in_box .signin .signin_form .account_num .question:hover .tooltip {
+  display: block;
+}
+
+.sign_in_box .signin .signin_form .account_password .question img, .sign_in_box .signin .signin_form .account_num .question img {
+  width: 20px;
+}
+
+.sign_in_box .signin .signin_form .account_password .question .tooltip, .sign_in_box .signin .signin_form .account_num .question .tooltip {
+  display: none;
+  white-space: nowrap;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  border-radius: 5px;
+  width: 120px;
+  white-space: pre-wrap;
+  padding: 5px 10px;
+  position: absolute;
+  top: 120%;
+  right: -54px;
+}
+
+.sign_in_box .signin .signin_form .account_password .question .tooltip::before, .sign_in_box .signin .signin_form .account_num .question .tooltip::before {
+  content: "";
+  display: inline-block;
+  width: 0;
+  height: 0;
+  position: absolute;
+  left: 50%;
+  top: -8px;
+  border-top: 0px solid transparent;
+  border-right: 8px solid transparent;
+  border-bottom: 8px solid rgba(0, 0, 0, 0.8);
+  border-left: 8px solid transparent;
+}
+
+.sign_in_box .signin .signin_form .signin_submit {
+  width: 100px;
+  height: 40px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  background-color: white;
+  border: 0;
+  cursor: pointer;
+  color: #2A2A2A;
+  font-size: 18px;
+  font-family: "Noto Sans TC", sans-serif;
+  -webkit-transition-property: all;
+  transition-property: all;
+  -webkit-transition-duration: 0.3s;
+          transition-duration: 0.3s;
+  -webkit-transform-origin: 50% 50%;
+          transform-origin: 50% 50%;
+}
+
+.sign_in_box .signin .signin_form .signin_submit:hover {
+  background-color: #F86422;
+  color: white;
+}
+
+.sign_in_box .signin .signin_form .signin_submit_not {
+  color: white;
+  background-color: rgba(204, 203, 203, 0.37);
+  border-color: rgba(204, 203, 203, 0.37);
+  cursor: not-allowed;
+}
+
+.sign_in_box .signin .signin_form .signin_submit_not:hover {
+  color: white;
+  background-color: rgba(204, 203, 203, 0.37);
+}
+
+.sign_in_box .signin_btn {
+  width: 95%;
+  padding: 10px 2px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.sign_in_box .signin_btn .social_signin, .sign_in_box .signin_btn .no_account {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+}
+
+.sign_in_box .signin_btn .social_signin .fb_signin, .sign_in_box .signin_btn .social_signin .google_signin {
+  width: 45%;
+  height: 40px;
+  cursor: pointer;
+}
+
+.sign_in_box .signin_btn .social_signin .fb_signin {
+  background-color: #283C92;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.sign_in_box .signin_btn .social_signin .fb_signin img {
+  margin-left: 5px;
+}
+
+.sign_in_box .signin_btn .social_signin .fb_signin span {
+  white-space: nowrap;
+  font-size: 15px;
+  font-weight: 700;
+  color: white;
+}
+
+.sign_in_box .signin_btn .social_signin .google_signin {
+  background-color: #4687F3;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.sign_in_box .signin_btn .social_signin .google_signin img {
+  margin-left: 9px;
+}
+
+.sign_in_box .signin_btn .social_signin .google_signin span {
+  margin-left: 8px;
+  white-space: nowrap;
+  font-size: 15px;
+  font-weight: 700;
+  color: white;
+}
+
+.sign_in_box .signin_btn .no_account {
+  margin-top: 10px;
+}
+
+.sign_in_box .signin_btn .no_account .forget, .sign_in_box .signin_btn .no_account .create {
+  cursor: pointer;
+  border: 0px;
+  font-size: 24px;
+  color: white;
+  font-weight: 500;
+  white-space: wrap;
+  -webkit-transition-property: all;
+  transition-property: all;
+  -webkit-transition-duration: 0.3s;
+          transition-duration: 0.3s;
+  -webkit-transform-origin: 50% 50%;
+          transform-origin: 50% 50%;
+}
+
+.sign_in_box .signin_btn .no_account .forget:hover, .sign_in_box .signin_btn .no_account .create:hover {
+  color: #F86422;
+}
+
+.sign_up_box {
+  position: fixed;
+  width: 400px;
+  background-color: #2A2A2A;
+  border-radius: 10px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  z-index: 100000;
+  top: 15%;
+  -webkit-box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
+          box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.sign_up_box .signup_title h1 {
+  font-size: 36px;
+  color: wheat;
+  font-weight: 500;
+  white-space: wrap;
+}
+
+.sign_up_box .signup {
+  width: 90%;
+}
+
+.sign_up_box .signup .signup_form {
+  width: 95%;
+  padding: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border: 2px solid wheat;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.sign_up_box .signup .signup_form .account_num, .sign_up_box .signup .signup_form .account_password, .sign_up_box .signup .signup_form .password_again {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.sign_up_box .signup .signup_form .account_num .account_label, .sign_up_box .signup .signup_form .account_password .account_label, .sign_up_box .signup .signup_form .password_again .account_label {
+  font-size: 20px;
+  color: wheat;
+  font-weight: 500;
+  white-space: wrap;
+}
+
+.sign_up_box .signup .signup_form .account_num .account_input, .sign_up_box .signup .signup_form .account_password .account_input, .sign_up_box .signup .signup_form .password_again .account_input {
+  margin: 10px 0;
+  width: 90%;
+  height: 30px;
+  color: #2A2A2A;
+  background-color: white;
+  border: 0;
+  padding-left: 5px;
+}
+
+.sign_up_box .signup .signup_form .account_password, .sign_up_box .signup .signup_form .account_num {
+  position: relative;
+}
+
+.sign_up_box .signup .signup_form .account_password .warning, .sign_up_box .signup .signup_form .account_num .warning {
+  width: 90%;
+  text-align: center;
+  border-radius: 5px;
+  margin: 0;
+  font-size: 14px;
+  color: white;
+  font-weight: 500;
+  white-space: wrap;
+  padding: 2px 5px;
+}
+
+.sign_up_box .signup .signup_form .account_password .warning_red, .sign_up_box .signup .signup_form .account_num .warning_red {
+  background-color: #b81919;
+}
+
+.sign_up_box .signup .signup_form .account_password .warning_green, .sign_up_box .signup .signup_form .account_num .warning_green {
+  background-color: green;
+}
+
+.sign_up_box .signup .signup_form .account_password .warning_orange, .sign_up_box .signup .signup_form .account_num .warning_orange {
+  background-color: orange;
+}
+
+.sign_up_box .signup .signup_form .account_password .warning_blue, .sign_up_box .signup .signup_form .account_num .warning_blue {
+  background-color: blue;
+}
+
+.sign_up_box .signup .signup_form .account_password .question, .sign_up_box .signup .signup_form .account_num .question {
+  cursor: pointer;
+  position: absolute;
+  right: 35px;
+  bottom: 38px;
+}
+
+.sign_up_box .signup .signup_form .account_password .question:hover .tooltip, .sign_up_box .signup .signup_form .account_num .question:hover .tooltip {
+  display: block;
+}
+
+.sign_up_box .signup .signup_form .account_password .question img, .sign_up_box .signup .signup_form .account_num .question img {
+  width: 20px;
+}
+
+.sign_up_box .signup .signup_form .account_password .question .tooltip, .sign_up_box .signup .signup_form .account_num .question .tooltip {
+  display: none;
+  white-space: nowrap;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  border-radius: 5px;
+  width: 120px;
+  white-space: pre-wrap;
+  padding: 5px 10px;
+  z-index: 10000000;
+  position: absolute;
+  top: 120%;
+  right: -54px;
+}
+
+.sign_up_box .signup .signup_form .account_password .question .tooltip::before, .sign_up_box .signup .signup_form .account_num .question .tooltip::before {
+  content: "";
+  display: inline-block;
+  width: 0;
+  height: 0;
+  position: absolute;
+  left: 50%;
+  top: -8px;
+  border-top: 0px solid transparent;
+  border-right: 8px solid transparent;
+  border-bottom: 8px solid rgba(0, 0, 0, 0.8);
+  border-left: 8px solid transparent;
+}
+
+.sign_up_box .signup .signup_form .signup_submit {
+  width: 100px;
+  height: 40px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  background-color: white;
+  border: 0;
+  cursor: pointer;
+  color: #2A2A2A;
+  font-size: 18px;
+  font-family: "Noto Sans TC", sans-serif;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition-property: all;
+  transition-property: all;
+  -webkit-transition-duration: 0.3s;
+          transition-duration: 0.3s;
+  -webkit-transform-origin: 50% 50%;
+          transform-origin: 50% 50%;
+}
+
+.sign_up_box .signup .signup_form .signup_submit:hover {
+  background-color: #F86422;
+  color: white;
+}
+
+.sign_up_box .signup .signup_form .signup_submit_not {
+  color: white;
+  background-color: rgba(204, 203, 203, 0.37);
+  border-color: rgba(204, 203, 203, 0.37);
+  cursor: not-allowed;
+}
+
+.sign_up_box .signup .signup_form .signup_submit_not:hover {
+  color: white;
+  background-color: rgba(204, 203, 203, 0.37);
+}
+
+.sign_up_box .signup_btn {
+  width: 95%;
+  padding: 10px 2px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.sign_up_box .signup_btn .signup_fb, .sign_up_box .signup_btn .signup_google {
+  width: 45%;
+  height: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.sign_up_box .signup_btn .signup_fb {
+  background-color: #283C92;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.sign_up_box .signup_btn .signup_fb span {
+  white-space: nowrap;
+  font-size: 15px;
+  font-weight: 700;
+  color: white;
+}
+
+.sign_up_box .signup_btn .signup_google {
+  background-color: #4687F3;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.sign_up_box .signup_btn .signup_google span {
+  white-space: nowrap;
+  font-size: 15px;
+  font-weight: 700;
+  color: white;
+}
+
+.sign_box_display {
+  display: none;
+}
+/*# sourceMappingURL=sign.css.map */

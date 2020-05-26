@@ -1,0 +1,1149 @@
+@charset "UTF-8";
+* {
+  font-family: 'Noto Sans TC', '微軟正黑體', "Times New Roman", sans-serif;
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+body {
+  background-color: rgba(204, 203, 203, 0.37);
+}
+
+.light_box .lb_card .product_title .lb_cross {
+  position: absolute;
+  right: 20px;
+  top: 40px;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+
+.light_box .lb_card .product_title .lb_cross:hover .close_line, .light_box .lb_card .product_title .lb_cross:hover .close_line2 {
+  border-color: #F86422;
+}
+
+.light_box .lb_card .product_title .lb_cross .close_line, .light_box .lb_card .product_title .lb_cross .close_line2 {
+  width: 30px;
+  border-top: 4px solid #e6c0a6;
+  -webkit-transition-property: all;
+  transition-property: all;
+  -webkit-transition-duration: 0.3s;
+          transition-duration: 0.3s;
+  -webkit-transform-origin: 50% 50%;
+          transform-origin: 50% 50%;
+}
+
+.light_box .lb_card .product_title .lb_cross .close_line {
+  -webkit-transform: rotate(45deg) translateX(-2.5px);
+          transform: rotate(45deg) translateX(-2.5px);
+}
+
+.light_box .lb_card .product_title .lb_cross .close_line2 {
+  -webkit-transform: rotate(-45deg) translate(2px, -6px);
+          transform: rotate(-45deg) translate(2px, -6px);
+}
+
+body {
+  background-color: rgba(204, 203, 203, 0.37);
+}
+
+.header .hd_black .header_btn .utensil_btn a {
+  color: #F86422;
+  font-weight: bolder;
+}
+
+.header .hd_black .header_btn .utensil_btn .line {
+  border-color: #F86422;
+  width: 110%;
+}
+
+@-webkit-keyframes run_horse {
+  0% {
+    margin-left: 0%;
+  }
+  100% {
+    margin-left: 120%;
+  }
+}
+
+@keyframes run_horse {
+  0% {
+    margin-left: 0%;
+  }
+  100% {
+    margin-left: 120%;
+  }
+}
+
+@-webkit-keyframes jump {
+  0% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+  7.7% {
+    -webkit-transform: translateY(-8px);
+            transform: translateY(-8px);
+  }
+  15.4% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+  100% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+}
+
+@keyframes jump {
+  0% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+  7.7% {
+    -webkit-transform: translateY(-8px);
+            transform: translateY(-8px);
+  }
+  15.4% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+  100% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+}
+
+.cards_box {
+  margin: 0 auto;
+  width: 1200px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.cards_box .run_horse {
+  margin: 0 auto;
+  width: 98%;
+  padding-top: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  overflow: hidden;
+}
+
+.cards_box .run_horse .run_span {
+  -webkit-animation: run_horse 13s infinite linear;
+          animation: run_horse 13s infinite linear;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.cards_box .run_horse .run_span span {
+  font-size: 24px;
+  color: #f04242;
+  font-weight: 500;
+  white-space: wrap;
+  margin-left: 1px;
+}
+
+.cards_box .run_horse .run_span .jump1 {
+  -webkit-animation: jump 4s infinite;
+          animation: jump 4s infinite;
+}
+
+.cards_box .run_horse .run_span .jump2 {
+  -webkit-animation: jump 4s .1s infinite;
+          animation: jump 4s .1s infinite;
+}
+
+.cards_box .run_horse .run_span .jump3 {
+  -webkit-animation: jump 4s .2s infinite;
+          animation: jump 4s .2s infinite;
+}
+
+.cards_box .run_horse .run_span .jump4 {
+  -webkit-animation: jump 4s .3s infinite;
+          animation: jump 4s .3s infinite;
+}
+
+.cards_box .run_horse .run_span .jump5 {
+  -webkit-animation: jump 4s .4s infinite;
+          animation: jump 4s .4s infinite;
+}
+
+.cards_box .run_horse .run_span .jump6 {
+  -webkit-animation: jump 4s .5s infinite;
+          animation: jump 4s .5s infinite;
+}
+
+.cards_box .run_horse .run_span .jump7 {
+  -webkit-animation: jump 4s .6s infinite;
+          animation: jump 4s .6s infinite;
+}
+
+.cards_box .run_horse .run_span .jump8 {
+  -webkit-animation: jump 4s .7s infinite;
+          animation: jump 4s .7s infinite;
+}
+
+.cards_box .run_horse .run_span .jump9 {
+  -webkit-animation: jump 4s .8s infinite;
+          animation: jump 4s .8s infinite;
+}
+
+.cards_box .run_horse .run_span .jump10 {
+  -webkit-animation: jump 4s .9s infinite;
+          animation: jump 4s .9s infinite;
+}
+
+.cards_box .run_horse .run_span .jump11 {
+  -webkit-animation: jump 4s 1s infinite;
+          animation: jump 4s 1s infinite;
+}
+
+.cards_box .run_horse .run_span .jump12 {
+  -webkit-animation: jump 4s 1.1s infinite;
+          animation: jump 4s 1.1s infinite;
+}
+
+.cards_box .run_horse .run_span .jump13 {
+  -webkit-animation: jump 4s 1.2s infinite;
+          animation: jump 4s 1.2s infinite;
+}
+
+.cards_box .crumbs {
+  padding: 10px;
+  padding-left: 30px;
+}
+
+.cards_box .crumbs .orange {
+  color: #F86422;
+}
+
+.cards_box .crumbs a {
+  font-size: 20px;
+  color: #111111;
+  font-weight: 500;
+  white-space: wrap;
+}
+
+.cards_box .cards_content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 0 auto;
+  width: 95%;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.cards_box .cards_content .card {
+  position: relative;
+  width: 23%;
+  height: 300px;
+  background-color: white;
+  -webkit-box-shadow: 5px 5px rgba(0, 0, 0, 0.03);
+          box-shadow: 5px 5px rgba(0, 0, 0, 0.03);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 5%;
+}
+
+.cards_box .cards_content .card:hover .bottom {
+  height: 15%;
+}
+
+.cards_box .cards_content .card:hover .img {
+  -webkit-transform: translateY(-10px) scale(1.1);
+          transform: translateY(-10px) scale(1.1);
+}
+
+.cards_box .cards_content .card .img {
+  -webkit-transition-property: all;
+  transition-property: all;
+  -webkit-transition-duration: 0.3s;
+          transition-duration: 0.3s;
+  -webkit-transform-origin: 50% 50%;
+          transform-origin: 50% 50%;
+  border-radius: 5px;
+  margin-top: 1%;
+  width: 90%;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.cards_box .cards_content .card .img img {
+  width: 100%;
+}
+
+.cards_box .cards_content .card .title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: 8%;
+  margin-top: 1%;
+}
+
+.cards_box .cards_content .card .title h2 {
+  margin-top: 2%;
+  margin-left: -20%;
+  font-size: 24px;
+  color: #06041d;
+  font-weight: 300;
+  white-space: wrap;
+}
+
+.cards_box .cards_content .card .title img {
+  right: 10%;
+  top: 68%;
+  position: absolute;
+  height: 8%;
+  -webkit-transform: translate(50%, 45%);
+          transform: translate(50%, 45%);
+  cursor: pointer;
+}
+
+.cards_box .cards_content .card .price {
+  margin-top: -10%;
+  margin-right: 0%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0;
+  color: #2A2A2A;
+}
+
+.cards_box .cards_content .card .price .english {
+  font-family: "Oswald", sans-serif;
+}
+
+.cards_box .cards_content .card .price .small {
+  font-size: 10px;
+}
+
+.cards_box .cards_content .card .price h3 {
+  margin: 0 10px;
+  font-size: 40px;
+  -webkit-transform: rotate(5deg);
+          transform: rotate(5deg);
+  color: #F86422;
+}
+
+.cards_box .cards_content .card .bottom {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #F86422;
+  width: 100%;
+  height: 3%;
+  top: 97%;
+  -webkit-transition-property: all;
+  transition-property: all;
+  -webkit-transition-duration: 0.3s;
+          transition-duration: 0.3s;
+  -webkit-transform-origin: top;
+          transform-origin: top;
+  transform-origin: top;
+  font-family: "Oswald", sans-serif;
+  color: white;
+  font-size: 28px;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.cards_box .cards_content .card .bottom span {
+  margin: 0;
+  padding: 0;
+  margin: 0 auto;
+  margin-top: 0;
+  font-weight: 700;
+}
+
+.cards_box .tab_bar {
+  margin: 0 auto;
+  margin-bottom: 1.5%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.cards_box .tab_bar .left, .cards_box .tab_bar .right, .cards_box .tab_bar .tab_num {
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: #F86422;
+  border: 1px solid #F86422;
+  white-space: nowrap;
+  margin-left: 5px;
+}
+
+.cards_box .tab_bar .left, .cards_box .tab_bar .right {
+  width: 70px;
+  border-radius: 30px;
+}
+
+.cards_box .tab_bar .tab_num {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.cards_box .tab_bar .-on {
+  background-color: #F86422;
+  color: white;
+}
+
+.cards_box .tab_bar .-gg {
+  background-color: rgba(204, 203, 203, 0.37);
+  color: #2A2A2A;
+  border: 0;
+  cursor: not-allowed;
+}
+
+@-webkit-keyframes cart {
+  0% {
+    left: 25%;
+    bottom: 43%;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  10% {
+    -webkit-transform: scale(0.9);
+            transform: scale(0.9);
+    left: 30%;
+    bottom: 47%;
+  }
+  100% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+    left: 73%;
+    bottom: 74%;
+  }
+}
+
+@keyframes cart {
+  0% {
+    left: 25%;
+    bottom: 43%;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  10% {
+    -webkit-transform: scale(0.9);
+            transform: scale(0.9);
+    left: 30%;
+    bottom: 47%;
+  }
+  100% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+    left: 73%;
+    bottom: 74%;
+  }
+}
+
+.light_box {
+  z-index: 1000;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  left: 0;
+  top: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  -webkit-transition-property: all;
+  transition-property: all;
+  -webkit-transition-duration: 0.2s;
+          transition-duration: 0.2s;
+  -webkit-transform-origin: center;
+          transform-origin: center;
+}
+
+.light_box .warning {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  border-radius: 0 0 5px 5px;
+  padding: 10px;
+  width: 200px;
+  text-align: center;
+  display: none;
+  z-index: 1000000000000;
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+.light_box .warning span {
+  font-size: 20px;
+  color: orange;
+  font-weight: 500;
+  white-space: wrap;
+}
+
+.light_box .pic {
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  width: 300px;
+  height: 210px;
+  position: absolute;
+  left: 25%;
+  bottom: 43%;
+  z-index: 1000000;
+}
+
+.light_box .pic img {
+  width: 100%;
+  height: 100%;
+}
+
+.light_box .lb_card {
+  background-color: #2c2b2b;
+  -webkit-box-shadow: 3px 3px 10px rgba(255, 255, 255, 0.2);
+          box-shadow: 3px 3px 10px rgba(255, 255, 255, 0.2);
+  -webkit-transition-property: all;
+  transition-property: all;
+  -webkit-transition-duration: 0.7s;
+          transition-duration: 0.7s;
+  -webkit-transform-origin: center;
+          transform-origin: center;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  -webkit-transition-delay: .3s;
+          transition-delay: .3s;
+  border-radius: 15px;
+  width: 1000px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.light_box .lb_card .product_title {
+  margin: 1%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.light_box .lb_card .product_title .lb_cross .close_line, .light_box .lb_card .product_title .lb_cross .close_line2 {
+  border-color: white;
+}
+
+.light_box .lb_card .product_title .h1 {
+  width: 90%;
+}
+
+.light_box .lb_card .product_title .h1 h1 {
+  margin: 0;
+  margin-left: 2%;
+  font-size: 36px;
+  color: white;
+  font-weight: 500;
+  white-space: wrap;
+}
+
+.light_box .lb_card .product_title .h1 .h1_bgc {
+  z-index: -1;
+  margin-left: 2%;
+  background-color: rgba(248, 100, 34, 0.7);
+  height: 15px;
+  width: 90%;
+  margin-top: -2%;
+}
+
+.light_box .lb_card .card_content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.light_box .lb_card .card_content .lb_card_left, .light_box .lb_card .card_content .lb_car_right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-bottom: 1%;
+}
+
+.light_box .lb_card .card_content .lb_card_left {
+  width: 48%;
+  margin-left: 2%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.light_box .lb_card .card_content .lb_card_left .img {
+  line-height: 0;
+  font-size: 0;
+  margin-top: 8%;
+  border: 5px solid #c2bebe;
+  width: 360px;
+  position: relative;
+  cursor: -webkit-zoom-in;
+  cursor: zoom-in;
+}
+
+.light_box .lb_card .card_content .lb_card_left .img .viewport {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100px;
+  height: 100px;
+  background-color: rgba(85, 106, 228, 0.4);
+  border: 1px solid #556ae4;
+  visibility: hidden;
+}
+
+.light_box .lb_card .card_content .lb_card_left .img img {
+  width: 100%;
+}
+
+.light_box .lb_card .card_content .lb_card_left .resume {
+  margin-top: 3%;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-left: 5%;
+}
+
+.light_box .lb_card .card_content .lb_card_left .resume .resume_title {
+  position: relative;
+  margin-bottom: 5%;
+}
+
+.light_box .lb_card .card_content .lb_card_left .resume .resume_title .h2_bgc {
+  z-index: -1;
+  position: absolute;
+  background-color: rgba(248, 100, 34, 0.7);
+  height: 20px;
+  width: 30%;
+  bottom: 0;
+}
+
+.light_box .lb_card .card_content .lb_card_left .resume .resume_title h2 {
+  margin: 0;
+  font-size: 28xp;
+  color: white;
+  font-weight: 500;
+  white-space: wrap;
+}
+
+.light_box .lb_card .card_content .lb_card_left .resume .resume_content {
+  margin-top: 1%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 96%;
+}
+
+.light_box .lb_card .card_content .lb_card_left .resume .resume_content .resume_words {
+  width: 25%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.light_box .lb_card .card_content .lb_card_left .resume .resume_content .resume_words span {
+  margin-bottom: 8%;
+  color: #918f8f;
+  font-size: 16px;
+  font-weight: 300;
+  font-size: 16px;
+  color: #918f8f;
+  font-weight: 300;
+  white-space: wrap;
+}
+
+.light_box .lb_card .card_content .lb_card_left .resume .resume_content .resume_words .fw {
+  color: #e9e5e5;
+  font-family: "Noto Serif TC", serif;
+}
+
+.light_box .lb_card .card_content .lb_card_right {
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-left: 2%;
+  position: relative;
+}
+
+.light_box .lb_card .card_content .lb_card_right .zoom_image {
+  width: 300px;
+  height: 300px;
+  border: 3px solid #c2bebe;
+  position: absolute;
+  overflow: hidden;
+  z-index: 10000000000;
+  display: none;
+}
+
+.light_box .lb_card .card_content .lb_card_right .zoom_image img {
+  width: 1080px;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+}
+
+.light_box .lb_card .card_content .lb_card_right .product_info_title {
+  position: relative;
+  margin-bottom: 3%;
+}
+
+.light_box .lb_card .card_content .lb_card_right .product_info_title h2 {
+  font-size: 28px;
+  color: white;
+  font-weight: 500;
+  white-space: wrap;
+  margin: 0;
+  margin-top: 2.5%;
+}
+
+.light_box .lb_card .card_content .lb_card_right .product_info_title .h2_line {
+  border: 1px solid #F86422;
+  width: 70%;
+}
+
+.light_box .lb_card .card_content .lb_card_right .product_info {
+  width: 85%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.light_box .lb_card .card_content .lb_card_right .product_info span {
+  line-height: 34px;
+  font-family: "Noto Serif TC", serif;
+  font-size: 16px;
+  color: #c2bebe;
+  font-weight: 500;
+  white-space: wrap;
+}
+
+.light_box .lb_card .card_content .lb_card_right .product_recipe_title {
+  position: relative;
+}
+
+.light_box .lb_card .card_content .lb_card_right .product_recipe_title h2 {
+  margin: 0;
+  margin-top: 2.5%;
+  font-size: 28px;
+  color: white;
+  font-weight: 400;
+  white-space: wrap;
+}
+
+.light_box .lb_card .card_content .lb_card_right .product_recipe_title .h2_line {
+  border: 1px solid #F86422;
+  width: 70%;
+}
+
+.light_box .lb_card .card_content .lb_card_right .product_recipe {
+  width: 85%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.light_box .lb_card .card_content .lb_card_right .product_recipe span {
+  width: 28%;
+  border: 1px solid #c2bebe;
+  border-radius: 3px;
+  text-align: center;
+  font-family: "Noto Serif TC", serif;
+  padding: 1%;
+  margin-top: 3%;
+  -webkit-transition-property: all;
+  transition-property: all;
+  -webkit-transition-duration: 0.3s;
+          transition-duration: 0.3s;
+  -webkit-transform-origin: 50% 50%;
+          transform-origin: 50% 50%;
+  font-size: 18px;
+  color: #c2bebe;
+  font-weight: 500;
+  white-space: wrap;
+  cursor: pointer;
+}
+
+.light_box .lb_card .card_content .lb_card_right .product_recipe span:hover {
+  color: #F86422;
+}
+
+.light_box .lb_card .card_content .lb_card_right .product_other {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+
+.light_box .lb_card .card_content .lb_card_right .product_other .price_item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 50%;
+}
+
+.light_box .lb_card .card_content .lb_card_right .product_other .price_item span {
+  font-size: 24px;
+  color: white;
+  font-weight: 500;
+  white-space: wrap;
+  font-family: "Noto Serif TC", serif;
+  margin-bottom: -3%;
+}
+
+.light_box .lb_card .card_content .lb_card_right .product_other .price_item input {
+  cursor: pointer;
+  height: 150%;
+  width: 80px;
+  font-size: 40px;
+  padding: 0;
+  text-align: center;
+  padding-left: 2%;
+  background-color: #2c2b2b;
+  border: 0px;
+  margin-bottom: -3%;
+  color: red;
+}
+
+.light_box .lb_card .card_content .lb_card_right .product_other .lb_btn {
+  width: 150px;
+  height: 50px;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-left: -20%;
+  background-color: #f04242;
+  text-align: center;
+  font-size: 26px;
+  color: white;
+  font-weight: 500;
+  white-space: nowrap;
+  line-height: 50px;
+  font-family: "Noto Sans TC", sans-serif;
+  -webkit-transition-property: all;
+  transition-property: all;
+  -webkit-transition-duration: 0.3s;
+          transition-duration: 0.3s;
+  -webkit-transform-origin: 50% 50%;
+          transform-origin: 50% 50%;
+}
+
+.light_box .lb_card .card_content .lb_card_right .product_other .lb_btn:hover {
+  background-color: #F86422;
+}
+
+.light_box .here {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+.shock {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+@media screen and (max-width: 1199px) and (min-width: 1024px) {
+  .cards_box {
+    width: 90%;
+  }
+  .cards_box .cards_content .card {
+    width: 30%;
+    max-width: 280px;
+  }
+}
+
+@media screen and (max-width: 1023px) and (min-width: 769px) {
+  .cards_box {
+    width: 90%;
+  }
+  .cards_box .cards_content {
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  .cards_box .cards_content .card {
+    width: 280px;
+    margin-bottom: 10%;
+  }
+  .cards_box .cards_content .card .bottom {
+    height: 15%;
+  }
+  .cards_box .cards_content .card .title img, .cards_box .cards_content .card .title .heart {
+    top: 75%;
+  }
+  .cards_box .cards_content .card .title .analytics {
+    display: none;
+  }
+  .light_box {
+    z-index: 10000000000;
+  }
+  .light_box .lb_card {
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    padding-top: 5%;
+    padding-bottom: 5%;
+  }
+  .light_box .lb_card .product_title .lb_cross {
+    top: 80px;
+  }
+  .light_box .lb_card .card_content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .light_box .lb_card .card_content .lb_card_left {
+    width: 80%;
+  }
+  .light_box .lb_card .card_content .lb_card_left .img {
+    margin: 0;
+    width: 90%;
+    cursor: auto;
+  }
+  .light_box .lb_card .card_content .lb_card_right {
+    width: 90%;
+  }
+  .light_box .lb_card .card_content .lb_card_right .product_info_title .h2_line {
+    width: 90%;
+  }
+  .light_box .lb_card .card_content .lb_card_right .product_recipe_title .h2_line {
+    width: 90%;
+  }
+  .light_box .lb_card .card_content .lb_card_right .product_recipe span {
+    width: 25%;
+  }
+  .light_box .lb_card .card_content .lb_card_right .product_info {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .cards_box {
+    padding-top: 120px;
+    width: 100%;
+  }
+  .cards_box .crumbs {
+    padding-left: 8%;
+  }
+  .cards_box .cards_content {
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  .cards_box .cards_content .card {
+    width: 45%;
+    min-width: 280px;
+    margin-bottom: 50px;
+  }
+  .cards_box .cards_content .card .title {
+    margin-bottom: 10px;
+  }
+  .cards_box .cards_content .card .price {
+    margin-bottom: 10px;
+  }
+  .cards_box .cards_content .card .img {
+    width: 50%;
+  }
+  .cards_box .cards_content .card .bottom {
+    height: 15%;
+  }
+  .cards_box .tab_bar {
+    margin-top: 10px;
+  }
+  .cards_box .tab_bar .left, .cards_box .tab_bar .right, .cards_box .tab_bar .tab_num {
+    font-size: 12px;
+  }
+  .cards_box .tab_bar .left, .cards_box .tab_bar .right {
+    width: 50px;
+    height: 30px;
+    border-radius: 20px;
+  }
+  .cards_box .tab_bar .tab_num {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+  }
+  .cards_box .tab_bar .-on {
+    color: white;
+  }
+  .light_box {
+    z-index: 10000000000;
+  }
+  .light_box .lb_card {
+    width: 100%;
+    height: 100%;
+    padding-bottom: 5%;
+    padding-top: 5%;
+    overflow: auto;
+  }
+  .light_box .lb_card .product_title {
+    margin: 10px 3px;
+  }
+  .light_box .lb_card .product_title .h1 h1 {
+    font-size: 28px;
+  }
+  .light_box .lb_card .product_title .lb_cross {
+    top: 50px;
+  }
+  .light_box .lb_card .card_content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .light_box .lb_card .card_content .product_title {
+    margin: 2%;
+  }
+  .light_box .lb_card .card_content .lb_card_left {
+    margin-bottom: 20px;
+    width: 80%;
+  }
+  .light_box .lb_card .card_content .lb_card_left .img {
+    margin: 0;
+    width: 90%;
+    cursor: auto;
+    margin: 20px 0;
+  }
+  .light_box .lb_card .card_content .lb_card_left .resume {
+    display: none;
+  }
+  .light_box .lb_card .card_content .lb_card_right {
+    width: 90%;
+    margin-bottom: 20px;
+  }
+  .light_box .lb_card .card_content .lb_card_right .product_info_title .h2_line {
+    width: 90%;
+  }
+  .light_box .lb_card .card_content .lb_card_right .product_recipe_title {
+    display: none;
+  }
+  .light_box .lb_card .card_content .lb_card_right .product_recipe_title .h2_line {
+    width: 90%;
+  }
+  .light_box .lb_card .card_content .lb_card_right .product_recipe {
+    display: none;
+  }
+  .light_box .lb_card .card_content .lb_card_right .product_recipe span {
+    width: 25%;
+  }
+  .light_box .lb_card .card_content .lb_card_right .product_info {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  .light_box .lb_card .card_content .lb_card_right .product_other {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    margin-top: 30px;
+  }
+}
+/*# sourceMappingURL=tools.css.map */

@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Licious Fantasy給你幻想的美味</title>
+    <link href="https://fonts.googleapis.com/css?family=Bellota|Noto+Sans+TC|Noto+Serif+TC|Oswald&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="./pic/BEWD_icon.png">
+    <link rel="bookmark" href="./pic/BEWD_icon.png">
+    <link rel="stylesheet" href="./css/hd_ft.css">
+    <link rel="stylesheet" href="./css/sign.css">
+    <link rel="stylesheet" href="./css/chat.css">
+    <link rel="stylesheet" href="./css/search_bar.css">
+    <link rel="stylesheet" href="./css/recipe_info.css">
+</head>
+<body>
+    <!-- inject header -->
+    <div class="headerpage"></div>
+    <!-- inject header -->
+    <!-- 購物車 -->
+    <div class="shoopingCart"></div>
+    <!-- 購物車 -->
+    <!-- 登入 -->
+    <div class="SigninSignup"></div>
+    <!-- 登入 -->
+    <!-- 聊天室 -->
+    <div class="ChatBox"></div>
+    <!-- 聊天室 -->
+
+
+    <div class="recipe_box">
+        <!-- 搜尋 -->
+        <div class="search_bar">
+            <div class="first_search">
+                <div class="extends">
+                    <div>
+                        <span>所有分類</span>
+                        <span class="extend" id="all_extend">+</span>
+                    </div>
+                </div>
+                <div class="sb_content1" id="sb_content1">
+                    <div class="sbcont1_left">
+                        <a href="">熱門食譜
+                            <div class="line"></div>
+                        </a>
+                        <a href="">快煮食譜
+                            <div class="line"></div>
+                        </a>
+                        <a href="">精緻食譜
+                            <div class="line"></div>
+                        </a>
+                        <a href="">夢幻食譜
+                            <div class="line"></div>
+                        </a>
+                        <a href="">異國食譜
+                            <div class="line"></div>
+                        </a>
+                    </div>
+                    <div class="sbcont1_right">
+                        <a href="">菜葉類
+                            <div class="line"></div>
+                        </a>
+                        <a href="">肉肉類
+                            <div class="line"></div>
+                        </a>
+                        <a href="">湯品類
+                            <div class="line"></div>
+                        </a>
+                        <a href="">調味料
+                            <div class="line"></div>
+                        </a>
+                        <a href="">飲品類
+                            <div class="line"></div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="second_search" id="app">
+                <input type="text" placeholder="請輸入關鍵字" class="input" v-model='text'>
+                <div :class="btnClass">搜尋</div>
+            </div>
+            <div class="third_search">
+                <div class="extends">
+                    <div>
+                        <span>選擇分類</span>
+                        <span class="extend" id="chose_extend">+</span>
+                    </div>
+                </div>
+                <div class="sb_content2_box" id="sb_content2">
+                    <div class="sb_content2">
+                        <div class="sbcont2_left">
+                            <label for="a">
+                                <input type="checkbox" value="要有菜" class="choose_inp" id="a">
+                                要有菜
+                            </label>
+                            <label for="b">
+                                <input type="checkbox" class="choose_inp" id="b">
+                                要有肉
+                            </label>
+                            <label for="c">
+                                <input type="checkbox" class="choose_inp" id="c">
+                                要有飯
+                            </label>
+                            <label for="d">
+                                <input type="checkbox" class="choose_inp" id="d">
+                                要有麵
+                            </label>
+                            <label for="e">
+                                <input type="checkbox" class="choose_inp" id="e">
+                                要有魚
+                            </label>
+                            <label for="e">
+                                <input type="checkbox" class="choose_inp" id="e">
+                                要有蛋
+                            </label>
+                        </div>
+                        <div class="sbcont2_right">
+                            <label for="f">
+                                <input type="checkbox" class="choose_inp" id="f">
+                                要貴貴
+                            </label>
+                            <label for="g">
+                                <input type="checkbox" class="choose_inp" id="g">
+                                要實惠
+                            </label>
+                            <label for="h">
+                                <input type="checkbox" class="choose_inp" id="h">
+                                要簡單
+                            </label>
+                            <label for="i">
+                                <input type="checkbox" class="choose_inp" id="i">
+                                要美美
+                            </label>
+                            <label for="j">
+                                <input type="checkbox" class="choose_inp" id="j">
+                                要好玩
+                            </label>
+                            <label for="k">
+                                <input type="checkbox" class="choose_inp" id="k">
+                                我全都要
+                            </label>
+                        </div>
+                    </div>
+                    <div class="submit2">搜尋</div>
+                </div>
+            </div>
+        </div>
+        <!-- 搜尋Html -->
+        <div class="crumbs">
+            <a href="./recipe.html">食譜</a>
+            <span>&nbsp;>&nbsp;</span>
+            <a href="./hot_recipe.html">熱門食譜</a>
+            <span>&nbsp;>&nbsp;</span>
+            <a href="" class="orange">超級無敵海景佛跳牆</a>
+        </div>
+        <div class="recipe_top">
+            <div class="recipe_pic">
+                <div class="main_pic">
+                    <img src="./pic/recipe/re0.jpg" alt="" id="big_pic">
+                </div>
+                <div class="pics">
+                    <div class="pic">
+                        <img src="./pic/recipe/re0.jpg" alt="" class="pic_img border_orange" id="pic_1">
+                    </div>
+                    <div class="pic">
+                        <img src="./pic/recipe/re1.jpg" alt="" class="pic_img" id="pic_2">
+                    </div>
+                    <div class="pic">
+                        <img src="./pic/recipe/re2.jpg" alt="" class="pic_img" id="pic_3">
+                    </div>
+                    <div class="pic">
+                        <img src="./pic/recipe/re3.jpg" alt="" class="pic_img" id="pic_4">
+                    </div>
+                </div>
+            </div>
+            <div class="recipe_title">
+                <div class="h1">
+                    <h1>超級無敵海景佛跳牆</h1>
+                    <div class="h1_bgc"></div>
+                </div>
+                <div class="authors">
+                    <div class="authors_pic">
+                        <img src="./pic/rcc_author1.jpg" alt="">
+                    </div>
+                    <div class="authors_name">
+                        <h2>唐家霸王槍 - 唐牛</h2>
+                        <span>在下乃七省文狀元兼參謀將軍，綽號</span>
+                        <span>對王之王的對穿腸</span>
+                    </div>
+                </div>
+                <div class="author_intro">
+                    <div class="h2">
+                        <div class="h2_bgc"></div>
+                        <h2>作者簡評</h2>
+                    </div>
+                    <span>好！好！好！此盅是由內功燉成的佛跳牆，不但火侯十足，而且濃而不膩，膠而不黏，九種材料均為極品，足足有九九八十一種變化，不但香味層次不同，而且可以渾然一體，不愧為超級無敵海景佛跳牆！</span>
+                </div>
+                <div class="author_other">
+                    <div class="collectbtn" id="collectbtn">
+                        <img src="./pic/collect.svg" alt="" class="collect" id="collect">
+                        <span id="collect_word">我要收藏</span>
+                    </div>
+                    <div class="message">
+                        <a href="#board">我要留言</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="recipe_content">
+            <div class="material">
+                <div class="top_material">
+                    <div class="serving">
+                        <span class="top">份量</span>
+                        <span>六人份</span>
+                    </div>
+                    <div class="hiline"></div>
+                    <div class="time">
+                        <span class="top">所需時間</span>
+                        <span>九九八十一天</span>
+                    </div>
+                </div>
+                <p>食材</p>
+                <div class="line"></div>
+                <div class="material_content">
+                    <div class="mc_content">
+                        <span class="mc_choose">鮑魚</span>
+                        <span>100g</span>
+                    </div>
+                    <div class="mc_content">
+                        <span class="mc_choose">魚皮</span>
+                        <span>一條</span>
+                    </div>
+                    <div class="mc_content">
+                        <span class="mc_choose">海參</span>
+                        <span>一條</span>
+                    </div>
+                    <div class="mc_content">
+                        <span class="mc_choose">炸芋頭</span>
+                        <span>六塊</span>
+                    </div>
+                    <div class="mc_content">
+                        <span class="mc_choose">鵪鶉蛋</span>
+                        <span>適量</span>
+                    </div>
+                    <div class="mc_content">
+                        <span class="mc_choose">白菜</span>
+                        <span>適量</span>
+                    </div>
+                    <div class="mc_content">
+                        <span class="mc_choose">紅棗</span>
+                        <span>六粒</span>
+                    </div>
+                    <div class="mc_content">
+                        <span class="mc_choose">干貝</span>
+                        <span>適量</span>
+                    </div>
+                    <div class="mc_content">
+                        <span class="mc_choose">蹄筋</span>
+                        <span>兩條</span>
+                    </div>
+                    <div class="mc_content">
+                        <span class="mc_choose">炸排骨</span>
+                        <span>六塊</span>
+                    </div>
+                    <div class="mc_content">
+                        <span class="mc_choose">杏鮑菇</span>
+                        <span>六塊</span>
+                    </div>
+                    <div class="mc_content">
+                        <span class="mc_choose">竹筍</span>
+                        <span>適量</span>
+                    </div>
+                    <div class="mc_content">
+                        <span class="mc_choose">香菇</span>
+                        <span>六朵</span>
+                    </div>
+                    <div class="mc_content">
+                        <span class="mc_choose">蒜頭</span>
+                        <span>適量</span>
+                    </div>
+                </div>
+            </div>
+            <div class="method">
+                <p>方法</p>
+                <div class="line"></div>
+                <div class="method_contents">
+                    <div class="method_content method_left">
+                        <div class="img">
+                            <img src="./pic/recipe/d1.jpg" alt="">
+                        </div>
+                        <div class="method_words">
+                            <div class="order">A.</div>
+                            <div class="word">料理前</div>
+                        </div>
+                    </div>
+                    <div class="method_content method_right">
+                        <div class="img">
+                            <img src="./pic/recipe/d2.jpg" alt="">
+                        </div>
+                        <div class="method_words">
+                            <div class="order">B.</div>
+                            <div class="word">排骨沾上麵粉</div>
+                        </div>
+                    </div>
+                    <div class="method_content method_left">
+                        <div class="img">
+                            <img src="./pic/recipe/d3.jpg" alt="">
+                        </div>
+                        <div class="method_words">
+                            <div class="order">C.</div>
+                            <div class="word">炸成金黃起鍋備用</div>
+                        </div>
+                    </div>
+                    <div class="method_content method_right">
+                        <div class="img">
+                            <img src="./pic/recipe/d4.jpg" alt="">
+                        </div>
+                        <div class="method_words">
+                            <div class="order">D.</div>
+                            <div class="word">川燙筍片</div>
+                        </div>
+                    </div>
+                    <div class="method_content method_left">
+                        <div class="img">
+                            <img src="./pic/recipe/d5.jpg" alt="">
+                        </div>
+                        <div class="method_words">
+                            <div class="order">E.</div>
+                            <div class="word">川燙蹄筋</div>
+                        </div>
+                    </div>
+                    <div class="method_content method_right">
+                        <div class="img">
+                            <img src="./pic/recipe/d6.jpg" alt="">
+                        </div>
+                        <div class="method_words">
+                            <div class="order">F.</div>
+                            <div class="word">川燙鵪鶉蛋</div>
+                        </div>
+                    </div>
+                    <div class="method_content method_left method_no_b">
+                        <div class="img">
+                            <img src="./pic/recipe/d7.jpg" alt="">
+                        </div>
+                        <div class="method_words">
+                            <div class="order">G.</div>
+                            <div class="word">川燙魚皮</div>
+                        </div>
+                    </div>
+                    <div class="method_content  method_no_b">
+                        <div class="img">
+                            <img src="./pic/recipe/d8.jpg" alt="">
+                        </div>
+                        <div class="method_words">
+                            <div class="order">H.</div>
+                            <div class="word">加入鮑魚湯汁和水加至九分滿，再加入調味料提味，小火燉煮2小時入味再加入香菜</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="board" id="board">
+            <p>我要發言</p>
+            <div class="line"></div>
+            <div class="my_message" id="my_message">
+                <div class="my_head">
+                    <img src="./pic/rcc_author3.jpg" alt="">
+                </div>
+                <textarea id="text"></textarea>
+                <input type="submit" value="送出" id="message_btn">
+            </div>
+            <div class="no_message" id="no_message">
+                <!-- <input type="submit" class="no_message_btn" id="no_message_btn" value="快登入留言"> -->
+                <div id="no_message_btn" class="no_message_btn">快登入留言</div>
+            </div>
+            <div class="line"></div>
+            <p>熱烈討論</p>
+            <div class="line"></div>
+            <div class="message_box" id="message_box">
+                <div class="main_message">
+                    <img src="./pic/rcc_author4.jpg" alt="">
+                    <div class="message_words">
+                        <div class="author_name">史帝芬周</div>
+                        <div class="words">
+                            <span>想問一下，會爆嗎?</span>
+                        </div>
+                        <div class="time">
+                            2020年1月16日7時
+                        </div>
+                    </div>
+                    <div class="words_line"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- footerpage -->
+    <div class="footerpage"></div>
+    <!-- footerpage -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.11/vue.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.14.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.6.1/firebase-database.js"></script>
+    <script src="./js/firebase.js"></script>
+    <!-- firebase -->
+    <script src="./js/inject.js"></script>
+    <script src="./js/hd_ft_menber.js"></script>
+    <script src="./js/searchbar.js"></script>
+    <script src="./js/recipe_info.js"></script>
+</body>
+</html>

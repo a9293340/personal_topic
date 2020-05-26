@@ -1,0 +1,92 @@
+<div class="sign_up_box sign_box_display" id="sign_up_box">
+    <div class="signup_title">
+        <h1>會員註冊</h1>
+        <div class="signup_cross" id="signup_cross" @click='signupClose' >
+            <div class="close_line"></div>
+            <div class="close_line2"></div>
+        </div>
+    </div>
+    <div class="signup">
+        <form action="" class="signup_form">
+            <div class="account_num">
+                <label for="signup_account" class="account_label">帳號:</label>
+                <input v-model='signup_account' type="text" placeholder="請輸入帳號..." id="signup_account" class="account_input num_input">
+                <span :class="accountCheck">{{signup_account_message}}</span>
+            </div>
+            <div class="account_password">
+                <label for="signup_password" class="account_label">密碼:</label>
+                <input v-model='signup_passwordfirst' type="password" placeholder="請注意大小寫" id="signup_password" class="account_input password_input">
+                <span :class="passwordCheckOne">{{signup_passwordOne}}</span>
+                <div class="question">
+                    <img src="./pic/question.png" alt="">
+                    <span class="tooltip">包含英文至少7碼，大小寫及數字至少各一</span>
+                </div>
+            </div>
+            <div class="password_again account_password">
+                <label for="signup_password2" class="account_label">確認密碼:</label>
+                <input v-model='signup_passwordsecond' type="password" placeholder="請注意大小寫" id="signup_password2" class="account_input password_input2">
+                <span :class="passwordCheckTwo">{{signup_passwordTwo}}</span>
+            </div>
+            <button type="button" :class="btnClass" id="signup_submit" @click='signupSubmit'>註冊</button>
+        </form>
+    </div>
+    <div class="signup_btn">
+        <div class="signup_fb">
+            <img src="./pic/sign_fb.png" alt="">
+            <span>Create by Facebook</span>
+        </div>
+        <div class="signup_google">
+            <img src="./pic/signin_google.png" alt="">
+            <span>Create by Google</span>
+        </div>
+    </div>
+</div>
+
+<div class="sign_in_box sign_box_display" id="sign_in_box">
+    <div class="signin_title">
+        <h1>會員登入</h1>
+        <div class="signin_cross" id="signin_cross"  @click='signinClose'>
+            <div class="close_line"></div>
+            <div class="close_line2"></div>
+        </div>
+    </div>
+    <div class="signin">
+        <form action="" class="signin_form">
+            <div class="account_num">
+                <label for="signin_account" class="account_label">帳號:</label>
+                <input v-model='account' type="text" placeholder="請輸入帳號..." id="signin_account" class="account_input num_input">
+                <span :class="accountSpanClass">{{signin_account}}</span>
+            </div>
+            <div class="account_password">
+                <label for="signin_password" class="account_label">密碼:</label>
+                <input type="password" v-model='passwords' placeholder="請注意大小寫" id="signin_password" class="account_input password_input">
+                <span :class="passwordSpanClass">{{signin_password}}</span>
+                <div class="question">
+                    <img src="./pic/question.png" alt="">
+                    <span class="tooltip">包含英文至少7碼，大小寫及數字至少各一</span>
+                </div>
+            </div>
+            <button type="button" :class="btnClass" id="signin_submit" @click='signinSubmit'>登入</button>
+        </form>
+    </div>
+    <div class="signin_btn">
+        <div class="social_signin">
+            <div class="fb_signin">
+                <img src="./pic/sign_fb.png" alt="">
+                <span>Sign by Facebook</span>
+            </div>
+            <div class="google_signin">
+                <img src="./pic/signin_google.png" alt="">
+                <span>Sign by Google</span>
+            </div>
+        </div>
+        <div class="no_account">
+            <div class="forget" id="signin_forget">
+                <span>忘記帳號?</span>
+            </div>
+            <div class="create" id="signin_create" @click='signinToSignup'>
+                <span>新建帳號?</span>
+            </div>
+        </div>
+    </div>
+</div>

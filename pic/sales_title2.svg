@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="621.548" height="231.783" viewBox="0 0 621.548 231.783">
+  <defs>
+    <radialGradient id="radial-gradient" cx="0.5" cy="0.5" r="0.629" gradientTransform="matrix(0.878, -0.48, 0.178, 0.326, -0.028, 0.577)" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#85d6dd"/>
+      <stop offset="1" stop-color="#e4e4e4"/>
+    </radialGradient>
+  </defs>
+  <g id="Group_356" data-name="Group 356" transform="translate(-1058.457 -1609.473)">
+    <path id="Path_88" data-name="Path 88" d="M0,0,574.085,2.6l.489,102.449L.489,102.449Z" transform="matrix(0.996, -0.087, 0.087, 0.996, 1058.457, 1729.984)" fill="url(#radial-gradient)"/>
+    <text id="滿2000再抽PS5_" data-name="滿2000再抽PS5～" transform="matrix(0.996, -0.087, 0.087, 0.996, 1078.154, 1805.306)" stroke="#fff" stroke-width="1" font-size="65" font-family="NotoSansTC-Black, Noto Sans TC" font-weight="800"><tspan x="0" y="0">滿2000再抽</tspan><tspan y="0" fill="#ff0303" font-size="120" font-family="Oswald-Medium, Oswald" font-weight="500">PS5</tspan><tspan y="0">～</tspan></text>
+  </g>
+</svg>

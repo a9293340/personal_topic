@@ -1,0 +1,630 @@
+@import "./base/_var"
+@import "./module/_function"
+
+
+body
+    background-color: $bgcgrey
+
+.header
+    .hd_black
+        .header_btn
+            .info_btn
+                // transform: scale(1.2) rotate(-10deg)
+                a
+                    color: $orange
+                    font-weight: bolder
+                .line
+                    border-color: $orange
+                    width: 110%
+                    
+
+.main_box
+    // border: 1px solid red
+    width: 1200px
+    margin: 0 auto
+    margin-top: 2%
+    margin-bottom: 2%
+    // min-height: 900px
+    display: flex
+    flex-direction: column
+    align-items: center
+    .top_info_box
+        // border: 1px solid green
+        width: 95%
+        display: flex
+        flex-direction: column
+        h1
+            font-size: 36px
+            font-weight: 500
+            margin: 2% 0
+        .top_box
+            display: flex
+            justify-content: space-between
+            flex-wrap: wrap
+            .tib_left, .tib_right
+                width: 48%
+                cursor: pointer
+            .tib_left
+                display: flex
+                flex-direction: column
+                position: relative
+                overflow: hidden
+                &:hover
+                    .info_bgc
+                        transform: translateY(-50%)
+                .info_bgc
+                    position: absolute
+                    transition-property: all
+                    transition-duration: .5s
+                    width: 100%
+                    background-color: rgba(0, 0, 0, 0.6)
+                    height: 30%
+                    bottom: -17%
+                    h1
+                        font-weight: 500
+                        padding-left: 2%
+                        color: wheat
+                        font-size: 22px
+                        letter-spacing: 2px
+                    .span
+                        margin-left: 3%
+                        margin-right: 3%
+                        color: #ffffff
+                        span
+                            font-weight: 300
+                            font-family: $notoserif
+                img
+                    width: 100%
+                    height: 100%
+            .tib_right
+                display: flex
+                flex-wrap: wrap
+                // align-items: flex-end
+                justify-content: space-between
+                .img
+                    width: 48%
+                    height: 49%
+                    // border: 1px solid $orange
+                    position: relative
+                    overflow: hidden
+                    &:hover
+                        .info_bgc
+                            transform: translateY(-75%)
+                    .info_bgc
+                        position: absolute
+                        transition-property: all
+                        transition-duration: .5s
+                        width: 100%
+                        background-color: rgba(0, 0, 0, 0.6)
+                        height: 100%
+                        bottom: -75%
+                        // bottom: 0
+                        h1
+                            font-weight: 500
+                            padding-left: 2%
+                            color: wheat
+                            font-size: 18px
+                            margin: 2% 0
+                            margin-top: 1%
+                            letter-spacing: 2px
+                        .span
+                            margin-top: 5%
+                            margin-left: 10%
+                            margin-right: 10%
+                            color: #ffffff
+                            span
+                                font-size: 16px
+                                font-weight: 300
+                                font-family: $notoserif
+                    img
+                        width: 100%
+                        height: 100%
+    .bottom_info_box
+        display: flex
+        flex-direction: column
+        // border: 1px solid red
+        margin: 0 auto
+        margin-top: 2%
+        width: 80%
+        // align-items: center
+        h1
+            font-size: 36px
+            font-weight: 500
+            margin: 2% 0
+            // margin-left: -20%
+        .info_box
+            margin: 0 auto
+            border-top: 1px solid $black
+            display: flex
+            // margin-top: 2%
+            margin-bottom: 2%
+            padding: 0
+            transition-property: all
+            transition-duration: .5s
+            cursor: pointer
+            align-items: center
+            &:hover
+                transition-property: all
+                transition-duration: .5s
+                box-shadow: 2px 3px 10px rgba(0, 0, 0, 0.1)
+            .pic
+                margin: 1%
+                // border: 1px solid red
+                img
+                    width: 100%
+                    // height: 100%
+            .content
+                width: 55%
+                margin-left: 2%
+                h2
+                    font-size: 22px
+                    margin: 0
+                    margin-top: 2%
+                    color: $black
+                .span
+                    margin-top: 2%
+                    span
+                        font-family: $notoserif
+                        color: $black
+    .tab_bar
+        margin: 0 auto
+        margin-bottom: 1.5%
+        display: flex
+        justify-content: space-between
+        .left, .right, .tab_num
+            cursor: pointer
+            display: flex
+            align-items: center
+            justify-content: center
+            color: $orange
+            border: 1px solid $orange
+            white-space: nowrap
+            margin-left: 5px
+        .left, .right
+            width: 70px
+            border-radius: 30px
+        .tab_num
+            width: 50px
+            height: 50px
+            border-radius: 50%
+        .-on
+            background-color: $orange
+            color: white
+        .-gg
+            background-color: $bgcgrey
+            color: $black
+            border: 0
+            cursor: not-allowed
+
+
+.light_box
+    z-index: 1000
+    position: fixed
+    width: 100%
+    height: 100%
+    background-color: rgba(0, 0, 0, 0.3)
+    left: 0
+    top: 0
+    display: flex
+    justify-content: center
+    align-items: center
+    transform: scale(0)
+    transform-origin: center
+    transition-duration: .2s
+    .lb_card
+        background-color: #2c2b2b
+        box-shadow: 3px 3px rgba(255, 255, 255, 0.2)
+        transition-property: all
+        transition-duration: .7s
+        transform-origin: center
+        transform: scale(0)
+        transition-delay: .3s
+        border-radius: 15px
+        width: 1000px
+        // background-color: white
+        display: flex
+        flex-direction: column
+        justify-content: space-around
+        .title
+            display: flex
+            justify-content: center
+            position: relative
+            margin: 2% 0
+            // border: 1px solid red
+            .lb_cross
+                position: absolute
+                right: 5%
+                top: 60%
+                // border: 1px solid blue
+                // z-index: 1000
+                width: 30px
+                height: 30px
+                cursor: pointer
+                .cross1
+                    width: 35px
+                    height: 3px
+                    background-color: rgb(255,255,255)
+                    transform: rotate(45deg)
+                .cross2
+                    width: 35px
+                    height: 3px
+                    background-color: rgb(255,255,255)
+                    transform: rotate(-45deg) translate(1px,-4px)
+            .h1
+                position: relative
+                .h1_bgc
+                    z-index: -1
+                    position: absolute
+                    background-color: rgba(248, 100, 34, 0.7)
+                    height: 15px
+                    width: 100%
+                    bottom: 20%
+                    margin-left: 1%
+                h1
+                    font-weight: 500
+                    color: white
+                    font-size: 26px
+                    letter-spacing: 2px
+        .lb_content
+            // border: 1px solid red
+            display: flex
+            flex-direction: column
+            width: 95%
+            margin: 2% auto
+            margin-top: -1%
+            .content
+                display: flex
+                align-items: center
+                margin-top: 2%
+                justify-content: space-around
+                img
+                    height: 100%
+                    width: 40%
+                    border: 4px solid white
+                .span
+                    width: 55%
+                    margin-left: 5%
+                    .lb_span
+                        font-size: 16px
+                        color: $white
+                        line-height: 32px
+                        letter-spacing: 2px
+                        font-family: $notoserif
+            .content_inverse
+                flex-direction: row-reverse
+                .span
+                    margin-left: 0
+                    margin-right: 5%
+
+    .here
+        transform: scale(1)
+
+.shock
+    transform: scale(1)
+
+
+@media screen and ( max-width: 1199px ) and ( min-width: 1024px )
+    .main_box
+        width: 98%
+        .top_info_box
+            .top_box
+                .tib_left
+                    &:hover
+                        .info_bgc
+                            transform: translateY(-50%)
+                    .info_bgc
+                        height: auto
+                        h1
+                            font-size: 20px
+                        span
+                            font-size: 14px
+                .tib_right
+                    .info_bgc
+                        .titleX
+                            font-size: 16px
+                        .span
+                            font-size: 12px
+
+@media screen and ( max-width: 1023px ) and ( min-width: 769px )
+    .main_box
+        width: 98%
+        .top_info_box
+            .top_box
+                .tib_left
+                    &:hover
+                        .info_bgc
+                            transform: translateY(-40%)
+                    .info_bgc
+                        bottom: -45%
+                        height: 70%
+                        h1
+                            font-size: 20px
+                        span
+                            font-size: 14px
+                .tib_right
+                    .img
+                        &:hover
+                            .info_bgc
+                                transform: translateY(-70%)
+                        .info_bgc
+                            bottom: -70%
+                            .titleX
+                                margin: 0
+                                font-size: 16px
+                                line-height: 26px
+                            .span
+                                display: none
+        .bottom_info_box
+            // border: 1px solid red
+            width: 95%
+    .light_box
+        justify-content: center
+        align-items: center
+        z-index: 100000001
+        .lb_card
+            // margin-top: -4%
+            border-radius: 5px
+            width: 100%
+            overflow: auto
+            .title
+                .lb_cross
+                    top: 10%
+                    right: 2%
+                .h1
+                    h1
+                        font-size: 22px
+
+
+@media screen and ( max-width: 768px ) and ( min-width: 500px )
+    // .chat
+    //     display: none
+    .main_box
+        padding-top: 90px
+        width: 100%
+        // border: 1px solid red
+        .top_info_box
+            width: 98%
+            // border: 1px solid red
+            .top_box
+                flex-direction: column
+                align-items: center
+                // border: 1px solid red
+                // display: none
+                .tib_left
+                    // display: none
+                    width: 80%
+                    margin-bottom: 4%
+                    &:hover
+                        .info_bgc
+                            transform: translateY(-60%)
+                    .info_bgc
+                        height: 100%
+                        bottom: -60%
+                        h1
+                            font-size: 28px
+                            margin: 20px 0
+                        span
+                            font-size: 16px
+                            line-height: 40px
+                .tib_right
+                    // display: none
+                    width: 80%
+                    .img
+                        width: 100%
+                        margin-bottom: 4%
+                        &:hover
+                            .info_bgc
+                                transform: translateY(-67%)
+                        .info_bgc
+                            bottom: -67%
+                            height: 100%
+                            .titleX
+                                font-size: 28px
+                                margin: 20px 0
+                            .span
+                                span
+                                    font-size: 16px
+                                    line-height: 40px
+        .tab_bar
+            .left, .right, .tab_num
+                font-size: 12px
+            .left, .right
+                width: 50px
+                height: 30px
+                border-radius: 20px
+            .tab_num
+                width: 30px
+                height: 30px
+                border-radius: 50%
+            .-on
+                color: white
+        .bottom_info_box
+            // border: 1px solid red
+            margin-top: -5%
+            width: 98%
+            h1
+                font-size: 28px
+            .info_box
+                width: 90%
+    .light_box
+        justify-content: center
+        align-items: center
+        z-index: 100000001
+        .lb_card
+            // margin-top: -4%
+            border-radius: 20px
+            width: 100%
+            height: 100%
+            overflow: auto
+            justify-content: flex-start
+            .title
+                margin: 0 5px
+                margin-bottom: 10px
+                .lb_cross
+                    top: 10%
+                    right: 2%
+                .h1
+                    margin-top: 3%
+                    h1
+                        font-size: 20px
+            .lb_content
+                justify-content: flex-start
+                margin-top: 0
+                margin-bottom: 20px
+                .content
+                    flex-direction: column
+                    justify-content: flex-start
+                    align-items: center
+                    // margin-top: 0
+                    .span
+                        margin-top: 1%
+                        width: 90%
+                        margin-left: 0%
+                        span
+                            font-size: 13px
+                    img
+                        width: 60%
+                        margin-right: 0%
+                        margin: 15px 0
+                    #lb_pic2
+                        display: none
+                .content_inverse
+                    .span
+                        margin-right: 0%
+
+@media screen and ( max-width: 499px )
+    // .chat
+    //     display: none
+    .main_box
+        padding-top: 90px
+        width: 100%
+        // border: 1px solid red
+        .bottom_info_box
+            .info_box
+                .content
+                    .titleX
+                        font-size: 18px
+                    .span
+                        display: none
+        .top_info_box
+            width: 98%
+            // border: 1px solid red
+            .top_box
+                flex-direction: column
+                align-items: center
+                // border: 1px solid red
+                // display: none
+                .tib_left
+                    // display: none
+                    width: 80%
+                    margin-bottom: 4%
+                    &:hover
+                        .info_bgc
+                            transform: translateY(0%)
+                    .info_bgc
+                        height: 100%
+                        bottom: 0%
+                        display: flex
+                        align-items: center
+                        justify-content: center
+                        h1
+                            font-size: 24px
+                            margin: 20px 0
+                            margin-left: 10px
+                        span
+                            font-size: 16px
+                            line-height: 40px
+                            display: none
+                .tib_right
+                    // display: none
+                    width: 80%
+                    .img
+                        width: 100%
+                        margin-bottom: 4%
+                        &:hover
+                            .info_bgc
+                                transform: translateY(0%)
+                        .info_bgc
+                            bottom: 0%
+                            height: 100%
+                            display: flex
+                            align-items: center
+                            justify-content: center
+                            .titleX
+                                font-size: 28px
+                                margin: 20px 0
+                                margin-left: 10px
+                            .span
+                                display: none
+                                span
+                                    font-size: 16px
+                                    line-height: 40px
+        .tab_bar
+            margin-top: 10px
+            .left, .right, .tab_num
+                font-size: 12px
+            .left, .right
+                width: 50px
+                height: 30px
+                border-radius: 20px
+            .tab_num
+                width: 30px
+                height: 30px
+                border-radius: 50%
+            .-on
+                color: white
+        .bottom_info_box
+            // border: 1px solid red
+            margin-top: -5%
+            width: 98%
+            h1
+                font-size: 28px
+            .info_box
+                width: 90%
+    .light_box
+        justify-content: center
+        align-items: center
+        z-index: 100000001
+        .lb_card
+            // margin-top: -4%
+            border-radius: 20px
+            width: 100%
+            height: 100%
+            overflow: auto
+            justify-content: flex-start
+            .title
+                margin: 10 5px
+                // border: 1px solid red
+                // margin-bottom: 10px
+                padding-left: 5px
+                .lb_cross
+                    top: 70px
+                    right: 2%
+                .h1
+                    margin-top: 3%
+                    h1
+                        font-size: 20px
+            .lb_content
+                justify-content: flex-start
+                margin-top: 0
+                margin-bottom: 20px
+                .content
+                    flex-direction: column
+                    justify-content: flex-start
+                    align-items: center
+                    // margin-top: 0
+                    .span
+                        margin-top: 1%
+                        width: 90%
+                        margin-left: 0%
+                        span
+                            font-size: 13px
+                    img
+                        width: 60%
+                        margin-right: 0%
+                        margin: 15px 0
+                    #lb_pic2
+                        display: none
+                .content_inverse
+                    .span
+                        margin-right: 0%

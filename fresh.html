@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Licious Fantasy給你幻想的美味</title>
+    <link href="https://fonts.googleapis.com/css?family=Bellota|Noto+Sans+TC|Noto+Serif+TC|Oswald&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="./pic/BEWD_icon.png">
+    <link rel="bookmark" href="./pic/BEWD_icon.png">
+    <link rel="stylesheet" href="./css/hd_ft.css">
+    <link rel="stylesheet" href="./css/sign.css">
+    <link rel="stylesheet" href="./css/chat.css">
+    <link rel="stylesheet" href="./css/search_bar.css">
+    <link rel="stylesheet" href="./css/fresh.css">
+</head>
+<body>
+    <!-- inject header -->
+    <div class="headerpage"></div>
+    <!-- inject header -->
+    <!-- 購物車 -->
+    <div class="shoopingCart"></div>
+    <!-- 購物車 -->
+    <!-- 登入 -->
+    <div class="SigninSignup"></div>
+    <!-- 登入 -->
+    <!-- 聊天室 -->
+    <div class="ChatBox"></div>
+    <!-- 聊天室 -->
+
+
+    <div class="cards_box">
+        <div class="run_horse">
+            <div class="run_span">
+                <span class="jump1">全</span>
+                <span class="jump2">館</span>
+                <span class="jump3">購</span>
+                <span class="jump4">物</span>
+                <span class="jump5">滿</span>
+                <span class="jump6">兩</span>
+                <span class="jump7">千</span>
+                <span class="jump8">享</span>
+                <span class="jump9">免</span>
+                <span class="jump10">運</span>
+                <span class="jump11">優</span>
+                <span class="jump12">惠</span>
+                <span class="jump13">！</span>
+            </div>
+        </div>
+        <!-- 搜尋 -->
+        <div class="search_bar">
+            <div class="first_search">
+                <div class="extends">
+                    <div>
+                        <span>所有分類</span>
+                        <span class="extend" id="all_extend">+</span>
+                    </div>
+                </div>
+                <div class="sb_content1" id="sb_content1">
+                    <div class="sbcont1_left">
+                        <a href="">熱門食譜
+                            <div class="line"></div>
+                        </a>
+                        <a href="">快煮食譜
+                            <div class="line"></div>
+                        </a>
+                        <a href="">精緻食譜
+                            <div class="line"></div>
+                        </a>
+                        <a href="">夢幻食譜
+                            <div class="line"></div>
+                        </a>
+                        <a href="">異國食譜
+                            <div class="line"></div>
+                        </a>
+                    </div>
+                    <div class="sbcont1_right">
+                        <a href="">菜葉類
+                            <div class="line"></div>
+                        </a>
+                        <a href="">肉肉類
+                            <div class="line"></div>
+                        </a>
+                        <a href="">湯品類
+                            <div class="line"></div>
+                        </a>
+                        <a href="">調味料
+                            <div class="line"></div>
+                        </a>
+                        <a href="">飲品類
+                            <div class="line"></div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="second_search" id="app">
+                <input type="text" placeholder="請輸入關鍵字" class="input" v-model='text'>
+                <div :class="btnClass">搜尋</div>
+            </div>
+            <div class="third_search">
+                <div class="extends">
+                    <div>
+                        <span>選擇分類</span>
+                        <span class="extend" id="chose_extend">+</span>
+                    </div>
+                </div>
+                <div class="sb_content2_box" id="sb_content2">
+                    <div class="sb_content2">
+                        <div class="sbcont2_left">
+                            <label for="a">
+                                <input type="checkbox" value="要有菜" class="choose_inp" id="a">
+                                要有菜
+                            </label>
+                            <label for="b">
+                                <input type="checkbox" class="choose_inp" id="b">
+                                要有肉
+                            </label>
+                            <label for="c">
+                                <input type="checkbox" class="choose_inp" id="c">
+                                要有飯
+                            </label>
+                            <label for="d">
+                                <input type="checkbox" class="choose_inp" id="d">
+                                要有麵
+                            </label>
+                            <label for="e">
+                                <input type="checkbox" class="choose_inp" id="e">
+                                要有魚
+                            </label>
+                            <label for="e">
+                                <input type="checkbox" class="choose_inp" id="e">
+                                要有蛋
+                            </label>
+                        </div>
+                        <div class="sbcont2_right">
+                            <label for="f">
+                                <input type="checkbox" class="choose_inp" id="f">
+                                要貴貴
+                            </label>
+                            <label for="g">
+                                <input type="checkbox" class="choose_inp" id="g">
+                                要實惠
+                            </label>
+                            <label for="h">
+                                <input type="checkbox" class="choose_inp" id="h">
+                                要簡單
+                            </label>
+                            <label for="i">
+                                <input type="checkbox" class="choose_inp" id="i">
+                                要美美
+                            </label>
+                            <label for="j">
+                                <input type="checkbox" class="choose_inp" id="j">
+                                要好玩
+                            </label>
+                            <label for="k">
+                                <input type="checkbox" class="choose_inp" id="k">
+                                我全都要
+                            </label>
+                        </div>
+                    </div>
+                    <div class="submit2">搜尋</div>
+                </div>
+            </div>
+        </div>
+        <!-- 搜尋Html -->
+        <div class="crumbs">
+            <a href="./fresh.html">生鮮</a>
+            <span>&nbsp;>&nbsp;</span>
+            <a href="" class="orange">所有生鮮</a>
+        </div>
+        <div class="cards_content">
+            <div class="card">
+                <div class="img">
+                    <img src="./pic/fresh/f1.jpg" alt="">
+                </div>
+                <div class="title">
+                    <h2>奧地利豆芽菜</h2>
+                    <img src="./pic/heart.svg" alt="" class="heart" data-count="0">
+                    <img src="./pic/analytics_black.svg" class="analytics" data-analytics="0" alt="">
+                </div>
+                <div class="price">
+                    <span>特價</span>
+                    <h3 class="english">9</h3>
+                    <span>元/</span>
+                    <span class="english small">100g</span>
+                </div>
+                <div class="bottom" data-picnum="1" >
+                    <span>GO!</span>
+                </div>
+            </div>
+            <div class="card">
+                <div class="img">
+                    <img src="./pic/fresh/f2.jpg" alt="">
+                </div>
+                <div class="title">
+                    <h2>韓國高麗菜</h2>
+                    <img src="./pic/heart.svg" alt="" class="heart" data-count="0">
+                    <img src="./pic/analytics_black.svg" class="analytics" data-analytics="2" alt="">
+                </div>
+                <div class="price">
+                    <span>特價</span>
+                    <h3 class="english">18</h3>
+                    <span>元/</span>
+                    <span class="english small">100g</span>
+                </div>
+                <div class="bottom" data-picnum="2" >
+                    <span>GO!</span>
+                </div>
+            </div>
+            <div class="card">
+                <div class="img">
+                    <img src="./pic/fresh/f3.jpg" alt="">
+                </div>
+                <div class="title">
+                    <h2>美濃特級水蓮</h2>
+                    <img src="./pic/heart.svg" alt="" class="heart" data-count="0">
+                    <img src="./pic/analytics_black.svg" class="analytics" data-analytics="4" alt="">
+                </div>
+                <div class="price">
+                    <span>特價</span>
+                    <h3 class="english">25</h3>
+                    <span>元/</span>
+                    <span class="english small">1pc</span>
+                </div>
+                <div class="bottom" data-picnum="3" >
+                    <span>GO!</span>
+                </div>
+            </div>
+            <div class="card">
+                <div class="img">
+                    <img src="./pic/fresh/f4.jpg" alt="">
+                </div>
+                <div class="title">
+                    <h2>乾黑木耳</h2>
+                    <img src="./pic/heart.svg" alt="" class="heart" data-count="0">
+                    <img src="./pic/analytics_black.svg" class="analytics" data-analytics="6" alt="">
+                </div>
+                <div class="price">
+                    <span>特價</span>
+                    <h3 class="english">47</h3>
+                    <span>元/</span>
+                    <span class="english small">100g</span>
+                </div>
+                <div class="bottom" data-picnum="4" >
+                    <span>GO!</span>
+                </div>
+            </div>
+            <div class="card">
+                <div class="img">
+                    <img src="./pic/fresh/f5.jpg" alt="">
+                </div>
+                <div class="title">
+                    <h2>新鮮白木耳</h2>
+                    <img src="./pic/heart.svg" alt="" class="heart" data-count="0">
+                    <img src="./pic/analytics_black.svg" class="analytics" data-analytics="8" alt="">
+                </div>
+                <div class="price">
+                    <span>特價</span>
+                    <h3 class="english">88</h3>
+                    <span>元/</span>
+                    <span class="english small">1pc</span>
+                </div>
+                <div class="bottom" data-picnum="5" >
+                    <span>GO!</span>
+                </div>
+            </div>
+            <div class="card">
+                <div class="img">
+                    <img src="./pic/fresh/f6.jpg" alt="">
+                </div>
+                <div class="title">
+                    <h2>宜蘭三星蔥</h2>
+                    <img src="./pic/heart.svg" alt="" class="heart" data-count="0">
+                    <img src="./pic/analytics_black.svg" class="analytics" data-analytics="10" alt="">
+                </div>
+                <div class="price">
+                    <span>特價</span>
+                    <h3 class="english">200</h3>
+                    <span>元/</span>
+                    <span class="english small">1pc</span>
+                </div>
+                <div class="bottom" data-picnum="6" >
+                    <span>GO!</span>
+                </div>
+            </div>
+            <div class="card">
+                <div class="img">
+                    <img src="./pic/fresh/f7.jpg" alt="">
+                </div>
+                <div class="title">
+                    <h2>近江牛</h2>
+                    <img src="./pic/heart.svg" alt="" class="heart" data-count="0">
+                    <img src="./pic/analytics_black.svg" class="analytics" data-analytics="12" alt="">
+                </div>
+                <div class="price">
+                    <span>特價</span>
+                    <h3 class="english">640</h3>
+                    <span>元/</span>
+                    <span class="english small">100g</span>
+                </div>
+                <div class="bottom" data-picnum="7" >
+                    <span>GO!</span>
+                </div>
+            </div>
+            <div class="card">
+                <div class="img">
+                    <img src="./pic/fresh/f8.png" alt="">
+                </div>
+                <div class="title">
+                    <h2>飛驒牛</h2>
+                    <img src="./pic/heart.svg" alt="" class="heart" data-count="0">
+                    <img src="./pic/analytics_black.svg" class="analytics" data-analytics="14" alt="">
+                </div>
+                <div class="price">
+                    <span>特價</span>
+                    <h3 class="english">1700</h3>
+                    <span>元/</span>
+                    <span class="english small">100g</span>
+                </div>
+                <div class="bottom" data-picnum="8" >
+                    <span>GO!</span>
+                </div>
+            </div>
+            <div class="card">
+                <div class="img">
+                    <img src="./pic/fresh/f9.jpg" alt="">
+                </div>
+                <div class="title">
+                    <h2>神戶牛</h2>
+                    <img src="./pic/heart.svg" alt="" class="heart" data-count="0">
+                    <img src="./pic/analytics_black.svg" class="analytics" data-analytics="16" alt="">
+                </div>
+                <div class="price">
+                    <span>特價</span>
+                    <h3 class="english">2100</h3>
+                    <span>元/</span>
+                    <span class="english small">1pc</span>
+                </div>
+                <div class="bottom" data-picnum="9" >
+                    <span>GO!</span>
+                </div>
+            </div>
+            <div class="card">
+                <div class="img">
+                    <img src="./pic/fresh/f10.jpg" alt="">
+                </div>
+                <div class="title">
+                    <h2>澳洲A9和牛</h2>
+                    <img src="./pic/heart.svg" alt="" class="heart" data-count="0">
+                    <img src="./pic/analytics_black.svg" class="analytics" data-analytics="18" alt="">
+                </div>
+                <div class="price">
+                    <span>特價</span>
+                    <h3 class="english">350</h3>
+                    <span>元/</span>
+                    <span class="english small">100g</span>
+                </div>
+                <div class="bottom" data-picnum="10" >
+                    <span>GO!</span>
+                </div>
+            </div>
+            <div class="card">
+                <div class="img">
+                    <img src="./pic/fresh/f11.jpg" alt="">
+                </div>
+                <div class="title">
+                    <h2>產地直送鮭魚片</h2>
+                    <img src="./pic/heart.svg" alt="" class="heart" data-count="0">
+                    <img src="./pic/analytics_black.svg" class="analytics" data-analytics="20" alt="">
+                </div>
+                <div class="price">
+                    <span>特價</span>
+                    <h3 class="english">300</h3>
+                    <span>元/</span>
+                    <span class="english small">1pc</span>
+                </div>
+                <div class="bottom" data-picnum="11" >
+                    <span>GO!</span>
+                </div>
+            </div>
+            <div class="card">
+                <div class="img">
+                    <img src="./pic/fresh/f12.jpg" alt="">
+                </div>
+                <div class="title">
+                    <h2>波士頓特選龍蝦</h2>
+                    <img src="./pic/heart.svg" alt="" class="heart" data-count="0">
+                    <img src="./pic/analytics_black.svg" class="analytics" data-analytics="22" alt="">
+                </div>
+                <div class="price">
+                    <span>特價</span>
+                    <h3 class="english">5000</h3>
+                    <span>元/</span>
+                    <span class="english small">1pc</span>
+                </div>
+                <div class="bottom" data-picnum="12" >
+                    <span>GO!</span>
+                </div>
+            </div>
+            <div class="card">
+                <div class="img">
+                    <img src="./pic/fresh/f13.jpg" alt="">
+                </div>
+                <div class="title">
+                    <h2>伊比利豬</h2>
+                    <img src="./pic/heart.svg" alt="" class="heart" data-count="0">
+                    <img src="./pic/analytics_black.svg" class="analytics" data-analytics="24" alt="">
+                </div>
+                <div class="price">
+                    <span>特價</span>
+                    <h3 class="english">700</h3>
+                    <span>元/</span>
+                    <span class="english small">100g</span>
+                </div>
+                <div class="bottom" data-picnum="13" >
+                    <span>GO!</span>
+                </div>
+            </div>
+            <div class="card">
+                <div class="img">
+                    <img src="./pic/fresh/f14.jpg" alt="">
+                </div>
+                <div class="title">
+                    <h2>佩里格松露</h2>
+                    <img src="./pic/heart.svg" alt="" class="heart" data-count="0">
+                    <img src="./pic/analytics_black.svg" class="analytics" data-analytics="26" alt="">
+                </div>
+                <div class="price">
+                    <span>特價</span>
+                    <h3 class="english">25000</h3>
+                    <span>元/</span>
+                    <span class="english small">100g</span>
+                </div>
+                <div class="bottom" data-picnum="14" >
+                    <span>GO!</span>
+                </div>
+            </div>
+            <div class="card">
+                <div class="img">
+                    <img src="./pic/fresh/f15.jpg" alt="">
+                </div>
+                <div class="title">
+                    <h2>阿爾巴白松露</h2>
+                    <img src="./pic/heart.svg" alt="" class="heart" data-count="0">
+                    <img src="./pic/analytics_black.svg" class="analytics" data-analytics="28" alt="">
+                </div>
+                <div class="price">
+                    <span>公道價</span>
+                    <h3 class="english">81000</h3>
+                    <span>元/</span>
+                    <span class="english small">100g</span>
+                </div>
+                <div class="bottom" data-picnum="15" >
+                    <span>GO!</span>
+                </div>
+            </div>
+            <div class="card">
+                <div class="img">
+                    <img src="./pic/fresh/f16.jpg" alt="">
+                </div>
+                <div class="title">
+                    <h2>澳大利亞袋鼠肉</h2>
+                    <img src="./pic/heart.svg" alt="" class="heart" data-count="0">
+                    <img src="./pic/analytics_black.svg" class="analytics" data-analytics="30" alt="">
+                </div>
+                <div class="price">
+                    <span>公道價</span>
+                    <h3 class="english">8</h3>
+                    <span>元/</span>
+                    <span class="english small">100g</span>
+                </div>
+                <div class="bottom" data-picnum="16" >
+                    <span>GO!</span>
+                </div>
+            </div>
+        </div>
+        <div class="tab_bar" id="tab_bar">
+            <!-- <div class="left -gg">
+                < Pref
+            </div>
+            <div class="tab_num -on">1</div>
+            <div class="tab_num">2</div>
+            <div class="tab_num">3</div>
+            <div class="tab_num">4</div>
+            <div class="tab_num">5</div>
+            <div class="tab_num">6</div>
+            <div class="tab_num">7</div>
+            <div class="tab_num">8</div>
+            <div class="tab_num">...</div>
+            <div class="right">
+                Next >
+            </div> -->
+        </div>
+    </div>
+
+    <!-- 分析燈箱 -->
+    <div class="analyticslb_box" id="analyticslb_box">
+        <div class="analyticslb_title">
+            <h1 id="analyticslb_title"></h1>
+            <div class="analyticslb_cross" id="analyticslb_cross">
+                <div class="close_line"></div>
+                <div class="close_line2"></div>
+            </div>
+        </div>
+        <div class="analytics_div" id="div">
+            <span class="span" id="span"></span>
+            <span class="movespan" id="movespan"></span>
+        </div>
+    </div>
+    <!-- 分析燈箱 -->
+
+    <!-- 食物燈箱 -->
+    <div class="light_box" id="light_box">
+        <div class="warning" id="warning">
+            <span>已加入購物車</span>
+        </div>
+        <div class="pic" id="lb_pic">
+            <img src="./pic/fresh/f15.jpg" alt="" id="cart_img">
+        </div>
+        <div class="lb_card" id="lb_card">
+            <div class="product_title">
+                <div class="h1">
+                    <h1 id="product_title">澳大利亞袋鼠肉</h1>
+                    <div class="h1_bgc"></div>
+                </div>
+                <div class="lb_cross" id="lb_cross">
+                    <div class="close_line"></div>
+                    <div class="close_line2"></div>
+                </div>
+            </div>
+            <div class="card_content" id="card_content">
+                <div class="lb_card_left">
+                    <div class="img" id="light_img">
+                        <img src="./pic/fresh/f15.jpg" alt="" id="lb_img">
+                        <div class="viewport" id="viewport"></div>
+                    </div>
+                    <div class="resume">
+                        <div class="resume_title">
+                            <div class="h2_bgc"></div>
+                            <h2>產地履歷</h2>
+                        </div>
+                        <div class="resume_content">
+                            <div class="resume_words">
+                                <span>追蹤碼：</span>
+                                <span>農民經營業者：</span>
+                                <span>組織代碼：</span>
+                            </div>
+                            <div class="resume_words">
+                                <span class="fw english">95279487</span>
+                                <span class="fw">今晚打老虎</span>
+                                <span class="fw english">duson</span>
+                            </div>
+                            <div class="resume_words">
+                                <span>驗證機構：</span>
+                                <span>驗證有效日期：</span>
+                                <span>通路商資訊：</span>
+                            </div>
+                            <div class="resume_words">
+                                <span class="fw">黃金貴集團</span>
+                                <span class="fw english">1990.1.18</span>
+                                <span class="fw">小7、全家</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="lb_card_right">
+                    <div class="zoom_image" id="zoom_image">
+                        <img src="" alt="" id='zoom_img'>
+                    </div>
+                    <div class="product_info_title">
+                        <h2>產品介紹</h2>
+                        <div class="h2_line"></div>
+                    </div>
+                    <div class="product_info">
+                        <span>在澳洲，袋鼠肉比牛肉略便宜，富含蛋白質、鐵、鋅、維生素B6、B12等，脂肪含量又非常低，再加上不少人認為袋鼠肉更加環保（袋鼠是食草量只是羊的三分之一，但又不像牛羊反芻動物一般吃飽了就放臭屁污染環境），所以不少澳洲餐館、超市都可以吃到袋鼠肉。跟牛肉有點兒像，但因為脂肪含量很低，所以口感比較柴，味道也比牛肉膻不少，如果烹飪不好還會又酸又硬。</span>
+                    </div>
+                    <div class="product_recipe_title">
+                        <h2>相關食譜</h2>
+                        <div class="h2_line"></div>
+                    </div>
+                    <div class="product_recipe">
+                        <span>火烤袋鼠肉</span>
+                        <span>水煮袋鼠肉</span>
+                        <span>油炸袋鼠肉</span>
+                        <span>袋鼠佛跳牆</span>
+                        <span>金縷佛鼠</span>
+                        <span>美味袋鼠堡</span>
+                    </div>
+                    <div class="product_other">
+                        <div class="price_item">
+                            <span>我要買</span>
+                            <input type="number" value="1" id="buy">
+                            <span>件</span>
+                        </div>
+                        <div class="lb_btn" id="lb_btn" data-cart="25">
+                            加入購物車
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 食物燈箱 -->
+
+    <!-- footerpage -->
+    <div class="footerpage"></div>
+    <!-- footerpage -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.11/vue.min.js"></script>
+    <script src="http://d3js.org/d3.v3.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.14.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.6.1/firebase-database.js"></script>
+    <script src="./js/firebase.js"></script>
+    <!-- firebase -->
+    <script src="./js/inject.js"></script>
+    <script src="./js/hd_ft_menber.js"></script>
+    <script src="./js/searchbar.js"></script>
+    <script src="./js/tab_bar.js"></script>
+    <script src="./js/data_fresh.js"></script>
+    <script src="./js/fresh.js"></script>
+</body>
+</html>

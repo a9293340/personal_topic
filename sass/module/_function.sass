@@ -1,0 +1,33 @@
+=transition_set($pro,$time,$ori1:50%,$ori2:50%)
+    transition-property: $pro   
+    transition-duration: $time
+    @if $ori2 == xx
+        transform-origin: $ori1
+    @else 
+        transform-origin: $ori1 $ori2
+
+=font_style($size,$color,$weight:500,$wrap:wrap)
+    font-size: $size
+    color: $color
+    font-weight: $weight
+    white-space: $wrap
+
+%cross
+    position: absolute
+    right: 20px
+    top: 40px
+    width: 30px
+    height: 30px
+    cursor: pointer
+    &:hover
+        .close_line, .close_line2
+            border-color: $orange
+    .close_line, .close_line2
+        width: 30px
+        border-top: 4px solid #e6c0a6
+        @include transition_set(all,.3s)
+    .close_line
+        transform: rotate(45deg) translateX(-2.5px)
+    .close_line2
+        transform: rotate(-45deg) translate(2px,-6px)
+        // border-top: 2px solid red

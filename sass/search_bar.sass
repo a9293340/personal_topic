@@ -1,0 +1,233 @@
+@import "./base/_var"
+    
+//搜尋列
+.search_bar
+    margin: 0 auto
+    margin-top: 10px
+    transform: translateY(12%)
+    width: 100%
+    display: flex
+    height: 42px
+    // margin-bottom: 20px
+    justify-content: center
+    // border: 1px solid red
+    z-index: 1000
+    .first_search
+        width: 25%
+        display: flex
+        flex-direction: column
+        position: relative
+        .extends
+            background-color: $search_bgc
+            box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5)
+            display: flex
+            align-items: center
+            justify-content: center
+            z-index: 100
+            padding: 5px 0
+            position: relative
+            span
+                font-weight: 700
+                font-size: 24px
+                line-height: 32px
+                color: #dbdbdb
+            .extend
+                position: absolute
+                cursor: pointer
+                font-size: 30px
+                margin: 0
+                padding: 0
+                padding-left: 3px
+                color: $orange
+                transition-property: all
+                transition-duration: .1s
+        .sb_content1
+            position: absolute
+            overflow: hidden
+            transition-property: all
+            transition-duration: .5s
+            transform-origin: top
+            width: 100%
+            height: 0
+            margin: 0 auto
+            top: 100%
+            background-color: $search_bgc
+            display: flex
+            justify-content: space-around
+            box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5)
+            .sbcont1_left, .sbcont1_right
+                display: flex
+                flex-direction: column
+                align-items: center
+                padding-top: 10px
+                a
+                    margin: 0
+                    padding-bottom: 5px 
+                    text-decoration: none
+                    color: $white
+                    &:hover
+                        color: $orange
+                        .line
+                            width: 100%
+                    .line
+                        transition-property: width
+                        transition-duration: .3s
+                        transform-origin: left
+                        width: 0%
+                        border: .5px solid $orange
+    .second_search
+        width: 40%
+        display: flex
+        align-items: center
+        justify-content: center
+        background-color: $search_bgc
+        box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5)
+        span
+            font-weight: 700
+            font-size: 24px
+            padding-left: 20px
+            padding-right: 10px
+            line-height: 30px
+            color: $black
+        .input
+            width: 70%
+            height: 30px
+            padding-left: 10px
+            color: $white
+            background-color: $black
+            border: 0
+        .submit
+            margin-left: 15px
+            padding: 2px 5px
+            cursor: pointer
+            font-size: 16px
+            border: 1px solid $orange
+            border-radius: 5px
+            color: $orange
+            transition-property: all
+            transition-duration: .3s
+            &:hover
+                background-color: $orange
+                color: white
+        .disable
+            color: white
+            background-color: $bgcgrey
+            border-color: $bgcgrey
+            cursor: not-allowed
+            &:hover
+                color: white
+                background-color: $bgcgrey
+    .third_search
+        display: flex
+        flex-direction: column
+        width: 25%
+        position: relative
+        // height: 30px
+        .extends
+            background-color: $search_bgc
+            box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5)
+            display: flex
+            align-items: center
+            justify-content: center
+            padding: 5px 0
+            position: relative
+            span
+                font-weight: 700
+                font-size: 24px
+                line-height: 32px
+                color: #dbdbdb
+                // position: absolute
+            .extend
+                cursor: pointer
+                // border: 1px solid red
+                position: absolute
+                font-size: 30px
+                margin: 0
+                padding: 0
+                padding-left: 3px
+                color: $orange
+                transition-property: all
+                transition-duration: .1s
+        .sb_content2_box
+            position: absolute
+            overflow: hidden
+            width: 100%
+            height: 0
+            transition-property: height
+            transition-duration: .5s
+            transform-origin: top
+            box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5)
+            top: 100%
+            background-color: $search_bgc
+            z-index: 10000
+            .sb_content2
+                display: flex
+                justify-content: space-around
+                margin: 0 auto
+                .sbcont2_left, .sbcont2_right
+                    padding-top: 10px
+                    display: flex
+                    flex-direction: column
+                    label
+                        font-size: 16px
+                        color: $white    
+                .sbcont2_left
+                    margin-right: 5px
+            .submit2
+                margin: 0 auto
+                margin-top: 10px
+                width: 50px
+                padding: 2px 5px
+                cursor: pointer
+                font-size: 16px
+                text-align: center
+                border: 1px solid $orange
+                border-radius: 5px
+                color: $orange
+                transition-property: all
+                transition-duration: .3s
+                &:hover
+                    background-color: $orange
+                    color: white
+
+
+
+@media screen and ( max-width: 1024px ) and ( min-width: 769px)
+    .search_bar
+        .first_search
+            width: 25%
+        .second_search
+            width: 50%
+            // .input
+            //     width: 150px
+        .third_search
+            width: 25%
+@media screen and ( max-width: 768px ) and ( min-width: 500px)
+    .search_bar
+        width: 90%
+        // min-width: 500px
+        justify-content: space-around
+        .second_search
+            display: none
+        .first_search, .third_search
+            width: 45%
+            .sb_content1
+                justify-content: space-around
+            .sb_content2_box
+                .sb_content2
+                    justify-content: space-around
+
+@media screen and ( max-width: 499px )
+    .search_bar
+        width: 95%
+        // min-width: 500px
+        justify-content: space-around
+        .second_search
+            display: none
+        .first_search, .third_search
+            width: 48%
+            .sb_content1
+                justify-content: space-around
+            .sb_content2_box
+                .sb_content2
+                    justify-content: space-around

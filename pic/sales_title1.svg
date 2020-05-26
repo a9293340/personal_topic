@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="578.369" height="191.551" viewBox="0 0 578.369 191.551">
+  <defs>
+    <radialGradient id="radial-gradient" cx="0.5" cy="0.5" r="0.629" gradientTransform="matrix(0.878, -0.48, 0.178, 0.326, -0.028, 0.577)" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#6ce688"/>
+      <stop offset="1" stop-color="#e4e4e4"/>
+    </radialGradient>
+  </defs>
+  <g id="Group_355" data-name="Group 355" transform="matrix(0.996, -0.087, 0.087, 0.996, -729.893, -1554.366)">
+    <rect id="Rectangle_261" data-name="Rectangle 261" width="571.178" height="107.449" transform="translate(585 1688)" fill="url(#radial-gradient)"/>
+    <text id="全館下殺7折_" data-name="全館下殺7折!!" transform="translate(606.207 1769.535)" stroke="#fff" stroke-width="1" font-size="67" font-family="NotoSansTC-Black, Noto Sans TC" font-weight="800"><tspan x="0" y="0">全館下殺</tspan><tspan y="0" fill="#ff0303" font-size="120" font-family="Bellota-BoldItalic, Bellota" font-weight="700" font-style="italic">7</tspan><tspan y="0">折!!</tspan></text>
+  </g>
+</svg>

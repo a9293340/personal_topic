@@ -1,0 +1,579 @@
+@import "./base/_var"
+@import "./module/_function"
+
+
+body
+    background-color: $bgcgrey
+
+.header
+    .hd_black
+        .header_btn
+            .recipe_btn
+                a
+                    color: $orange
+                    font-weight: bolder
+                .line
+                    border-color: $orange
+                    width: 110%
+
+
+
+.recipe_box
+    // box-sizing: border-box
+    margin: 0 auto
+    width: 1150px
+    display: flex
+    // border: 1px solid red
+    flex-direction: column
+    .crumbs
+        padding: 15px
+        padding-left: 28px
+        .orange
+            color: $orange
+        a
+            font-size: 20px
+            color: #111111
+    .recipe_top
+        width: 100%
+        display: flex
+        // border: 1px solid red
+        justify-content: space-around
+        .recipe_pic, .recipe_title
+            // border: 1px solid red
+            display: flex
+            flex-direction: column
+        .recipe_pic
+            width: 45%
+            .main_pic, .pics
+                display: flex
+                justify-content: space-between
+                // border: 1px solid green
+            .main_pic
+                width: 100%
+                height: 400px
+                img
+                    width: 100%
+                    // height: 500px
+            .pics
+                margin-top: 3%
+                .pic
+                    width: 24%
+                    // height: 100px
+                    // border: 1px solid blue
+                    .pic_img
+                        cursor: pointer
+                        width: 100%
+                        // height: 100%
+                        box-sizing: border-box
+                    .border_orange
+                        border: 3px solid $orange
+        .recipe_title
+            width: 45%
+            .h1, .authors, .author_intro
+                padding-left: 5%
+                padding-right: 5%
+            .h1
+                // border: 1px solid red
+                margin-top: -3%
+                h1
+                    font-size: 40px
+                    margin: 0
+                    font-weight: 500
+                .h1_bgc
+                    background-color: rgba(248, 100, 34, 0.7)
+                    width: 80%
+                    height: 20px
+                    bottom: 0
+                    z-index: -10
+                    margin-top: -5%
+            .authors
+                margin-top: 5%
+                // border: 1px solid red
+                display: flex
+                align-items: center
+                .authors_pic
+                    border-radius: 50%
+                    width: 80px
+                    height: 80px
+                    overflow: hidden
+                    img
+                        width: 100%
+                .authors_name
+                    margin-left: 5%
+                    display: flex
+                    flex-direction: column
+                    h2
+                        font-weight: 500
+                        font-size: 28px
+                        margin: 0
+                        color: $blue
+                    span
+                        font-size: 14px
+                        color: $black
+                        font-family: $notoserif
+            .author_intro
+                display: flex
+                flex-direction: column
+                margin-top: 5%
+                .h2
+                    position: relative
+                    margin-bottom: 3%
+                    h2
+                        font-size: 32px
+                        margin: 0
+                        font-weight: 500
+                    .h2_bgc
+                        position: absolute
+                        background-color: rgba(51, 143, 230, 0.3)
+                        width: 40%
+                        height: 10px
+                        bottom: 1%
+                        z-index: -10
+                span
+                    font-family: $notoserif
+                    color: $black
+                    line-height: 30px
+            .author_other
+                margin-top: 8%
+                display: flex
+                // border: 1px solid red
+                width: 100%
+                justify-content: space-around
+                .collectbtn
+                    border: 1px solid $orange
+                    border-radius: 10px
+                    width: 150px
+                    height: 60px
+                    display: flex
+                    align-items: center
+                    transition-property: all
+                    transition-duration: .3s
+                    cursor: pointer
+                    &:hover
+                        span
+                            color: $orange
+                    .collect
+                        transition-property: all
+                        transition-duration: .3s
+                        margin-left: 10%
+                    span
+                        transition-property: all
+                        transition-duration: .3s
+                        margin-left: 8%
+                        font-size: 20px
+                        color: black
+                .message
+                    border: 1px solid $orange
+                    border-radius: 10px
+                    width: 150px
+                    height: 60px
+                    display: flex
+                    align-items: center
+                    justify-content: center
+                    transition-property: all
+                    transition-duration: .3s
+                    cursor: pointer
+                    &:hover
+                        background-color: $orange
+                        a
+                            color: white
+                    a
+                        font-size: 20px
+                        color: black
+                        font-weight: 500
+                        text-decoration: none
+
+    .recipe_content
+        display: flex
+        justify-content: space-around
+        margin-top: 2%
+        margin-bottom: 2%
+        .material, .method
+            background-color: white
+            width: 45%
+            box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5)
+        .material
+            padding-left: .5%
+            padding-right: .5%
+            .top_material
+                margin: 1.5% 0
+                display: flex
+                // border: 1px solid red
+                // justify-content: space-around
+                .hiline
+                    border: .5px solid #979494
+                    height: 50px
+                    margin: auto 0
+                    margin-left: 23.5%
+                .serving, .time
+                    display: flex
+                    flex-direction: column
+                    justify-content: center
+                    align-items: center
+                    // border: 1px solid red
+                    .top
+                        font-weight: 600
+                        font-size: 18px
+                    span
+                        color: $black
+                        font-size: 16px
+                        line-height: 24px
+                        margin-top: 10%
+                        font-family: $notoserif
+                        white-space: nowrap
+                .serving
+                    margin-left: 18%
+                .time
+                    margin-left: 18%
+            p
+                margin: 1% 0
+                font-size: 24px
+                color: #111111
+                white-space: nowrap
+            .line
+                border: .5px solid $black
+                margin: 0 auto
+                margin-bottom: 2%
+                width: 99%
+            .material_content
+                display: flex
+                // border: 1px solid red
+                justify-content: space-around
+                width: 95%
+                flex-wrap: wrap
+                margin: 0 auto
+                position: relative
+                .mc_content
+                    // border: 1px solid red
+                    width: 45%
+                    display: flex
+                    justify-content: space-around
+                    align-items: center
+                    margin-bottom: 4%
+                    margin-top: 4%
+                .mc_choose
+                    border-bottom: 1px solid $black
+                    cursor: pointer
+                    @include transition_set(all,.2s)
+                    &:hover
+                        color: $orange
+                        border-color: $orange
+                &::after
+                    content: ''
+                    height: 90%
+                    // width: 1px
+                    border-left: .5px solid #979494
+                    position: absolute
+                    top: 25px
+        .method
+            margin-left: 2%
+            padding-left: .5%
+            padding-right: .5%
+            p
+                margin: 1% 0
+                font-size: 24px
+                color: #111111
+            .line
+                border: .5px solid $black
+                margin: 0 auto
+                margin-bottom: 2%
+                width: 99%
+            .method_contents
+                display: flex
+                flex-wrap: wrap
+                justify-content: space-around
+                .method_left
+                    border-right: 1px solid #979494
+                    border-bottom: 1px solid #979494
+                .method_right
+                    border-bottom: 1px solid #979494
+                .method_no_b
+                    border-bottom: 0px
+                    margin-bottom: 2%
+                .method_content
+                    // border: 1px solid red
+                    box-sizing: border-box
+                    width: 50%
+                    display: flex
+                    justify-items: center
+                    align-items: center
+                    .img
+                        margin: 2%
+                        img
+                            width: 100%
+                            height: 100%
+                    .method_words
+                        // border: 1px solid red   
+                        width: 80%
+                        display: flex
+                        flex-direction: column
+                        justify-content: space-around
+                        .order
+                            font-size: 24px
+                            color: $orange
+                            font-family: $notoserif
+                        .word
+                            font-size: 16px
+                            color: $black
+                            font-family: $notoserif
+
+    .board
+        // border: 1px solid red
+        width: 97%
+        background-color: white
+        box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5)
+        margin: 0 auto
+        margin-bottom: 2%
+        p
+            margin: 1% 0
+            margin-left: 1%
+            font-size: 24px
+            color: #363636
+        .line
+            border: .5px solid $black
+            margin-left: 1%
+            margin-bottom: 2%
+            width: 95%
+        .my_message
+            display: none
+            margin-bottom: 2%
+            flex-wrap: wrap
+            .my_head
+                margin-left: 1%
+                border-radius: 50%
+                width: 100px 
+                height: 100px
+                overflow: hidden
+                img
+                    width: 100%
+                    height: 100%
+            textarea
+                margin-left: 5%
+                width: 60%
+            input
+                cursor: pointer
+                margin-top: 13%
+                margin-left: 5%
+                height: 40px
+                width: 60px
+                font-size: 16px
+                background-color: #fff
+        .no_message
+            display: flex
+            justify-content: center
+            .no_message_btn
+                cursor: pointer
+                margin: 5%
+                font-size: 20px
+                font-weight: 500
+                color: $black
+                width: 200px
+                height: 80px
+                border: 1px solid $orange
+                border-radius: 10px
+                display: flex
+                justify-content: center
+                align-items: center
+                transition-property: all
+                transition-duration: .2s
+                &:hover
+                    background-color: $orange
+                    color: white
+                    transition-property: all
+                    transition-duration: .2s
+        .main_message
+            width: 100%
+            // border: 1px solid red
+            display: flex
+            position: relative
+            margin-bottom: 3%
+            flex-wrap: wrap
+            margin-left: 1%
+            img
+                border-radius: 50%
+                width: 60px
+                height: 60px
+                background-position: center
+                margin-left: .5%
+            .message_words
+                display: flex
+                flex-direction: column
+                // border: 1px solid red
+                width: 80%
+                margin-left: 1%
+                .author_name
+                    font-size: 22px
+                    color: #363636
+                    margin-bottom: 1%
+                .words
+                    margin-left: 1%
+                    font-size: 14px
+                    color: $black
+                    width: 80%
+                    display: inline-block
+                    word-break: break-word
+                .time
+                    margin-left: 1%
+                    margin-top: 1%
+                    font-size: 12px
+                    color: #a09c9c
+            .words_line
+                border: .5px solid #cfcfcf
+                width: 95%
+                margin-top: 2%
+                bottom: -20%
+
+
+
+@media screen and ( max-width: 1199px ) and ( min-width: 1025px)
+    .recipe_box
+        width: 95%
+        .recipe_top
+            .recipe_pic
+                min-width: 530px
+        .recipe_content
+            .material, .method
+                width: 50%
+        .board
+            width: 100%
+
+@media screen and ( max-width: 1024px ) and ( min-width: 769px)
+    .recipe_box
+        width: 95%
+        .crumbs
+            margin-left: 14%
+        .recipe_top
+            flex-wrap: wrap
+            .recipe_pic, .recipe_title
+                width: 65%
+            .recipe_pic
+                order: 2
+                background-color: #ffffff
+                box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5)
+            .recipe_title
+                margin: 0
+                background-color: #ffffff
+                box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5)
+                margin-bottom: 2%
+                .h1
+                    margin-top: 0
+                .author_other
+                    margin-bottom: 2%
+        .recipe_content
+            flex-wrap: wrap
+            .material, .method
+                width: 65%
+            .material
+                margin-bottom: 2%
+            .method
+                margin-left: 0
+        .board
+            width: 65%
+            .my_message
+                textarea
+                    width: 55%
+
+@media screen and ( max-width: 768px )
+    // .chat
+    //     display: none
+    .recipe_box
+        padding-top: 120px
+        width: 95%
+        // border: 1px solid red
+        // min-width: 500px
+        .crumbs
+            margin-left: 6%
+        .recipe_top
+            flex-wrap: wrap
+            .recipe_pic, .recipe_title
+                width: 90%
+                // min-width: 500px
+            .recipe_pic
+                order: 2
+                background-color: #ffffff
+                box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5)
+                margin: 0
+                align-items: center
+                .main_pic
+                    // margin: 0
+                    margin-top: 10px
+                    width: 80%
+                    max-height: 250px
+                    // height: auto
+                .pics
+                    margin-top: 10px
+                    margin-bottom: 10px
+                    justify-content: space-around
+                    .pic
+                        width: 20%
+                        // height: auto
+            .recipe_title
+                margin: 0
+                background-color: #ffffff
+                box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5)
+                margin-bottom: 2%
+                .h1
+                    margin-top: 0
+                    h1
+                        font-size: 30px
+                    .h1_bgc
+                        min-width: 200px
+                        height: 15px
+                .author_other
+                    margin-bottom: 2%
+                    .collectbtn, .message
+                        transform: scale(.8)
+                .authors
+                    .authors_name
+                        h2
+                            font-size: 20px
+                .author_intro
+                    .h2
+                        h2
+                            font-size: 24px
+                        span
+                            font-size: 20px
+        .recipe_content
+            flex-wrap: wrap
+            .material, .method
+                width: 90%
+                // min-width: 500px
+            .material
+                margin-bottom: 2%
+                .top_material
+                    justify-content: space-around
+                    .serving, .time
+                        margin-left: 0
+                        .top
+                            margin-top: 0
+                    .hiline
+                        margin-right: 10%
+            .method
+                margin-left: 0
+                .method_contents
+                    flex-wrap: wrap
+                    .method_content
+                        width: 90%
+                        border: 0
+                        border-bottom: 1px solid $black
+        .board
+            width: 90%
+            // min-width: 500px
+            .my_message
+                .my_head
+                    width: 50px
+                    height: 50px
+                textarea
+                    width: 50%
+                input
+                    margin: 0
+                    height: 20px
+                    width: 40px
+                    margin-left: 10px
+            .message_box
+                .main_message
+                    img
+                        width: 50px
+                        height: 50px
+                    .message_words
+                        width: 60%

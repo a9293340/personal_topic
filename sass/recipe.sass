@@ -1,0 +1,360 @@
+@import "./base/_var"
+
+
+$bellota: 'Bellota', cursive
+$oswald: 'Oswald', sans-serif
+$notosans: 'Noto Sans TC', sans-serif
+$notoserif: 'Noto Serif TC', serif
+$orange: #F86422
+$bgcgrey: rgba(204, 203, 203, 0.57)
+$black: #2A2A2A
+$white: #c2bebe
+$blue: #338fe6
+$search_bgc: #515151
+
+body
+    background-color: $bgcgrey
+.header
+    .hd_black
+        .header_btn
+            .recipe_btn
+                // transform: scale(1.2) rotate(-10deg)
+                a
+                    color: $orange
+                    font-weight: bolder
+                .line
+                    border-color: $orange
+                    width: 110%
+
+
+.cards_bgc
+    width: 1200px
+    // height: 900px
+    display: flex
+    flex-direction: column
+    margin: 0 auto
+    // border: 1px solid red
+    .cards_box
+        display: flex
+        flex-direction: column
+        .outer_box
+            display: flex
+            flex-direction: column
+            .crumbs
+                padding: 15px
+                .orange
+                    color: $orange
+                a
+                    font-size: 20px
+                    color: #111111
+            .card_box
+                width: 100%
+                display: flex
+                justify-content: center
+                flex-wrap: wrap
+                .card
+                    padding: 0
+                    margin: 0
+                    box-sizing: border-box
+                    border: 4px solid #131313
+                    border-radius: 15px
+                    width: 32%
+                    height: 480px
+                    background-color: #424343
+                    display: flex
+                    flex-direction: column
+                    align-items: center
+                    box-shadow: 3px 3px 20px rgba(255, 255, 255, 0.5)
+                    padding-top: 8px
+                    cursor: pointer
+                    position: relative
+                    &:hover
+                        .img
+                            clip-path: circle(100% at 50% 50%)
+                            filter: brightness(100%)
+                    .h1
+                        // border: 1px solid red
+                        // box-sizing: border-box
+                        width: 85%
+                        height: 40px
+                        margin-bottom: 16px
+                        position: relative
+                        h1
+                            font-size: 28px
+                            white-space: nowrap
+                            margin: 0
+                            color: $white
+                            font-weight: 500
+                            letter-spacing: 1px
+                            z-index: 100
+                            position: relative
+                        .eng
+                            font-family: $oswald
+                            font-weight: 400
+                        .h1_bgc
+                            position: absolute
+                            width: 90%
+                            background-color: #B2711E
+                            height: 15px
+                            z-index: 1
+                            top: 60%
+                    .img
+                        width: 85%
+                        height: 240px
+                        margin: 0
+                        padding: 0
+                        overflow: hidden
+                        border-radius: 5px
+                        clip-path: circle(45% at 50% 50%)
+                        transition-property: all
+                        transition-duration: 1s
+                        filter: brightness(70%)
+                        // border: 1px solid red
+                        img
+                            // margin: 0 auto
+                            border-radius: 5px
+                            width: 100%
+                            margin-top: -5%
+                    .content
+                        width: 85%
+                        .h2
+                            width: 100%
+                            h2
+                                margin: 0
+                                font-family: $bellota
+                                color: #7e7e7e
+                            .line
+                                width: 160px
+                                border: 1px solid #7e7e7e
+                        .span
+                            width: 90%
+                            padding: 8px 0
+                            padding-left: 10px
+                            span
+                                letter-spacing: 1px
+                                color: $white
+                                font-family: $notoserif
+                    .read_more
+                        position: absolute
+                        // bottom: 0
+                        transform-origin: 0px
+                        display: none
+                        cursor: pointer
+                        bottom: 200%
+                        left: -200%
+                        a
+                            text-decoration: none
+                            position: absolute
+                            left: 10%
+                            top: 25%
+                            font-size: 24px
+                            font-family: $bellota
+                            font-weight: bolder
+                            color: $blue
+                .card_top
+                    background-color: rgb(204, 203, 203)
+                    box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.5)
+                    border-color: white
+                    .h1
+                        h1
+                            color: $black
+                        .h1_bgc
+                            background-color: $blue
+                    .content
+                        .span
+                            span
+                                color: $black
+                    .img
+                        clip-path: circle(100% at 50% 50%)
+                        filter: brightness(100%)
+                    .read_more
+                        display: block
+                        animation: goin 3s .3s forwards
+                .card1
+                    transform: rotate(-8deg) translate(90px,15px)
+                    z-index: 1
+                .card2
+                    z-index: 3
+                .card3
+                    transform: rotate(8deg) translate(-90px,15px)
+                    z-index: 1
+                .card4
+                    transform: rotate(-10deg) translate(90px,-50px)
+                    z-index: 2
+                .card5
+                    transform: translateY(-70px)
+                    z-index: 2
+                .card6
+                    transform: rotate(10deg) translate(-90px,-50px)
+                    z-index: 2
+@keyframes goin
+    0%
+        bottom: 200%
+        left: -200%
+        transform: rotate(0deg)
+    60%
+        bottom: 27%
+        left: 55%
+        transform: rotate(0deg)
+    90%
+        bottom: 27%
+        left: 55%
+        transform: rotate(0deg)
+    100%
+        bottom: 27%
+        left: 55%
+        transform: rotate(8deg)
+
+
+
+@media screen and ( max-width: 1199px ) and ( min-width: 1025px)
+    .cards_bgc
+        width: 95%
+
+@media screen and ( max-width: 1024px ) and ( min-width: 769px)
+    .cards_bgc
+        width: 95%
+        .cards_box
+            .outer_box
+                .card_box
+                    justify-content: space-around
+                    .card
+                        width: 45%
+                        // min-width: 800px
+                        border-radius: 5px
+                        margin-bottom: 3%
+                        .img
+                            clip-path: circle(100% at 50% 50%)
+                    .card1
+                        transform: rotate(-0deg) translate(0)
+                    .card2
+                    .card3
+                        transform: rotate(0deg) translate(0)
+                    .card4
+                        transform: rotate(0deg) translate(0)
+                    .card5
+                        transform: translateY(0px)
+                    .card6
+                        transform: rotate(0deg) translate(0)
+
+@media screen and ( max-width: 768px ) and ( min-width: 560px)
+    // .chat
+    //     display: none
+    .cards_bgc
+        padding-top: 120px
+        width: 99%
+        .cards_box
+            .outer_box
+                .crumbs
+                    padding-left: 15%
+                .card_box
+                    justify-content: space-around
+                    .card
+                        width: 75%
+                        // min-width: 500px
+                        margin-bottom: 3%
+                        background-color: #424243
+                        box-shadow: 3px 3px 20px rgba(255, 255, 255, 0.5)
+                        border-color: #131313
+                        cursor: auto
+                        border-radius: 5px
+                        // height: auto
+                        // height: 420px
+                        .h1
+                            h1
+                                color: $white
+                            .h1_bgc
+                                background-color: #B2711E
+                        .content
+                            .span
+                                span
+                                    color: $white
+                        .img
+                            clip-path: circle(100% at 50% 50%)
+                            filter: brightness(100%)
+                            width: 80%
+                            // height: 270px
+                            // overflow: hidden
+                            img
+                                // height: 100%
+                                width: 100%
+                        .read_more
+                            display: block
+                            bottom: -1%
+                            left: 50%
+                            transform: rotate(0deg)
+                            animation-delay: 10000000000000000s
+                    .card_top
+                        .read_more
+                    .card1
+                        transform: rotate(0deg) translate(0)
+                    .card2
+                    .card3
+                        transform: rotate(0deg) translate(0)
+                    .card4
+                        transform: rotate(0deg) translate(0)
+                    .card5
+                        transform: translateY(0px)
+                    .card6
+                        transform: rotate(0deg) translate(0)
+    
+@media screen and ( max-width: 559px )
+    // .chat
+    //     display: none
+    .cards_bgc
+        padding-top: 120px
+        width: 99%
+        .cards_box
+            .outer_box
+                .crumbs
+                    padding-left: 15%
+                .card_box
+                    justify-content: space-around
+                    .card
+                        width: 95%
+                        // min-width: 500px
+                        margin-bottom: 3%
+                        background-color: #424243
+                        box-shadow: 3px 3px 20px rgba(255, 255, 255, 0.5)
+                        border-color: #131313
+                        cursor: auto
+                        border-radius: 5px
+                        // height: auto
+                        // height: 420px
+                        .h1
+                            h1
+                                color: $white
+                            .h1_bgc
+                                background-color: #B2711E
+                        .content
+                            .span
+                                span
+                                    color: $white
+                        .img
+                            clip-path: circle(100% at 50% 50%)
+                            filter: brightness(100%)
+                            // width: 80%
+                            height: 270px
+                            overflow: hidden
+                            img
+                                height: 100%
+                                // width: 100%
+                        .read_more
+                            display: block
+                            bottom: 19%
+                            left: 50%
+                            transform: rotate(0deg)
+                            animation-delay: 10000000000000000s
+                    .card_top
+                        .read_more
+                    .card1
+                        transform: rotate(0deg) translate(0)
+                    .card2
+                    .card3
+                        transform: rotate(0deg) translate(0)
+                    .card4
+                        transform: rotate(0deg) translate(0)
+                    .card5
+                        transform: translateY(0px)
+                    .card6
+                        transform: rotate(0deg) translate(0)
